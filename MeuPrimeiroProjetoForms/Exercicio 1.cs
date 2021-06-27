@@ -11,16 +11,9 @@ namespace MeuPrimeiroProjetoForms
     //FORMULARIO EXERCICIO 1
     public partial class Exercicio_1 : Form
     {
-        FormularioPrincipal formPrincipal;  
-        public Exercicio_1(FormularioPrincipal formularioPrincipal)
+        public Exercicio_1()
         {
             InitializeComponent();
-            formPrincipal = formularioPrincipal;
-        }
-
-        private void bntVoltar_Click(object sender, EventArgs e)
-        {
-            formPrincipal.voltarFormPrincipal(this);
         }
 
         private void btnComecar_Click(object sender, EventArgs e)
@@ -30,9 +23,11 @@ namespace MeuPrimeiroProjetoForms
 
         private void Switch_Questao(string question)
         {
-            switch(question)
+            Questão_1_Nivel_1 questao1 = new Questão_1_Nivel_1();
+            switch (question)
             {
                 case "Questão 1":
+                    questao1.Show();
                     break;
                 case "Questão 2":
                     break;
@@ -49,10 +44,16 @@ namespace MeuPrimeiroProjetoForms
                 case "Questão 8":
                     break;
                 case "Questão 9":
+                    MessageBox.Show("Questão 9");
                     break;
                 case "Questão 10":
                     break;              
             }
+        }
+
+        private void bntVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

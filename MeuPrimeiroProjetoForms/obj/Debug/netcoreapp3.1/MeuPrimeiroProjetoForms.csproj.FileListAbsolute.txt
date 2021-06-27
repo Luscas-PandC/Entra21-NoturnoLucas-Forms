@@ -16,3 +16,5 @@ C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\MeuPrimeiro
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\MeuPrimeiroProjetoForms\obj\Debug\netcoreapp3.1\MeuPrimeiroProjetoForms.Exercicio_2.resources
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\MeuPrimeiroProjetoForms\obj\Debug\netcoreapp3.1\MeuPrimeiroProjetoForms.Exercicio_3.resources
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\MeuPrimeiroProjetoForms\obj\Debug\netcoreapp3.1\MeuPrimeiroProjetoForms.FormularioPrincipal.resources
+C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\MeuPrimeiroProjetoForms\obj\Debug\netcoreapp3.1\MeuPrimeiroProjetoForms.Properties.Resources.resources
+C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\MeuPrimeiroProjetoForms\obj\Debug\netcoreapp3.1\MeuPrimeiroProjetoForms.Questão_1_Nivel_1.resources

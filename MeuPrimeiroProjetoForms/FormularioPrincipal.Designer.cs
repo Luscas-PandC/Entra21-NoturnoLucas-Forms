@@ -29,49 +29,89 @@ namespace MeuPrimeiroProjetoForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.bntConfirmar_Escolha_Questoes = new System.Windows.Forms.Button();
-            this.cnxEscolhaQuestao = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPrincipal));
+            this.BntConfirmar_Escolha_Questoes = new System.Windows.Forms.Button();
+            this.CnxEscolhaQuestao = new System.Windows.Forms.ComboBox();
+            this.LblTitulo = new System.Windows.Forms.Label();
+            this.BtnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // bntConfirmar_Escolha_Questoes
+            // BntConfirmar_Escolha_Questoes
             // 
-            this.bntConfirmar_Escolha_Questoes.Location = new System.Drawing.Point(344, 31);
-            this.bntConfirmar_Escolha_Questoes.Name = "bntConfirmar_Escolha_Questoes";
-            this.bntConfirmar_Escolha_Questoes.Size = new System.Drawing.Size(75, 23);
-            this.bntConfirmar_Escolha_Questoes.TabIndex = 0;
-            this.bntConfirmar_Escolha_Questoes.Text = "Confirmar";
-            this.bntConfirmar_Escolha_Questoes.UseVisualStyleBackColor = true;
-            this.bntConfirmar_Escolha_Questoes.Click += new System.EventHandler(this.bntConfirmar_Escolha_Questoes_Click);
+            this.BntConfirmar_Escolha_Questoes.BackColor = System.Drawing.Color.White;
+            this.BntConfirmar_Escolha_Questoes.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BntConfirmar_Escolha_Questoes.Location = new System.Drawing.Point(199, 199);
+            this.BntConfirmar_Escolha_Questoes.Name = "BntConfirmar_Escolha_Questoes";
+            this.BntConfirmar_Escolha_Questoes.Size = new System.Drawing.Size(109, 31);
+            this.BntConfirmar_Escolha_Questoes.TabIndex = 0;
+            this.BntConfirmar_Escolha_Questoes.Text = "Confirmar";
+            this.BntConfirmar_Escolha_Questoes.UseVisualStyleBackColor = false;
+            this.BntConfirmar_Escolha_Questoes.Click += new System.EventHandler(this.BntConfirmar_Escolha_Questoes_Click);
             // 
-            // cnxEscolhaQuestao
+            // CnxEscolhaQuestao
             // 
-            this.cnxEscolhaQuestao.FormattingEnabled = true;
-            this.cnxEscolhaQuestao.Items.AddRange(new object[] {
+            this.CnxEscolhaQuestao.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.CnxEscolhaQuestao.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CnxEscolhaQuestao.FormattingEnabled = true;
+            this.CnxEscolhaQuestao.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.CnxEscolhaQuestao.Items.AddRange(new object[] {
             "Exercicio 1",
             "Exercicio 2",
             "Exercicio 3"});
-            this.cnxEscolhaQuestao.Location = new System.Drawing.Point(19, 31);
-            this.cnxEscolhaQuestao.Name = "cnxEscolhaQuestao";
-            this.cnxEscolhaQuestao.Size = new System.Drawing.Size(293, 23);
-            this.cnxEscolhaQuestao.TabIndex = 1;
+            this.CnxEscolhaQuestao.Location = new System.Drawing.Point(19, 138);
+            this.CnxEscolhaQuestao.Name = "CnxEscolhaQuestao";
+            this.CnxEscolhaQuestao.Size = new System.Drawing.Size(289, 30);
+            this.CnxEscolhaQuestao.TabIndex = 1;
+            // 
+            // LblTitulo
+            // 
+            this.LblTitulo.AutoSize = true;
+            this.LblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.LblTitulo.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblTitulo.ForeColor = System.Drawing.Color.White;
+            this.LblTitulo.Location = new System.Drawing.Point(12, 43);
+            this.LblTitulo.Name = "LblTitulo";
+            this.LblTitulo.Size = new System.Drawing.Size(296, 56);
+            this.LblTitulo.TabIndex = 3;
+            this.LblTitulo.Text = "Selecione a lista de exercicio \r\nque desejas usar a seguir.";
+            // 
+            // BtnSair
+            // 
+            this.BtnSair.BackColor = System.Drawing.Color.White;
+            this.BtnSair.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnSair.Location = new System.Drawing.Point(19, 199);
+            this.BtnSair.Name = "BtnSair";
+            this.BtnSair.Size = new System.Drawing.Size(109, 31);
+            this.BtnSair.TabIndex = 4;
+            this.BtnSair.Text = "Sair";
+            this.BtnSair.UseVisualStyleBackColor = false;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 450);
-            this.Controls.Add(this.cnxEscolhaQuestao);
-            this.Controls.Add(this.bntConfirmar_Escolha_Questoes);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(331, 248);
+            this.Controls.Add(this.BtnSair);
+            this.Controls.Add(this.LblTitulo);
+            this.Controls.Add(this.CnxEscolhaQuestao);
+            this.Controls.Add(this.BntConfirmar_Escolha_Questoes);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "FormularioPrincipal";
             this.Text = "Formulario Principal";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button bntConfirmar_Escolha_Questoes;
-        private System.Windows.Forms.ComboBox cnxEscolhaQuestao;
+        private System.Windows.Forms.Button BntConfirmar_Escolha_Questoes;
+        private System.Windows.Forms.ComboBox CnxEscolhaQuestao;
+        private System.Windows.Forms.Label LblTitulo;
+        private System.Windows.Forms.Button BtnSair;
     }
 }
 

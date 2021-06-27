@@ -18,17 +18,17 @@ namespace MeuPrimeiroProjetoForms
             InitializeComponent();
         }
 
-        private void bntConfirmar_Escolha_Questoes_Click(object sender, EventArgs e)
+        private void BntConfirmar_Escolha_Questoes_Click(object sender, EventArgs e)
         {
-            switch_Questao();
+            Switch_Questao();
         }
 
-        private void switch_Questao()
+        private void Switch_Questao()
         {
-            var exercicio1 = new Exercicio_1(this);
-            var exercicio2 = new Exercicio_2(this);
-            var exercicio3 = new Exercicio_3(this);
-            string opcao = cnxEscolhaQuestao.Text.ToString();
+            var exercicio1 = new Exercicio_1();
+            var exercicio2 = new Exercicio_2();
+            var exercicio3 = new Exercicio_3();
+            string opcao = CnxEscolhaQuestao.Text.ToString();
 
             switch(opcao)
             {
@@ -44,10 +44,10 @@ namespace MeuPrimeiroProjetoForms
             }
         }
 
-        public void voltarFormPrincipal(Form formulario)
+        private void BtnSair_Click(object sender, EventArgs e)
         {
-            formulario.Hide();
-            this.Show();
+            this.Close();
         }
+
     }
 }

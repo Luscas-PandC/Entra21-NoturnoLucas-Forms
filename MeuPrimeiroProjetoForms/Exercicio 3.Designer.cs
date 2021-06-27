@@ -35,7 +35,7 @@ namespace MeuPrimeiroProjetoForms
             this.lblNivel4 = new System.Windows.Forms.Label();
             this.lblNivel5 = new System.Windows.Forms.Label();
             this.lblNivel6 = new System.Windows.Forms.Label();
-            this.btnIniciar = new System.Windows.Forms.Button();
+            this.btnComecar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -125,14 +125,15 @@ namespace MeuPrimeiroProjetoForms
             this.lblNivel6.TabIndex = 5;
             this.lblNivel6.Text = "Nivel 6";
             // 
-            // btnIniciar
+            // btnComecar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(241, 402);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(117, 23);
-            this.btnIniciar.TabIndex = 6;
-            this.btnIniciar.Text = "Iniciar";
-            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnComecar.Location = new System.Drawing.Point(241, 402);
+            this.btnComecar.Name = "btnComecar";
+            this.btnComecar.Size = new System.Drawing.Size(117, 23);
+            this.btnComecar.TabIndex = 6;
+            this.btnComecar.Text = "Começar";
+            this.btnComecar.UseVisualStyleBackColor = true;
+            this.btnComecar.Click += new System.EventHandler(this.btnComecar_Click);
             // 
             // btnVoltar
             // 
@@ -150,7 +151,7 @@ namespace MeuPrimeiroProjetoForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 486);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.btnIniciar);
+            this.Controls.Add(this.btnComecar);
             this.Controls.Add(this.lblNivel6);
             this.Controls.Add(this.lblNivel5);
             this.Controls.Add(this.lblNivel4);
@@ -172,7 +173,7 @@ namespace MeuPrimeiroProjetoForms
         private System.Windows.Forms.Label lblNivel4;
         private System.Windows.Forms.Label lblNivel5;
         private System.Windows.Forms.Label lblNivel6;
-        private System.Windows.Forms.Button btnIniciar;
+        private System.Windows.Forms.Button btnComecar;
         private System.Windows.Forms.Button btnVoltar;
     }
 }

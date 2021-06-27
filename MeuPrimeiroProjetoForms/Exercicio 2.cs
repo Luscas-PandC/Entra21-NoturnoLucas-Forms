@@ -10,17 +10,15 @@ namespace MeuPrimeiroProjetoForms
 {
     public partial class Exercicio_2 : Form
     {
-        FormularioPrincipal FormPrincipal;
 
-        public Exercicio_2(FormularioPrincipal formularioPrincipal)
+        public Exercicio_2()
         {
             InitializeComponent();
-            FormPrincipal = formularioPrincipal;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            FormPrincipal.voltarFormPrincipal(this);
+            this.Close();
         }
     }
 }

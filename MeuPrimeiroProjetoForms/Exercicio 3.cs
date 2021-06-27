@@ -10,16 +10,24 @@ namespace MeuPrimeiroProjetoForms
 {
     public partial class Exercicio_3 : Form
     {
-        FormularioPrincipal formPrincipal;
-        public Exercicio_3(FormularioPrincipal formularioPrincipal)
+        public Exercicio_3()
         {
             InitializeComponent();
-            formPrincipal = formularioPrincipal;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void btnComecar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Switch_Questoes()
+        {
+            
         }
     }
 }
