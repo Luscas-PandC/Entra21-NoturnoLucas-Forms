@@ -10,21 +10,24 @@ using System.Windows.Forms;
 
 namespace MeuPrimeiroProjetoForms
 {
+    // FORMULARIO PRINCIPAL
     public partial class FormularioPrincipal : Form
     {
         public FormularioPrincipal()
         {
             InitializeComponent();
         }
+
         private void bntConfirmar_Escolha_Questoes_Click(object sender, EventArgs e)
         {
             switch_Questao();
         }
+
         private void switch_Questao()
         {
             var exercicio1 = new Exercicio_1(this);
             var exercicio2 = new Exercicio_2(this);
-            var exercicio3 = new Exercicio_3();
+            var exercicio3 = new Exercicio_3(this);
             string opcao = cnxEscolhaQuestao.Text.ToString();
 
             switch(opcao)
@@ -40,6 +43,7 @@ namespace MeuPrimeiroProjetoForms
                     break;
             }
         }
+
         public void voltarFormPrincipal(Form formulario)
         {
             formulario.Hide();

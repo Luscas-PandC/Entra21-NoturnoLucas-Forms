@@ -79,7 +79,7 @@ namespace MeuPrimeiroProjetoForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(133, 318);
+            this.ClientSize = new System.Drawing.Size(143, 325);
             this.Controls.Add(this.btnComecar);
             this.Controls.Add(this.ltbQuestoes);
             this.Controls.Add(this.bntVoltar);
