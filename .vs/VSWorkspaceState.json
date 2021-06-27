@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MeuPrimeiroProjetoForms"
   ],
-  "SelectedNode": "\\Entra21-Projetos-Forms.sln",
+  "SelectedNode": "\\MeuPrimeiroProjetoForms\\FormularioPrincipal.cs",
   "PreviewInSolutionExplorer": false
 }
