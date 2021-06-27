@@ -16,7 +16,7 @@ namespace MeuPrimeiroProjetoForms
             InitializeComponent();
         }
 
-        private void btnComecar_Click(object sender, EventArgs e)
+        private void BtnComecar_Click(object sender, EventArgs e)
         {
             Switch_Questao(ltbQuestoes.Text.ToString());
         }
@@ -24,12 +24,15 @@ namespace MeuPrimeiroProjetoForms
         private void Switch_Questao(string question)
         {
             Questão_1_Nivel_1 questao1 = new Questão_1_Nivel_1();
+            Questão_2_Nivel_1 questao2 = new Questão_2_Nivel_1();
+
             switch (question)
             {
                 case "Questão 1":
                     questao1.Show();
                     break;
                 case "Questão 2":
+                    questao2.Show();
                     break;
                 case "Questão 3":
                     break;
@@ -51,7 +54,7 @@ namespace MeuPrimeiroProjetoForms
             }
         }
 
-        private void bntVoltar_Click(object sender, EventArgs e)
+        private void BntVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

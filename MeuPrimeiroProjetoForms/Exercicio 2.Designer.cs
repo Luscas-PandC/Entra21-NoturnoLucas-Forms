@@ -29,7 +29,8 @@ namespace MeuPrimeiroProjetoForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnVoltar = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exercicio_2));
+            this.BtnVoltar = new System.Windows.Forms.Button();
             this.ltbQuestoes_Nivel2 = new System.Windows.Forms.ListBox();
             this.lblNivel2 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -37,15 +38,15 @@ namespace MeuPrimeiroProjetoForms
             this.btnComeçar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnVoltar
+            // BtnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(102, 446);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(119, 30);
-            this.btnVoltar.TabIndex = 0;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            this.BtnVoltar.Location = new System.Drawing.Point(102, 446);
+            this.BtnVoltar.Name = "BtnVoltar";
+            this.BtnVoltar.Size = new System.Drawing.Size(119, 30);
+            this.BtnVoltar.TabIndex = 0;
+            this.BtnVoltar.Text = "Voltar";
+            this.BtnVoltar.UseVisualStyleBackColor = true;
+            this.BtnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // ltbQuestoes_Nivel2
             // 
@@ -73,7 +74,9 @@ namespace MeuPrimeiroProjetoForms
             // lblNivel2
             // 
             this.lblNivel2.AutoSize = true;
-            this.lblNivel2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNivel2.BackColor = System.Drawing.Color.Transparent;
+            this.lblNivel2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lblNivel2.ForeColor = System.Drawing.Color.White;
             this.lblNivel2.Location = new System.Drawing.Point(13, 13);
             this.lblNivel2.Name = "lblNivel2";
             this.lblNivel2.Size = new System.Drawing.Size(83, 28);
@@ -97,7 +100,9 @@ namespace MeuPrimeiroProjetoForms
             // lblNivel3
             // 
             this.lblNivel3.AutoSize = true;
-            this.lblNivel3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNivel3.BackColor = System.Drawing.Color.Transparent;
+            this.lblNivel3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lblNivel3.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNivel3.Location = new System.Drawing.Point(196, 13);
             this.lblNivel3.Name = "lblNivel3";
             this.lblNivel3.Size = new System.Drawing.Size(83, 28);
@@ -117,13 +122,15 @@ namespace MeuPrimeiroProjetoForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(326, 488);
             this.Controls.Add(this.btnComeçar);
             this.Controls.Add(this.lblNivel3);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblNivel2);
             this.Controls.Add(this.ltbQuestoes_Nivel2);
-            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.BtnVoltar);
             this.Name = "Exercicio_2";
             this.Text = "Exercicio_2";
             this.ResumeLayout(false);
@@ -133,7 +140,7 @@ namespace MeuPrimeiroProjetoForms
 
         #endregion
 
-        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button BtnVoltar;
         private System.Windows.Forms.ListBox ltbQuestoes_Nivel2;
         private System.Windows.Forms.Label lblNivel2;
         private System.Windows.Forms.ListBox listBox1;

@@ -17,11 +17,15 @@ namespace MeuPrimeiroProjetoForms
 
         private void BtnCalcular_Click(object sender, EventArgs e)
         {
-            double resultado = 0;
+            double resultado;
             if (TxtQuantidade_Minima.Text.ToString() != "" && TxtQuantidade_Maxima.Text.ToString() != "")
             {
                 resultado = (double.Parse(TxtQuantidade_Minima.Text.ToString()) + double.Parse(TxtQuantidade_Maxima.Text.ToString())) / 2;
                 TxtResultado.Text = ($"{resultado}");
+            }
+            else
+            {
+                TxtResultado.Text = "";
             }
         }
 

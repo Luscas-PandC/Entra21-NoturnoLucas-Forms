@@ -93,7 +93,8 @@ namespace MeuPrimeiroProjetoForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(331, 248);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(326, 259);
             this.Controls.Add(this.BtnSair);
             this.Controls.Add(this.LblTitulo);
             this.Controls.Add(this.CnxEscolhaQuestao);

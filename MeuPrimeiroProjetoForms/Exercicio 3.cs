@@ -15,19 +15,14 @@ namespace MeuPrimeiroProjetoForms
             InitializeComponent();
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void BtnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnComecar_Click(object sender, EventArgs e)
+        private void BtnComecar_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void Switch_Questoes()
-        {
-            
         }
     }
 }

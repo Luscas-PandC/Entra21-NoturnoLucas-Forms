@@ -30,22 +30,22 @@ namespace MeuPrimeiroProjetoForms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exercicio_1));
-            this.bntVoltar = new System.Windows.Forms.Button();
+            this.BntVoltar = new System.Windows.Forms.Button();
             this.ltbQuestoes = new System.Windows.Forms.ListBox();
-            this.btnComecar = new System.Windows.Forms.Button();
+            this.BtnComecar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // bntVoltar
+            // BntVoltar
             // 
-            this.bntVoltar.BackColor = System.Drawing.Color.White;
-            this.bntVoltar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bntVoltar.Location = new System.Drawing.Point(12, 296);
-            this.bntVoltar.Name = "bntVoltar";
-            this.bntVoltar.Size = new System.Drawing.Size(110, 30);
-            this.bntVoltar.TabIndex = 0;
-            this.bntVoltar.Text = "Voltar";
-            this.bntVoltar.UseVisualStyleBackColor = false;
-            this.bntVoltar.Click += new System.EventHandler(this.bntVoltar_Click);
+            this.BntVoltar.BackColor = System.Drawing.Color.White;
+            this.BntVoltar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BntVoltar.Location = new System.Drawing.Point(22, 308);
+            this.BntVoltar.Name = "BntVoltar";
+            this.BntVoltar.Size = new System.Drawing.Size(110, 30);
+            this.BntVoltar.TabIndex = 0;
+            this.BntVoltar.Text = "Voltar";
+            this.BntVoltar.UseVisualStyleBackColor = false;
+            this.BntVoltar.Click += new System.EventHandler(this.BntVoltar_Click);
             // 
             // ltbQuestoes
             // 
@@ -64,32 +64,33 @@ namespace MeuPrimeiroProjetoForms
             "Questão 8",
             "Questão 9",
             "Questão 10"});
-            this.ltbQuestoes.Location = new System.Drawing.Point(12, 12);
+            this.ltbQuestoes.Location = new System.Drawing.Point(22, 24);
             this.ltbQuestoes.Name = "ltbQuestoes";
             this.ltbQuestoes.Size = new System.Drawing.Size(110, 220);
             this.ltbQuestoes.TabIndex = 1;
             // 
-            // btnComecar
+            // BtnComecar
             // 
-            this.btnComecar.BackColor = System.Drawing.Color.White;
-            this.btnComecar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnComecar.Location = new System.Drawing.Point(12, 250);
-            this.btnComecar.Name = "btnComecar";
-            this.btnComecar.Size = new System.Drawing.Size(110, 29);
-            this.btnComecar.TabIndex = 2;
-            this.btnComecar.Text = "Começar";
-            this.btnComecar.UseVisualStyleBackColor = false;
-            this.btnComecar.Click += new System.EventHandler(this.btnComecar_Click);
+            this.BtnComecar.BackColor = System.Drawing.Color.White;
+            this.BtnComecar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnComecar.Location = new System.Drawing.Point(22, 262);
+            this.BtnComecar.Name = "BtnComecar";
+            this.BtnComecar.Size = new System.Drawing.Size(110, 29);
+            this.BtnComecar.TabIndex = 2;
+            this.BtnComecar.Text = "Começar";
+            this.BtnComecar.UseVisualStyleBackColor = false;
+            this.BtnComecar.Click += new System.EventHandler(this.BtnComecar_Click);
             // 
             // Exercicio_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(134, 347);
-            this.Controls.Add(this.btnComecar);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(155, 366);
+            this.Controls.Add(this.BtnComecar);
             this.Controls.Add(this.ltbQuestoes);
-            this.Controls.Add(this.bntVoltar);
+            this.Controls.Add(this.BntVoltar);
             this.Name = "Exercicio_1";
             this.Text = "Exercicio_1";
             this.ResumeLayout(false);
@@ -98,8 +99,8 @@ namespace MeuPrimeiroProjetoForms
 
         #endregion
 
-        private System.Windows.Forms.Button bntVoltar;
+        private System.Windows.Forms.Button BntVoltar;
         private System.Windows.Forms.ListBox ltbQuestoes;
-        private System.Windows.Forms.Button btnComecar;
+        private System.Windows.Forms.Button BtnComecar;
     }
 }
