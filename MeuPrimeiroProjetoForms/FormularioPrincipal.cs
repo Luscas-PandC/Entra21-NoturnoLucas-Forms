@@ -16,6 +16,7 @@ namespace MeuPrimeiroProjetoForms
         public FormularioPrincipal()
         {
             InitializeComponent();
+            CnxEscolhaQuestao.Text = "Exercicio 1";
         }
 
         private void BntConfirmar_Escolha_Questoes_Click(object sender, EventArgs e)

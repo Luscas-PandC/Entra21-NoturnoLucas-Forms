@@ -14,5 +14,24 @@ namespace MeuPrimeiroProjetoForms
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double cotacao;
+            if(TxtCotacao_Dolar.Text != "" && TxtDolar.Text != "")
+            {
+                cotacao = double.Parse(TxtCotacao_Dolar.Text) * double.Parse(TxtDolar.Text);
+                TxtReal.Text = ($"{cotacao}");            
+            }
+            else
+            {
+                TxtReal.Text = "";
+            }
+        }
+
+        private void BtnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
