@@ -15,7 +15,7 @@ namespace MeuPrimeiroProjetoForms
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             double cotacao;
             if(TxtCotacao_Dolar.Text != "" && TxtDolar.Text != "")

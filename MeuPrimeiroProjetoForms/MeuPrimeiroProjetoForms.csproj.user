@@ -19,5 +19,8 @@
     <Compile Update="Questão_2 Nivel_1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Questão_3 Nivel_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -98,7 +98,6 @@ namespace MeuPrimeiroProjetoForms
             this.BtnCalcular.TabIndex = 5;
             this.BtnCalcular.Text = "Calcular";
             this.BtnCalcular.UseVisualStyleBackColor = true;
-            this.BtnCalcular.Click += new System.EventHandler(this.button2_Click);
             // 
             // LblDolar
             // 

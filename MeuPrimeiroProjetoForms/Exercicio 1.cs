@@ -25,6 +25,7 @@ namespace MeuPrimeiroProjetoForms
         {
             Questão_1_Nivel_1 questao1 = new Questão_1_Nivel_1();
             Questão_2_Nivel_1 questao2 = new Questão_2_Nivel_1();
+            Questão_3_Nivel_1 questao3 = new Questão_3_Nivel_1();
 
             switch (question)
             {
@@ -35,6 +36,7 @@ namespace MeuPrimeiroProjetoForms
                     questao2.Show();
                     break;
                 case "Questão 3":
+                    questao3.Show();
                     break;
                 case "Questão 4":
                     break;

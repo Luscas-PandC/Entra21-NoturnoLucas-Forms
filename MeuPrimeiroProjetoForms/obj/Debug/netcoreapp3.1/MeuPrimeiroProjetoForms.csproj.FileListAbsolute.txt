@@ -19,3 +19,4 @@ C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\MeuPrimeiro
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\MeuPrimeiroProjetoForms\obj\Debug\netcoreapp3.1\MeuPrimeiroProjetoForms.Properties.Resources.resources
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\MeuPrimeiroProjetoForms\obj\Debug\netcoreapp3.1\MeuPrimeiroProjetoForms.Questão_1_Nivel_1.resources
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\MeuPrimeiroProjetoForms\obj\Debug\netcoreapp3.1\MeuPrimeiroProjetoForms.Questão_2_Nivel_1.resources
+C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\MeuPrimeiroProjetoForms\obj\Debug\netcoreapp3.1\MeuPrimeiroProjetoForms.Questão_3_Nivel_1.resources
