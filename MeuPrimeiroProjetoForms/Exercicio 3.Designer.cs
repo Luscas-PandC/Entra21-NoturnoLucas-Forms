@@ -29,7 +29,6 @@ namespace MeuPrimeiroProjetoForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exercicio_3));
             this.LtbQuestoes_Nivel4 = new System.Windows.Forms.ListBox();
             this.LtbQuestoes_Nivel5 = new System.Windows.Forms.ListBox();
             this.LtbQuestoes_Nivel6 = new System.Windows.Forms.ListBox();
@@ -42,9 +41,12 @@ namespace MeuPrimeiroProjetoForms
             // 
             // LtbQuestoes_Nivel4
             // 
-            this.LtbQuestoes_Nivel4.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LtbQuestoes_Nivel4.BackColor = System.Drawing.Color.Black;
+            this.LtbQuestoes_Nivel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LtbQuestoes_Nivel4.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LtbQuestoes_Nivel4.ForeColor = System.Drawing.Color.White;
             this.LtbQuestoes_Nivel4.FormattingEnabled = true;
-            this.LtbQuestoes_Nivel4.ItemHeight = 28;
+            this.LtbQuestoes_Nivel4.ItemHeight = 37;
             this.LtbQuestoes_Nivel4.Items.AddRange(new object[] {
             "Questão 26",
             "Questão 27",
@@ -57,16 +59,19 @@ namespace MeuPrimeiroProjetoForms
             "Questão 34",
             "Questão 35",
             "Questão 36"});
-            this.LtbQuestoes_Nivel4.Location = new System.Drawing.Point(15, 38);
+            this.LtbQuestoes_Nivel4.Location = new System.Drawing.Point(71, 46);
             this.LtbQuestoes_Nivel4.Name = "LtbQuestoes_Nivel4";
-            this.LtbQuestoes_Nivel4.Size = new System.Drawing.Size(117, 312);
+            this.LtbQuestoes_Nivel4.Size = new System.Drawing.Size(146, 409);
             this.LtbQuestoes_Nivel4.TabIndex = 0;
             // 
             // LtbQuestoes_Nivel5
             // 
-            this.LtbQuestoes_Nivel5.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LtbQuestoes_Nivel5.BackColor = System.Drawing.Color.Black;
+            this.LtbQuestoes_Nivel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LtbQuestoes_Nivel5.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LtbQuestoes_Nivel5.ForeColor = System.Drawing.Color.White;
             this.LtbQuestoes_Nivel5.FormattingEnabled = true;
-            this.LtbQuestoes_Nivel5.ItemHeight = 28;
+            this.LtbQuestoes_Nivel5.ItemHeight = 37;
             this.LtbQuestoes_Nivel5.Items.AddRange(new object[] {
             "Questão 45",
             "Questão 46",
@@ -79,32 +84,35 @@ namespace MeuPrimeiroProjetoForms
             "Questão 53",
             "Questão 54",
             "Questão 55"});
-            this.LtbQuestoes_Nivel5.Location = new System.Drawing.Point(188, 38);
+            this.LtbQuestoes_Nivel5.Location = new System.Drawing.Point(286, 46);
             this.LtbQuestoes_Nivel5.Name = "LtbQuestoes_Nivel5";
-            this.LtbQuestoes_Nivel5.Size = new System.Drawing.Size(117, 312);
+            this.LtbQuestoes_Nivel5.Size = new System.Drawing.Size(146, 409);
             this.LtbQuestoes_Nivel5.TabIndex = 1;
             // 
             // LtbQuestoes_Nivel6
             // 
-            this.LtbQuestoes_Nivel6.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LtbQuestoes_Nivel6.BackColor = System.Drawing.Color.Black;
+            this.LtbQuestoes_Nivel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LtbQuestoes_Nivel6.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LtbQuestoes_Nivel6.ForeColor = System.Drawing.Color.White;
             this.LtbQuestoes_Nivel6.FormattingEnabled = true;
-            this.LtbQuestoes_Nivel6.ItemHeight = 28;
+            this.LtbQuestoes_Nivel6.ItemHeight = 37;
             this.LtbQuestoes_Nivel6.Items.AddRange(new object[] {
             " Questão 60"});
-            this.LtbQuestoes_Nivel6.Location = new System.Drawing.Point(358, 38);
+            this.LtbQuestoes_Nivel6.Location = new System.Drawing.Point(502, 46);
             this.LtbQuestoes_Nivel6.Name = "LtbQuestoes_Nivel6";
-            this.LtbQuestoes_Nivel6.Size = new System.Drawing.Size(126, 312);
+            this.LtbQuestoes_Nivel6.Size = new System.Drawing.Size(155, 409);
             this.LtbQuestoes_Nivel6.TabIndex = 2;
             // 
             // lblNivel4
             // 
             this.lblNivel4.AutoSize = true;
             this.lblNivel4.BackColor = System.Drawing.Color.Transparent;
-            this.lblNivel4.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lblNivel4.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.lblNivel4.ForeColor = System.Drawing.Color.White;
-            this.lblNivel4.Location = new System.Drawing.Point(15, 7);
+            this.lblNivel4.Location = new System.Drawing.Point(90, 6);
             this.lblNivel4.Name = "lblNivel4";
-            this.lblNivel4.Size = new System.Drawing.Size(83, 28);
+            this.lblNivel4.Size = new System.Drawing.Size(107, 37);
             this.lblNivel4.TabIndex = 3;
             this.lblNivel4.Text = "Nivel 4";
             // 
@@ -112,11 +120,11 @@ namespace MeuPrimeiroProjetoForms
             // 
             this.lblNivel5.AutoSize = true;
             this.lblNivel5.BackColor = System.Drawing.Color.Transparent;
-            this.lblNivel5.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lblNivel5.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.lblNivel5.ForeColor = System.Drawing.Color.White;
-            this.lblNivel5.Location = new System.Drawing.Point(188, 7);
+            this.lblNivel5.Location = new System.Drawing.Point(305, 6);
             this.lblNivel5.Name = "lblNivel5";
-            this.lblNivel5.Size = new System.Drawing.Size(83, 28);
+            this.lblNivel5.Size = new System.Drawing.Size(107, 37);
             this.lblNivel5.TabIndex = 4;
             this.lblNivel5.Text = "Nivel 5";
             // 
@@ -124,20 +132,20 @@ namespace MeuPrimeiroProjetoForms
             // 
             this.lblNivel6.AutoSize = true;
             this.lblNivel6.BackColor = System.Drawing.Color.Transparent;
-            this.lblNivel6.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lblNivel6.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.lblNivel6.ForeColor = System.Drawing.Color.White;
-            this.lblNivel6.Location = new System.Drawing.Point(358, 7);
+            this.lblNivel6.Location = new System.Drawing.Point(526, 6);
             this.lblNivel6.Name = "lblNivel6";
-            this.lblNivel6.Size = new System.Drawing.Size(83, 28);
+            this.lblNivel6.Size = new System.Drawing.Size(107, 37);
             this.lblNivel6.TabIndex = 5;
             this.lblNivel6.Text = "Nivel 6";
             // 
             // BtnComecar
             // 
-            this.BtnComecar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnComecar.Location = new System.Drawing.Point(188, 368);
+            this.BtnComecar.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnComecar.Location = new System.Drawing.Point(250, 482);
             this.BtnComecar.Name = "BtnComecar";
-            this.BtnComecar.Size = new System.Drawing.Size(117, 32);
+            this.BtnComecar.Size = new System.Drawing.Size(219, 41);
             this.BtnComecar.TabIndex = 6;
             this.BtnComecar.Text = "Começar";
             this.BtnComecar.UseVisualStyleBackColor = true;
@@ -145,10 +153,10 @@ namespace MeuPrimeiroProjetoForms
             // 
             // BtnVoltar
             // 
-            this.BtnVoltar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnVoltar.Location = new System.Drawing.Point(188, 415);
+            this.BtnVoltar.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnVoltar.Location = new System.Drawing.Point(250, 549);
             this.BtnVoltar.Name = "BtnVoltar";
-            this.BtnVoltar.Size = new System.Drawing.Size(117, 32);
+            this.BtnVoltar.Size = new System.Drawing.Size(219, 42);
             this.BtnVoltar.TabIndex = 7;
             this.BtnVoltar.Text = "Voltar";
             this.BtnVoltar.UseVisualStyleBackColor = true;
@@ -158,10 +166,9 @@ namespace MeuPrimeiroProjetoForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(497, 464);
+            this.ClientSize = new System.Drawing.Size(724, 603);
             this.Controls.Add(this.BtnVoltar);
             this.Controls.Add(this.BtnComecar);
             this.Controls.Add(this.lblNivel6);
@@ -170,8 +177,10 @@ namespace MeuPrimeiroProjetoForms
             this.Controls.Add(this.LtbQuestoes_Nivel6);
             this.Controls.Add(this.LtbQuestoes_Nivel5);
             this.Controls.Add(this.LtbQuestoes_Nivel4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Exercicio_3";
-            this.Text = "Exercicio_3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lista 3";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -30,78 +30,100 @@ namespace MeuPrimeiroProjetoForms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPrincipal));
-            this.BntConfirmar_Escolha_Questoes = new System.Windows.Forms.Button();
-            this.CnxEscolhaQuestao = new System.Windows.Forms.ComboBox();
+            this.BtnLista2 = new System.Windows.Forms.Button();
             this.LblTitulo = new System.Windows.Forms.Label();
             this.BtnSair = new System.Windows.Forms.Button();
+            this.BtnLista3 = new System.Windows.Forms.Button();
+            this.BtnLista1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // BntConfirmar_Escolha_Questoes
+            // BtnLista2
             // 
-            this.BntConfirmar_Escolha_Questoes.BackColor = System.Drawing.Color.White;
-            this.BntConfirmar_Escolha_Questoes.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BntConfirmar_Escolha_Questoes.Location = new System.Drawing.Point(199, 199);
-            this.BntConfirmar_Escolha_Questoes.Name = "BntConfirmar_Escolha_Questoes";
-            this.BntConfirmar_Escolha_Questoes.Size = new System.Drawing.Size(109, 31);
-            this.BntConfirmar_Escolha_Questoes.TabIndex = 0;
-            this.BntConfirmar_Escolha_Questoes.Text = "Confirmar";
-            this.BntConfirmar_Escolha_Questoes.UseVisualStyleBackColor = false;
-            this.BntConfirmar_Escolha_Questoes.Click += new System.EventHandler(this.BntConfirmar_Escolha_Questoes_Click);
-            // 
-            // CnxEscolhaQuestao
-            // 
-            this.CnxEscolhaQuestao.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.CnxEscolhaQuestao.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CnxEscolhaQuestao.FormattingEnabled = true;
-            this.CnxEscolhaQuestao.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.CnxEscolhaQuestao.Items.AddRange(new object[] {
-            "Exercicio 1",
-            "Exercicio 2",
-            "Exercicio 3"});
-            this.CnxEscolhaQuestao.Location = new System.Drawing.Point(19, 138);
-            this.CnxEscolhaQuestao.Name = "CnxEscolhaQuestao";
-            this.CnxEscolhaQuestao.Size = new System.Drawing.Size(289, 30);
-            this.CnxEscolhaQuestao.TabIndex = 1;
+            this.BtnLista2.AutoSize = true;
+            this.BtnLista2.BackColor = System.Drawing.Color.White;
+            this.BtnLista2.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnLista2.Location = new System.Drawing.Point(103, 280);
+            this.BtnLista2.Name = "BtnLista2";
+            this.BtnLista2.Size = new System.Drawing.Size(563, 49);
+            this.BtnLista2.TabIndex = 0;
+            this.BtnLista2.Text = "Lista de Exercicio 2";
+            this.BtnLista2.UseVisualStyleBackColor = false;
+            this.BtnLista2.Click += new System.EventHandler(this.BtnLista2_Click);
             // 
             // LblTitulo
             // 
             this.LblTitulo.AutoSize = true;
             this.LblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.LblTitulo.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblTitulo.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LblTitulo.ForeColor = System.Drawing.Color.White;
-            this.LblTitulo.Location = new System.Drawing.Point(12, 43);
+            this.LblTitulo.Location = new System.Drawing.Point(27, 73);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(296, 56);
+            this.LblTitulo.Size = new System.Drawing.Size(739, 39);
             this.LblTitulo.TabIndex = 3;
-            this.LblTitulo.Text = "Selecione a lista de exercicio \r\nque desejas usar a seguir.";
+            this.LblTitulo.Text = "Selecione a lista de exercicio que desejas usar a seguir.";
             // 
             // BtnSair
             // 
+            this.BtnSair.AutoSize = true;
             this.BtnSair.BackColor = System.Drawing.Color.White;
-            this.BtnSair.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnSair.Location = new System.Drawing.Point(19, 199);
+            this.BtnSair.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnSair.Location = new System.Drawing.Point(263, 477);
             this.BtnSair.Name = "BtnSair";
-            this.BtnSair.Size = new System.Drawing.Size(109, 31);
+            this.BtnSair.Size = new System.Drawing.Size(235, 49);
             this.BtnSair.TabIndex = 4;
             this.BtnSair.Text = "Sair";
             this.BtnSair.UseVisualStyleBackColor = false;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
+            // BtnLista3
+            // 
+            this.BtnLista3.AutoSize = true;
+            this.BtnLista3.BackColor = System.Drawing.Color.White;
+            this.BtnLista3.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnLista3.Location = new System.Drawing.Point(103, 377);
+            this.BtnLista3.Name = "BtnLista3";
+            this.BtnLista3.Size = new System.Drawing.Size(563, 49);
+            this.BtnLista3.TabIndex = 5;
+            this.BtnLista3.Text = "Lista de Exercicio 3";
+            this.BtnLista3.UseVisualStyleBackColor = false;
+            this.BtnLista3.Click += new System.EventHandler(this.BtnLista3_Click);
+            // 
+            // BtnLista1
+            // 
+            this.BtnLista1.AutoSize = true;
+            this.BtnLista1.BackColor = System.Drawing.Color.White;
+            this.BtnLista1.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnLista1.Location = new System.Drawing.Point(103, 199);
+            this.BtnLista1.Name = "BtnLista1";
+            this.BtnLista1.Size = new System.Drawing.Size(563, 49);
+            this.BtnLista1.TabIndex = 6;
+            this.BtnLista1.Text = "Lista de Exercicio 1";
+            this.BtnLista1.UseVisualStyleBackColor = false;
+            this.BtnLista1.Click += new System.EventHandler(this.BtnLista1_Click);
+            // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(326, 259);
+            this.ClientSize = new System.Drawing.Size(778, 628);
+            this.Controls.Add(this.BtnLista1);
+            this.Controls.Add(this.BtnLista3);
             this.Controls.Add(this.BtnSair);
             this.Controls.Add(this.LblTitulo);
-            this.Controls.Add(this.CnxEscolhaQuestao);
-            this.Controls.Add(this.BntConfirmar_Escolha_Questoes);
+            this.Controls.Add(this.BtnLista2);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormularioPrincipal";
+            this.RightToLeftLayout = true;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,10 +131,11 @@ namespace MeuPrimeiroProjetoForms
 
         #endregion
 
-        private System.Windows.Forms.Button BntConfirmar_Escolha_Questoes;
-        private System.Windows.Forms.ComboBox CnxEscolhaQuestao;
+        private System.Windows.Forms.Button BtnLista2;
         private System.Windows.Forms.Label LblTitulo;
         private System.Windows.Forms.Button BtnSair;
+        private System.Windows.Forms.Button BtnLista3;
+        private System.Windows.Forms.Button BtnLista1;
     }
 }
 

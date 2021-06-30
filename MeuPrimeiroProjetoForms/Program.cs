@@ -17,7 +17,7 @@ namespace MeuPrimeiroProjetoForms
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormularioPrincipal());
+            Application.Run(new FormPai());
         }
     }
 }
