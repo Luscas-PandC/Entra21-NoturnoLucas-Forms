@@ -1,0 +1,15 @@
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\bin\Debug\netcoreapp3.1\Forms_Projeto_CRUD.exe
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\bin\Debug\netcoreapp3.1\Forms_Projeto_CRUD.deps.json
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\bin\Debug\netcoreapp3.1\Forms_Projeto_CRUD.runtimeconfig.json
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\bin\Debug\netcoreapp3.1\Forms_Projeto_CRUD.runtimeconfig.dev.json
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\bin\Debug\netcoreapp3.1\Forms_Projeto_CRUD.dll
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\bin\Debug\netcoreapp3.1\Forms_Projeto_CRUD.pdb
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.csproj.AssemblyReference.cache
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.Form1.resources
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.csproj.GenerateResource.cache
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.AssemblyInfoInputs.cache
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.AssemblyInfo.cs
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.csproj.CoreCompileInputs.cache
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.dll
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.pdb
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.genruntimeconfig.cache

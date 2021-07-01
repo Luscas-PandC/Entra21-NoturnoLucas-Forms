@@ -24,15 +24,8 @@ namespace MeuPrimeiroProjetoForms
 
         private void BtnLista1_Click(object sender, EventArgs e)
         {
-            Exercicio_1 exercicio_1 = new Exercicio_1();
-            if (exercicio_1.Visible)
-            {
-
-            }
-            else
-            {
-                exercicio_1.Show();
-            }
+            FormPai formpai = new FormPai();
+            formpai.teste();
         }
 
         private void BtnLista2_Click(object sender, EventArgs e)
