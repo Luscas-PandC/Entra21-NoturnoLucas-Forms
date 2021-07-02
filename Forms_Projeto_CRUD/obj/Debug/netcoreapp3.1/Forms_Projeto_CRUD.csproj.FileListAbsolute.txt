@@ -13,3 +13,4 @@ C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Proje
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.dll
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.pdb
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.genruntimeconfig.cache
+C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\Forms_Projeto_CRUD\obj\Debug\netcoreapp3.1\Forms_Projeto_CRUD.Properties.Resources.resources

@@ -20,7 +20,8 @@ namespace Forms_Projeto_CRUD
         List<DateTime> lista_Data_Nascimento;
 
 
-        bool novo;
+        bool novo = true;
+        
 
         public Form1()
 
@@ -28,6 +29,7 @@ namespace Forms_Projeto_CRUD
             InitializeComponent();
             CbxMatricula.Text = "Selecione";
             CbxGenero.Text = "Selecione";
+            BtnNovo.Enabled = false;
 
             lista_Nome_Aluno = new List<string>();
             lista_Genero = new List<string>();
@@ -38,9 +40,69 @@ namespace Forms_Projeto_CRUD
             lista_CPF_2Responsavel = new List<string>();
             lista_Data_Nascimento = new List<DateTime>();
         }
+
+        private void TxtNome_Aluno_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(TxtNome_Aluno.Text))
+            {
+                MessageBox.Show("Por favor informe o nome do aluno!");
+                TxtNome_Aluno.Focus();
+            }
+        }
+        private void DtpData_Nascimento_Leave(object sender, EventArgs e)
+        {
+            if (DtpData_Nascimento.Value.Equals(DateTime.Today))
+            {
+                MessageBox.Show("Informe a data de nascimento!");
+                DtpData_Nascimento.Focus();
+            }
+        }
+        private void CbxMatricula_Leave(object sender, EventArgs e)
+        {
+            if (CbxMatricula.Text == "Selecione")
+            {
+                MessageBox.Show("Informe a matricula!");
+                CbxMatricula.Focus();
+            }
+        }
+        private void CbxGenero_Leave(object sender, EventArgs e)
+        {
+            if (CbxGenero.Text == "Selecione")
+            {
+                MessageBox.Show("Informe o genero!");
+                CbxGenero.Focus();
+            }
+        }
+        private void TxtNome_1Responsavel_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(TxtNome_1Responsavel.Text))
+            {
+                MessageBox.Show("Informe o nome do responsavel!");
+                TxtNome_1Responsavel.Focus();
+            }
+        }
+        private void MTB_CPF_1Responsavel_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(MTB_CPF_1Responsavel.Text))
+            {
+                MessageBox.Show("Informe o CPF do responsavel!");
+                MTB_CPF_1Responsavel.Focus();
+            }
+        }
+
+        private void TxtNome_Aluno_TextChanged(object sender, EventArgs e)
+        {
+            BtnSalvar.Enabled = true;
+            if(String.IsNullOrEmpty(LtbMatricula_Aluno.Text))
+            {
+                BtnDeletar.Enabled = false;
+            }
+        }
+
         private void BtnNovo_Click(object sender, EventArgs e)
         {
             novo = true;
+            BtnDeletar.Enabled = false;
             BtnSalvar.Enabled = novo;
             TxtNome_Aluno.Focus();
             TxtNome_Aluno.Text = "";
@@ -51,6 +113,8 @@ namespace Forms_Projeto_CRUD
             MTB_CPF_1Responsavel.Text = "";
             MTB_CPF_2Responsavel.Text = "";
             DtpData_Nascimento.Text = "";
+            BtnNovo.Enabled = false;
+            BtnSalvar.Enabled = false;
         }
         private void LtbMatricula_Aluno_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -80,15 +144,25 @@ namespace Forms_Projeto_CRUD
             lista_CPF_2Responsavel.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
             lista_Data_Nascimento.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
             LtbMatricula_Aluno.Items.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
+            TxtNome_Aluno.Text = "";
+            CbxMatricula.Text = "Selecione";
+            CbxGenero.Text = "Selecione";
+            TxtNome_1Responsavel.Text = "";
+            TxtNome_2Responsavel.Text = "";
+            MTB_CPF_1Responsavel.Text = "";
+            MTB_CPF_2Responsavel.Text = "";
+            DtpData_Nascimento.Text = "";
+            BtnNovo.Enabled = false;
+            BtnSalvar.Enabled = false;
+            novo = true;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            BtnNovo_Click(sender, e);
+            BtnSalvar.Enabled = false;
         }
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            Verificar();
-            if (novo)
+            if (novo && Verificar())
             {
                 lista_Nome_Aluno.Add(TxtNome_Aluno.Text);
                 lista_Matricula.Add(LtbMatricula_Aluno.Text);
@@ -99,9 +173,9 @@ namespace Forms_Projeto_CRUD
                 lista_CPF_1Responsavel.Add(MTB_CPF_1Responsavel.Text);
                 lista_Nome_2Responsavel.Add(TxtNome_2Responsavel.Text);
                 lista_CPF_2Responsavel.Add(MTB_CPF_2Responsavel.Text);
-
+                BtnNovo.Enabled = true;
             }
-            else
+            else if (novo == false && Verificar())
             {
                 lista_Nome_Aluno[LtbMatricula_Aluno.SelectedIndex] = TxtNome_Aluno.Text;
                 lista_Matricula[LtbMatricula_Aluno.SelectedIndex] = LtbMatricula_Aluno.Text;
@@ -119,18 +193,52 @@ namespace Forms_Projeto_CRUD
                 LtbMatricula_Aluno.Items.Add(nome);
             }
         }
-        private void Verificar()
+        private bool Verificar()
         {
-            string aluno = "", matricula = "";
+            bool preenchido = true;
+            string mensagem = "Por favor insira as informações a seguir:\n";
+            
+            if (LtbMatricula_Aluno.Items.IndexOf(TxtNome_Aluno.Text) > 0)
+            {
+                mensagem = "USUARIO JÁ CADASTRADO\n";
+                mensagem += "Por favor insira as informações a seguir:\n";
+                preenchido = false;
+            }
             if(TxtNome_Aluno.Text == "")
             {
-                aluno = "Nome do aluno não informado\n";
+                mensagem += "- Nome do aluno.\n";
+                preenchido = false;
             }
-            if(CbxMatricula.Text == "Selecione")
+            if (DtpData_Nascimento.Value == null)
             {
-                matricula = "Matricula não informada\n";
+                mensagem += "- Data de nascimento.\n";
+                preenchido = false;
             }
-            MessageBox.Show(aluno + matricula);
+            if (CbxMatricula.Text == "Selecione")
+            {
+                mensagem += "- Matricula.\n";
+                preenchido = false;
+            }
+            if (CbxGenero.Text == "Selecione")
+            {
+                mensagem += "- Genero.\n";
+                preenchido = false;
+            }
+            if (TxtNome_1Responsavel.Text == "")
+            {
+                mensagem += "- Nome do responsavel.\n";
+                preenchido = false;
+            }
+            if (MTB_CPF_1Responsavel.Text == "")
+            {
+                mensagem += "- CPF do responsavel.\n";
+                preenchido = false;
+            }
+            if (preenchido == false)
+            {
+                MessageBox.Show(mensagem);
+            }
+            return preenchido;
         }
     }
 }
