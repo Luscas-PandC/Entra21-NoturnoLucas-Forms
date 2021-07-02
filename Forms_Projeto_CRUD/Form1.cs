@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Forms_Projeto_CRUD.NovaPasta1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,36 +13,29 @@ namespace Forms_Projeto_CRUD
 {
     public partial class Form1 : Form
     {
-        List<string> lista_Nome_Aluno, lista_Genero, lista_Matricula,
-                     lista_Nome_1Responsavel, lista_Nome_2Responsavel,
-                     lista_CPF_1Responsavel, lista_CPF_2Responsavel;
+        List<ClassOO> AlunosMatriculados;
 
-
-        List<DateTime> lista_Data_Nascimento;
-
-
-        bool novo;
-
+        bool novo = true;
+        
         public Form1()
-
         {
+            AlunosMatriculados = new List<ClassOO>();
+            
             InitializeComponent();
             CbxMatricula.Text = "Selecione";
             CbxGenero.Text = "Selecione";
-
-            lista_Nome_Aluno = new List<string>();
-            lista_Genero = new List<string>();
-            lista_Matricula = new List<string>();
-            lista_Nome_1Responsavel = new List<string>();
-            lista_Nome_2Responsavel = new List<string>();
-            lista_CPF_1Responsavel = new List<string>();
-            lista_CPF_2Responsavel = new List<string>();
-            lista_Data_Nascimento = new List<DateTime>();
+            BtnNovo.Enabled = false;
         }
+
+        private void TxtNome_Aluno_TextChanged(object sender, EventArgs e)
+        {
+            BtnSalvar.Enabled = true;          
+        }
+
         private void BtnNovo_Click(object sender, EventArgs e)
         {
             novo = true;
-            BtnSalvar.Enabled = novo;
+            BtnDeletar.Enabled = false;
             TxtNome_Aluno.Focus();
             TxtNome_Aluno.Text = "";
             CbxMatricula.Text = "Selecione";
@@ -51,86 +45,134 @@ namespace Forms_Projeto_CRUD
             MTB_CPF_1Responsavel.Text = "";
             MTB_CPF_2Responsavel.Text = "";
             DtpData_Nascimento.Text = "";
+            BtnNovo.Enabled = false;
+            BtnSalvar.Enabled = false;
         }
         private void LtbMatricula_Aluno_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (LtbMatricula_Aluno.SelectedIndex >= 0)
             {
-                TxtNome_Aluno.Text = lista_Nome_Aluno[LtbMatricula_Aluno.SelectedIndex];
-                CbxMatricula.Text = lista_Matricula[LtbMatricula_Aluno.SelectedIndex];
-                CbxGenero.Text = lista_Genero[LtbMatricula_Aluno.SelectedIndex];
-                TxtNome_1Responsavel.Text = lista_Nome_1Responsavel[LtbMatricula_Aluno.SelectedIndex];
-                TxtNome_2Responsavel.Text = lista_Nome_2Responsavel[LtbMatricula_Aluno.SelectedIndex];
-                MTB_CPF_1Responsavel.Text = lista_CPF_1Responsavel[LtbMatricula_Aluno.SelectedIndex];
-                MTB_CPF_2Responsavel.Text = lista_CPF_2Responsavel[LtbMatricula_Aluno.SelectedIndex];
-                DtpData_Nascimento.Value = lista_Data_Nascimento[LtbMatricula_Aluno.SelectedIndex];
+                TxtNome_Aluno.Text = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].Nome;
+                DtpData_Nascimento.Value = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].DataNascimento;
+                CbxMatricula.Text = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].Matricula;
+                CbxGenero.Text = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].Genero;
+                TxtNome_1Responsavel.Text = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].NomeResp1;
+                TxtNome_2Responsavel.Text = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].NomeResp2;
+                MTB_CPF_1Responsavel.Text = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].CpfResp1;
+                MTB_CPF_2Responsavel.Text = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].CpfResp2;
                 novo = false;
                 BtnSalvar.Enabled = true;
                 BtnDeletar.Enabled = true;
             }
         }
         private void BtnDeletar_Click(object sender, EventArgs e)
-        { 
-            lista_Nome_Aluno.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
-            lista_Matricula.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
-            lista_Genero.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
-            lista_Nome_1Responsavel.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
-            lista_Nome_2Responsavel.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
-            lista_CPF_1Responsavel.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
-            lista_CPF_2Responsavel.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
-            lista_Data_Nascimento.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
-            LtbMatricula_Aluno.Items.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
+        {
+            if (LtbMatricula_Aluno.SelectedIndex >= 0)
+            {
+                AlunosMatriculados.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
+                LtbMatricula_Aluno.Items.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
+
+                TxtNome_Aluno.Text = "";
+                CbxMatricula.Text = "Selecione";
+                CbxGenero.Text = "Selecione";
+                TxtNome_1Responsavel.Text = "";
+                TxtNome_2Responsavel.Text = "";
+                MTB_CPF_1Responsavel.Text = "";
+                MTB_CPF_2Responsavel.Text = "";
+                DtpData_Nascimento.Text = "";
+                BtnNovo.Enabled = false;
+                BtnSalvar.Enabled = false;
+                novo = true;
+            }
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            BtnNovo_Click(sender, e);
+            BtnSalvar.Enabled = false;
         }
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            Verificar();
-            if (novo)
+            if (novo && Verificar())
             {
-                lista_Nome_Aluno.Add(TxtNome_Aluno.Text);
-                lista_Matricula.Add(LtbMatricula_Aluno.Text);
-                lista_Genero.Add(CbxGenero.Text);
-                lista_Data_Nascimento.Add(DtpData_Nascimento.Value);
-                lista_Nome_1Responsavel.Add(TxtNome_1Responsavel.Text);
-                lista_Nome_2Responsavel.Add(TxtNome_2Responsavel.Text);
-                lista_CPF_1Responsavel.Add(MTB_CPF_1Responsavel.Text);
-                lista_Nome_2Responsavel.Add(TxtNome_2Responsavel.Text);
-                lista_CPF_2Responsavel.Add(MTB_CPF_2Responsavel.Text);
-
+                ClassOO clase = new ClassOO
+                {
+                    Nome = TxtNome_Aluno.Text,
+                    DataNascimento = DtpData_Nascimento.Value,
+                    Matricula = CbxMatricula.Text,
+                    Genero = CbxGenero.Text,
+                    NomeResp1 = TxtNome_1Responsavel.Text,
+                    NomeResp2 = TxtNome_2Responsavel.Text,
+                    CpfResp1 = MTB_CPF_1Responsavel.Text,
+                    CpfResp2 = MTB_CPF_2Responsavel.Text
+                };
+                AlunosMatriculados.Add(clase);
+                LtbMatricula_Aluno.Items.Add(clase);
+                BtnNovo.Enabled = true;
             }
-            else
+            else if (novo == false || Verificar() == false)
             {
-                lista_Nome_Aluno[LtbMatricula_Aluno.SelectedIndex] = TxtNome_Aluno.Text;
-                lista_Matricula[LtbMatricula_Aluno.SelectedIndex] = LtbMatricula_Aluno.Text;
-                lista_Genero[LtbMatricula_Aluno.SelectedIndex] = CbxGenero.Text;
-                lista_Data_Nascimento[LtbMatricula_Aluno.SelectedIndex] = DtpData_Nascimento.Value;
-                lista_Nome_1Responsavel[LtbMatricula_Aluno.SelectedIndex] = TxtNome_1Responsavel.Text;
-                lista_Nome_2Responsavel[LtbMatricula_Aluno.SelectedIndex] = TxtNome_2Responsavel.Text;
-                lista_CPF_1Responsavel[LtbMatricula_Aluno.SelectedIndex] = MTB_CPF_1Responsavel.Text;
-                lista_CPF_2Responsavel[LtbMatricula_Aluno.SelectedIndex] = MTB_CPF_2Responsavel.Text;
+                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].Nome = TxtNome_Aluno.Text;
+                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].DataNascimento = DtpData_Nascimento.Value;
+                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].Matricula = CbxMatricula.Text;
+                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].Genero = CbxGenero.Text;
+                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].NomeResp1 = TxtNome_1Responsavel.Text;
+                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].CpfResp1 = MTB_CPF_1Responsavel.Text;
+                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].NomeResp2 = TxtNome_2Responsavel.Text;
+                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].CpfResp2 = MTB_CPF_2Responsavel.Text;
             }
 
             LtbMatricula_Aluno.Items.Clear();
-            foreach (var nome in lista_Nome_Aluno)
+            foreach (var contato in AlunosMatriculados)
             {
-                LtbMatricula_Aluno.Items.Add(nome);
+                LtbMatricula_Aluno.Items.Add(contato);
             }
         }
-        private void Verificar()
+        private bool Verificar()
         {
-            string aluno = "", matricula = "";
+            bool preenchido = true;
+            string mensagem = "Por favor insira as informações a seguir:\n";
+            
+            if (LtbMatricula_Aluno.Items.IndexOf(TxtNome_Aluno.Text) >= 0)
+            {
+                mensagem = "USUARIO JÁ CADASTRADO\n";
+                mensagem += "Por favor insira as informações a seguir:\n";
+                mensagem += "- Novo aluno aluno.\n";
+                preenchido = false;
+            }
             if(TxtNome_Aluno.Text == "")
             {
-                aluno = "Nome do aluno não informado\n";
+                mensagem += "- Nome do aluno.\n";
+                preenchido = false;
             }
-            if(CbxMatricula.Text == "Selecione")
+            if (DtpData_Nascimento.Value == DateTime.Today)
             {
-                matricula = "Matricula não informada\n";
+                mensagem += "- Data de nascimento.\n";
+                preenchido = false;
             }
-            MessageBox.Show(aluno + matricula);
+            if (CbxMatricula.Text == "Selecione")
+            {
+                mensagem += "- Matricula.\n";
+                preenchido = false;
+            }
+            if (CbxGenero.Text == "Selecione")
+            {
+                mensagem += "- Genero.\n";
+                preenchido = false;
+            }
+            if (TxtNome_1Responsavel.Text == "")
+            {
+                mensagem += "- Nome do responsavel.\n";
+                preenchido = false;
+            }
+            if (MTB_CPF_1Responsavel.ToString() == "")
+            {
+                mensagem += "- CPF do responsavel.\n";
+                preenchido = false;
+            }
+            if (preenchido == false)
+            {
+                MessageBox.Show(mensagem);
+            }
+            return preenchido;
         }
     }
 }

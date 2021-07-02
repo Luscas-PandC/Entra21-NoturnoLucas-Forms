@@ -29,6 +29,7 @@ namespace Forms_Projeto_CRUD
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.LblAluno = new System.Windows.Forms.Label();
             this.TxtNome_Aluno = new System.Windows.Forms.TextBox();
@@ -53,202 +54,154 @@ namespace Forms_Projeto_CRUD
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Enabled = false;
-            this.BtnSalvar.Location = new System.Drawing.Point(408, 361);
+            resources.ApplyResources(this.BtnSalvar, "BtnSalvar");
             this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.BtnSalvar.TabIndex = 0;
-            this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // LblAluno
             // 
-            this.LblAluno.AutoSize = true;
-            this.LblAluno.Location = new System.Drawing.Point(12, 25);
+            resources.ApplyResources(this.LblAluno, "LblAluno");
+            this.LblAluno.BackColor = System.Drawing.Color.Transparent;
+            this.LblAluno.ForeColor = System.Drawing.Color.White;
             this.LblAluno.Name = "LblAluno";
-            this.LblAluno.Size = new System.Drawing.Size(95, 15);
-            this.LblAluno.TabIndex = 1;
-            this.LblAluno.Text = "Nome do Aluno:";
             // 
             // TxtNome_Aluno
             // 
-            this.TxtNome_Aluno.Location = new System.Drawing.Point(12, 43);
+            resources.ApplyResources(this.TxtNome_Aluno, "TxtNome_Aluno");
             this.TxtNome_Aluno.Name = "TxtNome_Aluno";
-            this.TxtNome_Aluno.Size = new System.Drawing.Size(275, 23);
-            this.TxtNome_Aluno.TabIndex = 2;
+            this.TxtNome_Aluno.TextChanged += new System.EventHandler(this.TxtNome_Aluno_TextChanged);
             // 
             // LtbMatricula_Aluno
             // 
+            resources.ApplyResources(this.LtbMatricula_Aluno, "LtbMatricula_Aluno");
             this.LtbMatricula_Aluno.FormattingEnabled = true;
-            this.LtbMatricula_Aluno.ItemHeight = 15;
-            this.LtbMatricula_Aluno.Location = new System.Drawing.Point(327, 25);
             this.LtbMatricula_Aluno.Name = "LtbMatricula_Aluno";
-            this.LtbMatricula_Aluno.Size = new System.Drawing.Size(237, 319);
-            this.LtbMatricula_Aluno.TabIndex = 3;
             this.LtbMatricula_Aluno.SelectedIndexChanged += new System.EventHandler(this.LtbMatricula_Aluno_SelectedIndexChanged);
             // 
             // DtpData_Nascimento
             // 
-            this.DtpData_Nascimento.Location = new System.Drawing.Point(12, 112);
+            resources.ApplyResources(this.DtpData_Nascimento, "DtpData_Nascimento");
             this.DtpData_Nascimento.Name = "DtpData_Nascimento";
-            this.DtpData_Nascimento.Size = new System.Drawing.Size(275, 23);
-            this.DtpData_Nascimento.TabIndex = 4;
             // 
             // MTB_CPF_1Responsavel
             // 
-            this.MTB_CPF_1Responsavel.Location = new System.Drawing.Point(208, 250);
-            this.MTB_CPF_1Responsavel.Mask = "000,000,00-00";
+            resources.ApplyResources(this.MTB_CPF_1Responsavel, "MTB_CPF_1Responsavel");
             this.MTB_CPF_1Responsavel.Name = "MTB_CPF_1Responsavel";
-            this.MTB_CPF_1Responsavel.Size = new System.Drawing.Size(79, 23);
-            this.MTB_CPF_1Responsavel.TabIndex = 5;
             // 
             // lblData_Nascimento
             // 
-            this.lblData_Nascimento.AutoSize = true;
-            this.lblData_Nascimento.Location = new System.Drawing.Point(12, 84);
+            resources.ApplyResources(this.lblData_Nascimento, "lblData_Nascimento");
+            this.lblData_Nascimento.BackColor = System.Drawing.Color.Transparent;
+            this.lblData_Nascimento.ForeColor = System.Drawing.Color.White;
             this.lblData_Nascimento.Name = "lblData_Nascimento";
-            this.lblData_Nascimento.Size = new System.Drawing.Size(115, 15);
-            this.lblData_Nascimento.TabIndex = 6;
-            this.lblData_Nascimento.Text = "Data de nascimento:";
             // 
             // LblMatricula
             // 
-            this.LblMatricula.AutoSize = true;
-            this.LblMatricula.Location = new System.Drawing.Point(12, 161);
+            resources.ApplyResources(this.LblMatricula, "LblMatricula");
+            this.LblMatricula.BackColor = System.Drawing.Color.Transparent;
+            this.LblMatricula.ForeColor = System.Drawing.Color.White;
             this.LblMatricula.Name = "LblMatricula";
-            this.LblMatricula.Size = new System.Drawing.Size(60, 15);
-            this.LblMatricula.TabIndex = 7;
-            this.LblMatricula.Text = "Matrícula:";
             // 
             // CbxMatricula
             // 
             this.CbxMatricula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.CbxMatricula, "CbxMatricula");
             this.CbxMatricula.FormattingEnabled = true;
             this.CbxMatricula.Items.AddRange(new object[] {
-            "Selecione",
-            "1°Ano",
-            "2°Ano",
-            "3°Ano",
-            "4°Ano",
-            "5°Ano",
-            "6°Ano",
-            "7°Ano",
-            "8°Ano",
-            "9°Ano"});
-            this.CbxMatricula.Location = new System.Drawing.Point(12, 179);
+            resources.GetString("CbxMatricula.Items"),
+            resources.GetString("CbxMatricula.Items1"),
+            resources.GetString("CbxMatricula.Items2"),
+            resources.GetString("CbxMatricula.Items3"),
+            resources.GetString("CbxMatricula.Items4"),
+            resources.GetString("CbxMatricula.Items5"),
+            resources.GetString("CbxMatricula.Items6"),
+            resources.GetString("CbxMatricula.Items7"),
+            resources.GetString("CbxMatricula.Items8"),
+            resources.GetString("CbxMatricula.Items9")});
             this.CbxMatricula.Name = "CbxMatricula";
-            this.CbxMatricula.Size = new System.Drawing.Size(131, 23);
-            this.CbxMatricula.TabIndex = 8;
             // 
             // LblSexo
             // 
-            this.LblSexo.AutoSize = true;
-            this.LblSexo.Location = new System.Drawing.Point(156, 161);
+            resources.ApplyResources(this.LblSexo, "LblSexo");
+            this.LblSexo.BackColor = System.Drawing.Color.Transparent;
+            this.LblSexo.ForeColor = System.Drawing.Color.White;
             this.LblSexo.Name = "LblSexo";
-            this.LblSexo.Size = new System.Drawing.Size(48, 15);
-            this.LblSexo.TabIndex = 9;
-            this.LblSexo.Text = "Genero:";
             // 
             // CbxGenero
             // 
             this.CbxGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.CbxGenero, "CbxGenero");
             this.CbxGenero.FormattingEnabled = true;
             this.CbxGenero.Items.AddRange(new object[] {
-            "Selecione",
-            "Masculino",
-            "Femenino",
-            "Outro"});
-            this.CbxGenero.Location = new System.Drawing.Point(156, 179);
+            resources.GetString("CbxGenero.Items"),
+            resources.GetString("CbxGenero.Items1"),
+            resources.GetString("CbxGenero.Items2"),
+            resources.GetString("CbxGenero.Items3")});
             this.CbxGenero.Name = "CbxGenero";
-            this.CbxGenero.Size = new System.Drawing.Size(131, 23);
-            this.CbxGenero.TabIndex = 10;
             // 
             // LblNome_1Responsavel
             // 
-            this.LblNome_1Responsavel.AutoSize = true;
-            this.LblNome_1Responsavel.Location = new System.Drawing.Point(12, 232);
+            resources.ApplyResources(this.LblNome_1Responsavel, "LblNome_1Responsavel");
+            this.LblNome_1Responsavel.BackColor = System.Drawing.Color.Transparent;
+            this.LblNome_1Responsavel.ForeColor = System.Drawing.Color.White;
             this.LblNome_1Responsavel.Name = "LblNome_1Responsavel";
-            this.LblNome_1Responsavel.Size = new System.Drawing.Size(173, 15);
-            this.LblNome_1Responsavel.TabIndex = 11;
-            this.LblNome_1Responsavel.Text = "Nome do primeiro responsavel:";
             // 
             // TxtNome_1Responsavel
             // 
-            this.TxtNome_1Responsavel.Location = new System.Drawing.Point(12, 250);
+            resources.ApplyResources(this.TxtNome_1Responsavel, "TxtNome_1Responsavel");
             this.TxtNome_1Responsavel.Name = "TxtNome_1Responsavel";
-            this.TxtNome_1Responsavel.Size = new System.Drawing.Size(173, 23);
-            this.TxtNome_1Responsavel.TabIndex = 12;
             // 
             // LblCPF_1Responsavel
             // 
-            this.LblCPF_1Responsavel.AutoSize = true;
-            this.LblCPF_1Responsavel.Location = new System.Drawing.Point(208, 232);
+            resources.ApplyResources(this.LblCPF_1Responsavel, "LblCPF_1Responsavel");
+            this.LblCPF_1Responsavel.BackColor = System.Drawing.Color.Transparent;
+            this.LblCPF_1Responsavel.ForeColor = System.Drawing.Color.White;
             this.LblCPF_1Responsavel.Name = "LblCPF_1Responsavel";
-            this.LblCPF_1Responsavel.Size = new System.Drawing.Size(31, 15);
-            this.LblCPF_1Responsavel.TabIndex = 13;
-            this.LblCPF_1Responsavel.Text = "CPF:";
             // 
             // LblCPF_2Responsavel
             // 
-            this.LblCPF_2Responsavel.AutoSize = true;
-            this.LblCPF_2Responsavel.Location = new System.Drawing.Point(208, 296);
+            resources.ApplyResources(this.LblCPF_2Responsavel, "LblCPF_2Responsavel");
+            this.LblCPF_2Responsavel.BackColor = System.Drawing.Color.Transparent;
+            this.LblCPF_2Responsavel.ForeColor = System.Drawing.Color.White;
             this.LblCPF_2Responsavel.Name = "LblCPF_2Responsavel";
-            this.LblCPF_2Responsavel.Size = new System.Drawing.Size(31, 15);
-            this.LblCPF_2Responsavel.TabIndex = 17;
-            this.LblCPF_2Responsavel.Text = "CPF:";
             // 
             // TxtNome_2Responsavel
             // 
-            this.TxtNome_2Responsavel.Location = new System.Drawing.Point(12, 314);
+            resources.ApplyResources(this.TxtNome_2Responsavel, "TxtNome_2Responsavel");
             this.TxtNome_2Responsavel.Name = "TxtNome_2Responsavel";
-            this.TxtNome_2Responsavel.Size = new System.Drawing.Size(173, 23);
-            this.TxtNome_2Responsavel.TabIndex = 16;
             // 
             // LblNome_2Responsavel
             // 
-            this.LblNome_2Responsavel.AutoSize = true;
-            this.LblNome_2Responsavel.Location = new System.Drawing.Point(12, 296);
+            resources.ApplyResources(this.LblNome_2Responsavel, "LblNome_2Responsavel");
+            this.LblNome_2Responsavel.BackColor = System.Drawing.Color.Transparent;
+            this.LblNome_2Responsavel.ForeColor = System.Drawing.Color.White;
             this.LblNome_2Responsavel.Name = "LblNome_2Responsavel";
-            this.LblNome_2Responsavel.Size = new System.Drawing.Size(174, 15);
-            this.LblNome_2Responsavel.TabIndex = 15;
-            this.LblNome_2Responsavel.Text = "Nome do segundo responsavel:";
             // 
             // MTB_CPF_2Responsavel
             // 
-            this.MTB_CPF_2Responsavel.Location = new System.Drawing.Point(208, 314);
-            this.MTB_CPF_2Responsavel.Mask = "000,000,000-00";
+            resources.ApplyResources(this.MTB_CPF_2Responsavel, "MTB_CPF_2Responsavel");
             this.MTB_CPF_2Responsavel.Name = "MTB_CPF_2Responsavel";
-            this.MTB_CPF_2Responsavel.Size = new System.Drawing.Size(79, 23);
-            this.MTB_CPF_2Responsavel.TabIndex = 14;
             // 
             // BtnDeletar
             // 
-            this.BtnDeletar.Enabled = false;
-            this.BtnDeletar.Location = new System.Drawing.Point(489, 361);
+            resources.ApplyResources(this.BtnDeletar, "BtnDeletar");
             this.BtnDeletar.Name = "BtnDeletar";
-            this.BtnDeletar.Size = new System.Drawing.Size(75, 23);
-            this.BtnDeletar.TabIndex = 18;
-            this.BtnDeletar.Text = "Deletar";
             this.BtnDeletar.UseVisualStyleBackColor = true;
             this.BtnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
             // 
             // BtnNovo
             // 
-            this.BtnNovo.Location = new System.Drawing.Point(327, 361);
+            resources.ApplyResources(this.BtnNovo, "BtnNovo");
             this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(75, 23);
-            this.BtnNovo.TabIndex = 19;
-            this.BtnNovo.Text = "Novo";
             this.BtnNovo.UseVisualStyleBackColor = true;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(583, 399);
             this.Controls.Add(this.BtnNovo);
             this.Controls.Add(this.BtnDeletar);
             this.Controls.Add(this.LblCPF_2Responsavel);
@@ -269,8 +222,10 @@ namespace Forms_Projeto_CRUD
             this.Controls.Add(this.TxtNome_Aluno);
             this.Controls.Add(this.LblAluno);
             this.Controls.Add(this.BtnSalvar);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
