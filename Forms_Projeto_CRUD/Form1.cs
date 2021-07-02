@@ -18,6 +18,8 @@ namespace Forms_Projeto_CRUD
 
 
         List<DateTime> lista_Data_Nascimento;
+
+
         bool novo;
 
         public Form1()
@@ -67,9 +69,8 @@ namespace Forms_Projeto_CRUD
                 BtnDeletar.Enabled = true;
             }
         }
-
         private void BtnDeletar_Click(object sender, EventArgs e)
-        {
+        { 
             lista_Nome_Aluno.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
             lista_Matricula.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
             lista_Genero.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
@@ -78,10 +79,58 @@ namespace Forms_Projeto_CRUD
             lista_CPF_1Responsavel.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
             lista_CPF_2Responsavel.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
             lista_Data_Nascimento.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
+            LtbMatricula_Aluno.Items.RemoveAt(LtbMatricula_Aluno.SelectedIndex);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             BtnNovo_Click(sender, e);
+        }
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+            Verificar();
+            if (novo)
+            {
+                lista_Nome_Aluno.Add(TxtNome_Aluno.Text);
+                lista_Matricula.Add(LtbMatricula_Aluno.Text);
+                lista_Genero.Add(CbxGenero.Text);
+                lista_Data_Nascimento.Add(DtpData_Nascimento.Value);
+                lista_Nome_1Responsavel.Add(TxtNome_1Responsavel.Text);
+                lista_Nome_2Responsavel.Add(TxtNome_2Responsavel.Text);
+                lista_CPF_1Responsavel.Add(MTB_CPF_1Responsavel.Text);
+                lista_Nome_2Responsavel.Add(TxtNome_2Responsavel.Text);
+                lista_CPF_2Responsavel.Add(MTB_CPF_2Responsavel.Text);
+
+            }
+            else
+            {
+                lista_Nome_Aluno[LtbMatricula_Aluno.SelectedIndex] = TxtNome_Aluno.Text;
+                lista_Matricula[LtbMatricula_Aluno.SelectedIndex] = LtbMatricula_Aluno.Text;
+                lista_Genero[LtbMatricula_Aluno.SelectedIndex] = CbxGenero.Text;
+                lista_Data_Nascimento[LtbMatricula_Aluno.SelectedIndex] = DtpData_Nascimento.Value;
+                lista_Nome_1Responsavel[LtbMatricula_Aluno.SelectedIndex] = TxtNome_1Responsavel.Text;
+                lista_Nome_2Responsavel[LtbMatricula_Aluno.SelectedIndex] = TxtNome_2Responsavel.Text;
+                lista_CPF_1Responsavel[LtbMatricula_Aluno.SelectedIndex] = MTB_CPF_1Responsavel.Text;
+                lista_CPF_2Responsavel[LtbMatricula_Aluno.SelectedIndex] = MTB_CPF_2Responsavel.Text;
+            }
+
+            LtbMatricula_Aluno.Items.Clear();
+            foreach (var nome in lista_Nome_Aluno)
+            {
+                LtbMatricula_Aluno.Items.Add(nome);
+            }
+        }
+        private void Verificar()
+        {
+            string aluno = "", matricula = "";
+            if(TxtNome_Aluno.Text == "")
+            {
+                aluno = "Nome do aluno não informado\n";
+            }
+            if(CbxMatricula.Text == "Selecione")
+            {
+                matricula = "Matricula não informada\n";
+            }
+            MessageBox.Show(aluno + matricula);
         }
     }
 }
