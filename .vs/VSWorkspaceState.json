@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Forms_Projeto_CRUD",
+    "\\Forms_Projeto_CRUD\\Class",
     "\\MeuPrimeiroProjetoForms"
   ],
-  "SelectedNode": "\\MeuPrimeiroProjetoForms\\Exercicio 3.cs",
+  "SelectedNode": "\\Forms_Projeto_CRUD\\Class\\ClassOO.cs",
   "PreviewInSolutionExplorer": false
 }
