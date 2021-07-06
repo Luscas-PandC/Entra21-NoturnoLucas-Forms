@@ -64,8 +64,9 @@ namespace Forms_Projeto_CRUD
             // 
             resources.ApplyResources(this.LblAluno, "LblAluno");
             this.LblAluno.BackColor = System.Drawing.Color.Transparent;
-            this.LblAluno.ForeColor = System.Drawing.Color.White;
+            this.LblAluno.ForeColor = System.Drawing.Color.Black;
             this.LblAluno.Name = "LblAluno";
+            this.LblAluno.Click += new System.EventHandler(this.LblAluno_Click);
             // 
             // TxtNome_Aluno
             // 
@@ -84,7 +85,10 @@ namespace Forms_Projeto_CRUD
             // 
             resources.ApplyResources(this.DtpData_Nascimento, "DtpData_Nascimento");
             this.DtpData_Nascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpData_Nascimento.MaxDate = new System.DateTime(2015, 12, 30, 0, 0, 0, 0);
+            this.DtpData_Nascimento.MinDate = new System.DateTime(2004, 1, 1, 0, 0, 0, 0);
             this.DtpData_Nascimento.Name = "DtpData_Nascimento";
+            this.DtpData_Nascimento.Value = new System.DateTime(2015, 12, 30, 0, 0, 0, 0);
             // 
             // MTB_CPF_1Responsavel
             // 
@@ -95,15 +99,17 @@ namespace Forms_Projeto_CRUD
             // 
             resources.ApplyResources(this.lblData_Nascimento, "lblData_Nascimento");
             this.lblData_Nascimento.BackColor = System.Drawing.Color.Transparent;
-            this.lblData_Nascimento.ForeColor = System.Drawing.Color.White;
+            this.lblData_Nascimento.ForeColor = System.Drawing.Color.Black;
             this.lblData_Nascimento.Name = "lblData_Nascimento";
+            this.lblData_Nascimento.Click += new System.EventHandler(this.lblData_Nascimento_Click);
             // 
             // LblMatricula
             // 
             resources.ApplyResources(this.LblMatricula, "LblMatricula");
             this.LblMatricula.BackColor = System.Drawing.Color.Transparent;
-            this.LblMatricula.ForeColor = System.Drawing.Color.White;
+            this.LblMatricula.ForeColor = System.Drawing.Color.Black;
             this.LblMatricula.Name = "LblMatricula";
+            this.LblMatricula.Click += new System.EventHandler(this.LblMatricula_Click);
             // 
             // CbxMatricula
             // 
@@ -127,8 +133,9 @@ namespace Forms_Projeto_CRUD
             // 
             resources.ApplyResources(this.LblSexo, "LblSexo");
             this.LblSexo.BackColor = System.Drawing.Color.Transparent;
-            this.LblSexo.ForeColor = System.Drawing.Color.White;
+            this.LblSexo.ForeColor = System.Drawing.Color.Black;
             this.LblSexo.Name = "LblSexo";
+            this.LblSexo.Click += new System.EventHandler(this.LblSexo_Click);
             // 
             // CbxGenero
             // 
@@ -146,8 +153,9 @@ namespace Forms_Projeto_CRUD
             // 
             resources.ApplyResources(this.LblNome_1Responsavel, "LblNome_1Responsavel");
             this.LblNome_1Responsavel.BackColor = System.Drawing.Color.Transparent;
-            this.LblNome_1Responsavel.ForeColor = System.Drawing.Color.White;
+            this.LblNome_1Responsavel.ForeColor = System.Drawing.Color.Black;
             this.LblNome_1Responsavel.Name = "LblNome_1Responsavel";
+            this.LblNome_1Responsavel.Click += new System.EventHandler(this.LblNome_1Responsavel_Click);
             // 
             // TxtNome_1Responsavel
             // 
@@ -158,15 +166,17 @@ namespace Forms_Projeto_CRUD
             // 
             resources.ApplyResources(this.LblCPF_1Responsavel, "LblCPF_1Responsavel");
             this.LblCPF_1Responsavel.BackColor = System.Drawing.Color.Transparent;
-            this.LblCPF_1Responsavel.ForeColor = System.Drawing.Color.White;
+            this.LblCPF_1Responsavel.ForeColor = System.Drawing.Color.Black;
             this.LblCPF_1Responsavel.Name = "LblCPF_1Responsavel";
+            this.LblCPF_1Responsavel.Click += new System.EventHandler(this.LblCPF_1Responsavel_Click);
             // 
             // LblCPF_2Responsavel
             // 
             resources.ApplyResources(this.LblCPF_2Responsavel, "LblCPF_2Responsavel");
             this.LblCPF_2Responsavel.BackColor = System.Drawing.Color.Transparent;
-            this.LblCPF_2Responsavel.ForeColor = System.Drawing.Color.White;
+            this.LblCPF_2Responsavel.ForeColor = System.Drawing.Color.Black;
             this.LblCPF_2Responsavel.Name = "LblCPF_2Responsavel";
+            this.LblCPF_2Responsavel.Click += new System.EventHandler(this.LblCPF_2Responsavel_Click);
             // 
             // TxtNome_2Responsavel
             // 
@@ -177,8 +187,9 @@ namespace Forms_Projeto_CRUD
             // 
             resources.ApplyResources(this.LblNome_2Responsavel, "LblNome_2Responsavel");
             this.LblNome_2Responsavel.BackColor = System.Drawing.Color.Transparent;
-            this.LblNome_2Responsavel.ForeColor = System.Drawing.Color.White;
+            this.LblNome_2Responsavel.ForeColor = System.Drawing.Color.Black;
             this.LblNome_2Responsavel.Name = "LblNome_2Responsavel";
+            this.LblNome_2Responsavel.Click += new System.EventHandler(this.LblNome_2Responsavel_Click);
             // 
             // MTB_CPF_2Responsavel
             // 
@@ -203,8 +214,9 @@ namespace Forms_Projeto_CRUD
             // 
             resources.ApplyResources(this.LblTitulo, "LblTitulo");
             this.LblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.LblTitulo.ForeColor = System.Drawing.Color.White;
+            this.LblTitulo.ForeColor = System.Drawing.Color.Black;
             this.LblTitulo.Name = "LblTitulo";
+            this.LblTitulo.Click += new System.EventHandler(this.LblTitulo_Click);
             // 
             // Form1
             // 
@@ -233,7 +245,8 @@ namespace Forms_Projeto_CRUD
             this.Controls.Add(this.LblAluno);
             this.Controls.Add(this.BtnSalvar);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

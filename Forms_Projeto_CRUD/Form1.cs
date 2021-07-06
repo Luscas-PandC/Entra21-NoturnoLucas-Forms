@@ -108,6 +108,8 @@ namespace Forms_Projeto_CRUD
                 AlunosMatriculados.Add(clase);
                 LtbMatricula_Aluno.Items.Add(clase);
                 BtnNovo.Enabled = true;
+                BtnNovo_Click(sender, e);
+
             }
             else if (novo == false || verificando)
             {
@@ -119,6 +121,8 @@ namespace Forms_Projeto_CRUD
                 AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].CpfResp1 = MTB_CPF_1Responsavel.Text;
                 AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].NomeResp2 = TxtNome_2Responsavel.Text;
                 AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].CpfResp2 = MTB_CPF_2Responsavel.Text;
+                BtnNovo_Click(sender, e);
+
             }
 
             LtbMatricula_Aluno.Items.Clear();
@@ -131,20 +135,23 @@ namespace Forms_Projeto_CRUD
         {
             bool preenchido = true;
             string mensagem = "Por favor insira as informações a seguir:\n";
-            
-            if (LtbMatricula_Aluno.Items.IndexOf(TxtNome_Aluno.Text) >= 0)
+
+            foreach (var contato in AlunosMatriculados)
             {
-                mensagem = "USUARIO JÁ CADASTRADO\n";
-                mensagem += "Por favor insira as informações a seguir:\n";
-                mensagem += "- Novo aluno aluno.\n";
-                preenchido = false;
+                if (contato.Nome == TxtNome_Aluno.Text && novo == true)
+                {
+                    mensagem = "USUARIO JÁ CADASTRADO\n";
+                    mensagem += "Por favor insira as informações a seguir:\n";
+                    mensagem += "- Novo aluno aluno.\n";
+                    preenchido = false;
+                }
             }
             if(TxtNome_Aluno.Text == "")
             {
                 mensagem += "- Nome do aluno.\n";
                 preenchido = false;
             }
-            if (DtpData_Nascimento.Value == DateTime.Today)
+            if (DtpData_Nascimento.Text == "12/30/2015")
             {
                 mensagem += "- Data de nascimento.\n";
                 preenchido = false;
@@ -169,7 +176,7 @@ namespace Forms_Projeto_CRUD
             int contador = 0;
             for (int i = 0; i < cpf.Length; i++)
             {
-                if(cpf[i] != ' ' && contador < 1)
+                if(cpf[i] == ' ' && contador < 1)
                 {
                     mensagem += "- CPF do primeiro responsavel.\n";
                     preenchido = false;
@@ -181,6 +188,51 @@ namespace Forms_Projeto_CRUD
                 MessageBox.Show(mensagem);
             }
             return preenchido;
+        }
+
+        private void LblNome_2Responsavel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblCPF_1Responsavel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblNome_1Responsavel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblSexo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblMatricula_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblData_Nascimento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblAluno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblCPF_2Responsavel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblTitulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
