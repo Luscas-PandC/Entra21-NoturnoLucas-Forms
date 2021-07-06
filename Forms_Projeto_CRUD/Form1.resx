@@ -66,7 +66,7 @@
     <value>Palatino Linotype, 14.25pt, style=Bold</value>
   </data>
   <data name="BtnSalvar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>603, 464</value>
+    <value>637, 430</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BtnSalvar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -91,7 +91,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnSalvar.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="LblAluno.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -100,7 +100,7 @@
     <value>Palatino Linotype, 15.75pt, style=Bold, Underline</value>
   </data>
   <data name="LblAluno.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 33</value>
+    <value>16, 107</value>
   </data>
   <data name="LblAluno.Size" type="System.Drawing.Size, System.Drawing">
     <value>174, 28</value>
@@ -121,19 +121,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LblAluno.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="TxtNome_Aluno.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 14.25pt, style=Bold</value>
   </data>
   <data name="TxtNome_Aluno.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 64</value>
+    <value>16, 138</value>
   </data>
   <data name="TxtNome_Aluno.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="TxtNome_Aluno.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 33</value>
+    <value>237, 33</value>
   </data>
   <data name="TxtNome_Aluno.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TxtNome_Aluno.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="LtbMatricula_Aluno.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 14.25pt, style=Bold</value>
@@ -157,13 +157,13 @@
     <value>26</value>
   </data>
   <data name="LtbMatricula_Aluno.Location" type="System.Drawing.Point, System.Drawing">
-    <value>488, 33</value>
+    <value>522, 107</value>
   </data>
   <data name="LtbMatricula_Aluno.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="LtbMatricula_Aluno.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 420</value>
+    <value>340, 290</value>
   </data>
   <data name="LtbMatricula_Aluno.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -178,19 +178,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LtbMatricula_Aluno.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
+  </data>
+  <data name="DtpData_Nascimento.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="DtpData_Nascimento.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 14.25pt, style=Bold</value>
   </data>
   <data name="DtpData_Nascimento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 163</value>
+    <value>274, 138</value>
   </data>
   <data name="DtpData_Nascimento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="DtpData_Nascimento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 33</value>
+    <value>210, 33</value>
   </data>
   <data name="DtpData_Nascimento.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -205,22 +208,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DtpData_Nascimento.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="MTB_CPF_1Responsavel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 14.25pt, style=Bold</value>
   </data>
   <data name="MTB_CPF_1Responsavel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 364</value>
+    <value>346, 341</value>
   </data>
   <data name="MTB_CPF_1Responsavel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="MTB_CPF_1Responsavel.Mask" xml:space="preserve">
-    <value>000,000,00-00</value>
+    <value>000,000,000-00</value>
   </data>
   <data name="MTB_CPF_1Responsavel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 33</value>
+    <value>138, 33</value>
   </data>
   <data name="MTB_CPF_1Responsavel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -235,7 +238,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MTB_CPF_1Responsavel.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="lblData_Nascimento.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -244,7 +247,7 @@
     <value>Palatino Linotype, 15.75pt, style=Bold, Underline</value>
   </data>
   <data name="lblData_Nascimento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 124</value>
+    <value>273, 107</value>
   </data>
   <data name="lblData_Nascimento.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 28</value>
@@ -265,7 +268,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblData_Nascimento.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="LblMatricula.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -274,7 +277,7 @@
     <value>Palatino Linotype, 15.75pt, style=Bold, Underline</value>
   </data>
   <data name="LblMatricula.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 221</value>
+    <value>14, 198</value>
   </data>
   <data name="LblMatricula.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 28</value>
@@ -295,7 +298,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LblMatricula.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="CbxMatricula.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 14.25pt, style=Bold</value>
@@ -331,13 +334,13 @@
     <value>9°Ano</value>
   </data>
   <data name="CbxMatricula.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 260</value>
+    <value>16, 237</value>
   </data>
   <data name="CbxMatricula.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="CbxMatricula.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 34</value>
+    <value>237, 34</value>
   </data>
   <data name="CbxMatricula.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -352,7 +355,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CbxMatricula.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="LblSexo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -361,7 +364,7 @@
     <value>Palatino Linotype, 15.75pt, style=Bold, Underline</value>
   </data>
   <data name="LblSexo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 221</value>
+    <value>274, 198</value>
   </data>
   <data name="LblSexo.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 28</value>
@@ -382,7 +385,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LblSexo.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="CbxGenero.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 14.25pt, style=Bold</value>
@@ -400,13 +403,13 @@
     <value>Outro</value>
   </data>
   <data name="CbxGenero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 260</value>
+    <value>273, 237</value>
   </data>
   <data name="CbxGenero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="CbxGenero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 34</value>
+    <value>211, 34</value>
   </data>
   <data name="CbxGenero.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -421,7 +424,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CbxGenero.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="LblNome_1Responsavel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -430,7 +433,7 @@
     <value>Palatino Linotype, 15.75pt, style=Bold, Underline</value>
   </data>
   <data name="LblNome_1Responsavel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 325</value>
+    <value>14, 302</value>
   </data>
   <data name="LblNome_1Responsavel.Size" type="System.Drawing.Size, System.Drawing">
     <value>229, 28</value>
@@ -451,19 +454,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LblNome_1Responsavel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="TxtNome_1Responsavel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 14.25pt, style=Bold</value>
   </data>
   <data name="TxtNome_1Responsavel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 364</value>
+    <value>16, 341</value>
   </data>
   <data name="TxtNome_1Responsavel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="TxtNome_1Responsavel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 33</value>
+    <value>310, 33</value>
   </data>
   <data name="TxtNome_1Responsavel.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -478,7 +481,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TxtNome_1Responsavel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="LblCPF_1Responsavel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -487,7 +490,7 @@
     <value>Palatino Linotype, 15.75pt, style=Bold, Underline</value>
   </data>
   <data name="LblCPF_1Responsavel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 325</value>
+    <value>346, 302</value>
   </data>
   <data name="LblCPF_1Responsavel.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 28</value>
@@ -508,7 +511,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LblCPF_1Responsavel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="LblCPF_2Responsavel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -517,7 +520,7 @@
     <value>Palatino Linotype, 15.75pt, style=Bold, Underline</value>
   </data>
   <data name="LblCPF_2Responsavel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 427</value>
+    <value>346, 404</value>
   </data>
   <data name="LblCPF_2Responsavel.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 28</value>
@@ -538,19 +541,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LblCPF_2Responsavel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="TxtNome_2Responsavel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 14.25pt, style=Bold</value>
   </data>
   <data name="TxtNome_2Responsavel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 465</value>
+    <value>16, 442</value>
   </data>
   <data name="TxtNome_2Responsavel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="TxtNome_2Responsavel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 33</value>
+    <value>310, 33</value>
   </data>
   <data name="TxtNome_2Responsavel.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -565,7 +568,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TxtNome_2Responsavel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="LblNome_2Responsavel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -574,7 +577,7 @@
     <value>Palatino Linotype, 15.75pt, style=Bold, Underline</value>
   </data>
   <data name="LblNome_2Responsavel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 427</value>
+    <value>14, 404</value>
   </data>
   <data name="LblNome_2Responsavel.Size" type="System.Drawing.Size, System.Drawing">
     <value>229, 28</value>
@@ -595,13 +598,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LblNome_2Responsavel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="MTB_CPF_2Responsavel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 14.25pt, style=Bold</value>
   </data>
   <data name="MTB_CPF_2Responsavel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 465</value>
+    <value>346, 442</value>
   </data>
   <data name="MTB_CPF_2Responsavel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -610,7 +613,7 @@
     <value>000,000,000-00</value>
   </data>
   <data name="MTB_CPF_2Responsavel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 33</value>
+    <value>138, 33</value>
   </data>
   <data name="MTB_CPF_2Responsavel.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -625,7 +628,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MTB_CPF_2Responsavel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="BtnDeletar.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -634,7 +637,7 @@
     <value>Palatino Linotype, 14.25pt, style=Bold</value>
   </data>
   <data name="BtnDeletar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>719, 464</value>
+    <value>753, 430</value>
   </data>
   <data name="BtnDeletar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -658,13 +661,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnDeletar.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="BtnNovo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 14.25pt, style=Bold</value>
   </data>
   <data name="BtnNovo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>488, 464</value>
+    <value>522, 430</value>
   </data>
   <data name="BtnNovo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -688,12 +691,39 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnNovo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LblTitulo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LblTitulo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 36pt, style=Bold, Underline</value>
+  </data>
+  <data name="LblTitulo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>242, 21</value>
+  </data>
+  <data name="LblTitulo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>389, 65</value>
+  </data>
+  <data name="LblTitulo.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="LblTitulo.Text" xml:space="preserve">
+    <value>Matricula Aluno</value>
+  </data>
+  <data name="&gt;&gt;LblTitulo.Name" xml:space="preserve">
+    <value>LblTitulo</value>
+  </data>
+  <data name="&gt;&gt;LblTitulo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblTitulo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LblTitulo.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
@@ -986,7 +1016,7 @@
 </value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>846, 532</value>
+    <value>872, 508</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11.25pt</value>

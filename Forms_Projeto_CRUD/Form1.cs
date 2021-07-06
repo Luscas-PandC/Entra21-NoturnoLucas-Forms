@@ -91,7 +91,8 @@ namespace Forms_Projeto_CRUD
         }
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            if (novo && Verificar())
+            bool verificando = Verificar();
+            if (novo && verificando)
             {
                 ClassOO clase = new ClassOO
                 {
@@ -108,7 +109,7 @@ namespace Forms_Projeto_CRUD
                 LtbMatricula_Aluno.Items.Add(clase);
                 BtnNovo.Enabled = true;
             }
-            else if (novo == false || Verificar() == false)
+            else if (novo == false || verificando)
             {
                 AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].Nome = TxtNome_Aluno.Text;
                 AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].DataNascimento = DtpData_Nascimento.Value;
@@ -160,13 +161,20 @@ namespace Forms_Projeto_CRUD
             }
             if (TxtNome_1Responsavel.Text == "")
             {
-                mensagem += "- Nome do responsavel.\n";
+                mensagem += "- Nome do primeiro responsavel.\n";
                 preenchido = false;
             }
-            if (MTB_CPF_1Responsavel.ToString() == "")
+
+            string cpf = MTB_CPF_1Responsavel.Text;
+            int contador = 0;
+            for (int i = 0; i < cpf.Length; i++)
             {
-                mensagem += "- CPF do responsavel.\n";
-                preenchido = false;
+                if(cpf[i] != ' ' && contador < 1)
+                {
+                    mensagem += "- CPF do primeiro responsavel.\n";
+                    preenchido = false;
+                    contador++;
+                }
             }
             if (preenchido == false)
             {

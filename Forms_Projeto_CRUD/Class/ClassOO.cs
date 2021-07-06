@@ -14,5 +14,10 @@ namespace Forms_Projeto_CRUD.NovaPasta1
         public string CpfResp1 { get; set; }
         public string NomeResp2 { get; set; }
         public string CpfResp2 { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Nome}, {Genero} - {Matricula}";
+        }
     }
 }

@@ -50,6 +50,7 @@ namespace Forms_Projeto_CRUD
             this.MTB_CPF_2Responsavel = new System.Windows.Forms.MaskedTextBox();
             this.BtnDeletar = new System.Windows.Forms.Button();
             this.BtnNovo = new System.Windows.Forms.Button();
+            this.LblTitulo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnSalvar
@@ -82,6 +83,7 @@ namespace Forms_Projeto_CRUD
             // DtpData_Nascimento
             // 
             resources.ApplyResources(this.DtpData_Nascimento, "DtpData_Nascimento");
+            this.DtpData_Nascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpData_Nascimento.Name = "DtpData_Nascimento";
             // 
             // MTB_CPF_1Responsavel
@@ -197,11 +199,19 @@ namespace Forms_Projeto_CRUD
             this.BtnNovo.UseVisualStyleBackColor = true;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
+            // LblTitulo
+            // 
+            resources.ApplyResources(this.LblTitulo, "LblTitulo");
+            this.LblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.LblTitulo.ForeColor = System.Drawing.Color.White;
+            this.LblTitulo.Name = "LblTitulo";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.LblTitulo);
             this.Controls.Add(this.BtnNovo);
             this.Controls.Add(this.BtnDeletar);
             this.Controls.Add(this.LblCPF_2Responsavel);
@@ -254,6 +264,7 @@ namespace Forms_Projeto_CRUD
         private System.Windows.Forms.MaskedTextBox MTB_CPF_2Responsavel;
         private System.Windows.Forms.Button BtnDeletar;
         private System.Windows.Forms.Button BtnNovo;
+        private System.Windows.Forms.Label LblTitulo;
     }
 }
 
