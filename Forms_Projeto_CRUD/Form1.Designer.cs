@@ -30,7 +30,7 @@ namespace Forms_Projeto_CRUD
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.BtnAdd = new System.Windows.Forms.Button();
             this.LblAluno = new System.Windows.Forms.Label();
             this.TxtNome_Aluno = new System.Windows.Forms.TextBox();
             this.LtbMatricula_Aluno = new System.Windows.Forms.ListBox();
@@ -49,16 +49,16 @@ namespace Forms_Projeto_CRUD
             this.LblNome_2Responsavel = new System.Windows.Forms.Label();
             this.MTB_CPF_2Responsavel = new System.Windows.Forms.MaskedTextBox();
             this.BtnDeletar = new System.Windows.Forms.Button();
-            this.BtnNovo = new System.Windows.Forms.Button();
             this.LblTitulo = new System.Windows.Forms.Label();
+            this.BtnAtualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // BtnSalvar
+            // BtnAdd
             // 
-            resources.ApplyResources(this.BtnSalvar, "BtnSalvar");
-            this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.UseVisualStyleBackColor = true;
-            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
+            resources.ApplyResources(this.BtnAdd, "BtnAdd");
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // LblAluno
             // 
@@ -66,7 +66,6 @@ namespace Forms_Projeto_CRUD
             this.LblAluno.BackColor = System.Drawing.Color.Transparent;
             this.LblAluno.ForeColor = System.Drawing.Color.Black;
             this.LblAluno.Name = "LblAluno";
-            this.LblAluno.Click += new System.EventHandler(this.LblAluno_Click);
             // 
             // TxtNome_Aluno
             // 
@@ -101,7 +100,6 @@ namespace Forms_Projeto_CRUD
             this.lblData_Nascimento.BackColor = System.Drawing.Color.Transparent;
             this.lblData_Nascimento.ForeColor = System.Drawing.Color.Black;
             this.lblData_Nascimento.Name = "lblData_Nascimento";
-            this.lblData_Nascimento.Click += new System.EventHandler(this.lblData_Nascimento_Click);
             // 
             // LblMatricula
             // 
@@ -109,7 +107,6 @@ namespace Forms_Projeto_CRUD
             this.LblMatricula.BackColor = System.Drawing.Color.Transparent;
             this.LblMatricula.ForeColor = System.Drawing.Color.Black;
             this.LblMatricula.Name = "LblMatricula";
-            this.LblMatricula.Click += new System.EventHandler(this.LblMatricula_Click);
             // 
             // CbxMatricula
             // 
@@ -135,7 +132,6 @@ namespace Forms_Projeto_CRUD
             this.LblSexo.BackColor = System.Drawing.Color.Transparent;
             this.LblSexo.ForeColor = System.Drawing.Color.Black;
             this.LblSexo.Name = "LblSexo";
-            this.LblSexo.Click += new System.EventHandler(this.LblSexo_Click);
             // 
             // CbxGenero
             // 
@@ -155,7 +151,6 @@ namespace Forms_Projeto_CRUD
             this.LblNome_1Responsavel.BackColor = System.Drawing.Color.Transparent;
             this.LblNome_1Responsavel.ForeColor = System.Drawing.Color.Black;
             this.LblNome_1Responsavel.Name = "LblNome_1Responsavel";
-            this.LblNome_1Responsavel.Click += new System.EventHandler(this.LblNome_1Responsavel_Click);
             // 
             // TxtNome_1Responsavel
             // 
@@ -168,7 +163,6 @@ namespace Forms_Projeto_CRUD
             this.LblCPF_1Responsavel.BackColor = System.Drawing.Color.Transparent;
             this.LblCPF_1Responsavel.ForeColor = System.Drawing.Color.Black;
             this.LblCPF_1Responsavel.Name = "LblCPF_1Responsavel";
-            this.LblCPF_1Responsavel.Click += new System.EventHandler(this.LblCPF_1Responsavel_Click);
             // 
             // LblCPF_2Responsavel
             // 
@@ -176,7 +170,6 @@ namespace Forms_Projeto_CRUD
             this.LblCPF_2Responsavel.BackColor = System.Drawing.Color.Transparent;
             this.LblCPF_2Responsavel.ForeColor = System.Drawing.Color.Black;
             this.LblCPF_2Responsavel.Name = "LblCPF_2Responsavel";
-            this.LblCPF_2Responsavel.Click += new System.EventHandler(this.LblCPF_2Responsavel_Click);
             // 
             // TxtNome_2Responsavel
             // 
@@ -189,7 +182,6 @@ namespace Forms_Projeto_CRUD
             this.LblNome_2Responsavel.BackColor = System.Drawing.Color.Transparent;
             this.LblNome_2Responsavel.ForeColor = System.Drawing.Color.Black;
             this.LblNome_2Responsavel.Name = "LblNome_2Responsavel";
-            this.LblNome_2Responsavel.Click += new System.EventHandler(this.LblNome_2Responsavel_Click);
             // 
             // MTB_CPF_2Responsavel
             // 
@@ -203,28 +195,27 @@ namespace Forms_Projeto_CRUD
             this.BtnDeletar.UseVisualStyleBackColor = true;
             this.BtnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
             // 
-            // BtnNovo
-            // 
-            resources.ApplyResources(this.BtnNovo, "BtnNovo");
-            this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.UseVisualStyleBackColor = true;
-            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
-            // 
             // LblTitulo
             // 
             resources.ApplyResources(this.LblTitulo, "LblTitulo");
             this.LblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.LblTitulo.ForeColor = System.Drawing.Color.Black;
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Click += new System.EventHandler(this.LblTitulo_Click);
+            // 
+            // BtnAtualizar
+            // 
+            resources.ApplyResources(this.BtnAtualizar, "BtnAtualizar");
+            this.BtnAtualizar.Name = "BtnAtualizar";
+            this.BtnAtualizar.UseVisualStyleBackColor = true;
+            this.BtnAtualizar.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.BtnAtualizar);
             this.Controls.Add(this.LblTitulo);
-            this.Controls.Add(this.BtnNovo);
             this.Controls.Add(this.BtnDeletar);
             this.Controls.Add(this.LblCPF_2Responsavel);
             this.Controls.Add(this.TxtNome_2Responsavel);
@@ -243,7 +234,7 @@ namespace Forms_Projeto_CRUD
             this.Controls.Add(this.LtbMatricula_Aluno);
             this.Controls.Add(this.TxtNome_Aluno);
             this.Controls.Add(this.LblAluno);
-            this.Controls.Add(this.BtnSalvar);
+            this.Controls.Add(this.BtnAdd);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -257,7 +248,7 @@ namespace Forms_Projeto_CRUD
 
         #endregion
 
-        private System.Windows.Forms.Button BtnSalvar;
+        private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.Label LblAluno;
         private System.Windows.Forms.TextBox TxtNome_Aluno;
         private System.Windows.Forms.ListBox LtbMatricula_Aluno;
@@ -276,8 +267,8 @@ namespace Forms_Projeto_CRUD
         private System.Windows.Forms.Label LblNome_2Responsavel;
         private System.Windows.Forms.MaskedTextBox MTB_CPF_2Responsavel;
         private System.Windows.Forms.Button BtnDeletar;
-        private System.Windows.Forms.Button BtnNovo;
         private System.Windows.Forms.Label LblTitulo;
+        private System.Windows.Forms.Button BtnAtualizar;
     }
 }
 

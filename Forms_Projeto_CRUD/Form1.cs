@@ -14,6 +14,7 @@ namespace Forms_Projeto_CRUD
     public partial class Form1 : Form
     {
         List<ClassOO> AlunosMatriculados;
+        int index;
 
         bool novo = true;
         
@@ -24,12 +25,11 @@ namespace Forms_Projeto_CRUD
             InitializeComponent();
             CbxMatricula.Text = "Selecione";
             CbxGenero.Text = "Selecione";
-            BtnNovo.Enabled = false;
         }
 
         private void TxtNome_Aluno_TextChanged(object sender, EventArgs e)
         {
-            BtnSalvar.Enabled = true;          
+            BtnAdd.Enabled = true;          
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
@@ -45,13 +45,13 @@ namespace Forms_Projeto_CRUD
             MTB_CPF_1Responsavel.Text = "";
             MTB_CPF_2Responsavel.Text = "";
             DtpData_Nascimento.Text = "";
-            BtnNovo.Enabled = false;
-            BtnSalvar.Enabled = false;
+            BtnAdd.Enabled = false;
         }
         private void LtbMatricula_Aluno_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (LtbMatricula_Aluno.SelectedIndex >= 0)
             {
+                index = LtbMatricula_Aluno.SelectedIndex;
                 TxtNome_Aluno.Text = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].Nome;
                 DtpData_Nascimento.Value = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].DataNascimento;
                 CbxMatricula.Text = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].Matricula;
@@ -61,7 +61,8 @@ namespace Forms_Projeto_CRUD
                 MTB_CPF_1Responsavel.Text = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].CpfResp1;
                 MTB_CPF_2Responsavel.Text = AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].CpfResp2;
                 novo = false;
-                BtnSalvar.Enabled = true;
+                BtnAdd.Enabled = false;
+                BtnAtualizar.Enabled = true;
                 BtnDeletar.Enabled = true;
             }
         }
@@ -80,14 +81,15 @@ namespace Forms_Projeto_CRUD
                 MTB_CPF_1Responsavel.Text = "";
                 MTB_CPF_2Responsavel.Text = "";
                 DtpData_Nascimento.Text = "";
-                BtnNovo.Enabled = false;
-                BtnSalvar.Enabled = false;
+                BtnAdd.Enabled = false;
+                BtnDeletar.Enabled = false;
                 novo = true;
+                DtpData_Nascimento.Text = "30/12/2015";
             }
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            BtnSalvar.Enabled = false;
+            BtnAdd.Enabled = false;
         }
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
@@ -107,24 +109,53 @@ namespace Forms_Projeto_CRUD
                 };
                 AlunosMatriculados.Add(clase);
                 LtbMatricula_Aluno.Items.Add(clase);
-                BtnNovo.Enabled = true;
                 BtnNovo_Click(sender, e);
-
+                DtpData_Nascimento.Text = "30/12/2015";
             }
-            else if (novo == false || verificando)
+            LtbMatricula_Aluno.Items.Clear();
+            foreach (var contato in AlunosMatriculados)
             {
-                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].Nome = TxtNome_Aluno.Text;
-                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].DataNascimento = DtpData_Nascimento.Value;
-                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].Matricula = CbxMatricula.Text;
-                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].Genero = CbxGenero.Text;
-                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].NomeResp1 = TxtNome_1Responsavel.Text;
-                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].CpfResp1 = MTB_CPF_1Responsavel.Text;
-                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].NomeResp2 = TxtNome_2Responsavel.Text;
-                AlunosMatriculados[LtbMatricula_Aluno.SelectedIndex].CpfResp2 = MTB_CPF_2Responsavel.Text;
-                BtnNovo_Click(sender, e);
-
+                LtbMatricula_Aluno.Items.Add(contato);
             }
-
+        }
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            bool verificando = Verificar();
+            
+            if (novo == false && verificando && LtbMatricula_Aluno.SelectedIndex >= 0)
+            {
+                AlunosMatriculados[index].Nome = TxtNome_Aluno.Text;
+                AlunosMatriculados[index].DataNascimento = DtpData_Nascimento.Value;
+                AlunosMatriculados[index].Matricula = CbxMatricula.Text;
+                AlunosMatriculados[index].Genero = CbxGenero.Text;
+                AlunosMatriculados[index].NomeResp1 = TxtNome_1Responsavel.Text;
+                AlunosMatriculados[index].CpfResp1 = MTB_CPF_1Responsavel.Text;
+                AlunosMatriculados[index].NomeResp2 = TxtNome_2Responsavel.Text;
+                AlunosMatriculados[index].CpfResp2 = MTB_CPF_2Responsavel.Text;
+                BtnNovo_Click(sender, e);
+                DtpData_Nascimento.Text = "30/12/2015";
+            }
+            else if (verificando == false)
+            {
+                LtbMatricula_Aluno.(novo && verificando)
+            {
+                ClassOO clase = new ClassOO
+                {
+                    Nome = TxtNome_Aluno.Text,
+                    DataNascimento = DtpData_Nascimento.Value,
+                    Matricula = CbxMatricula.Text,
+                    Genero = CbxGenero.Text,
+                    NomeResp1 = TxtNome_1Responsavel.Text,
+                    NomeResp2 = TxtNome_2Responsavel.Text,
+                    CpfResp1 = MTB_CPF_1Responsavel.Text,
+                    CpfResp2 = MTB_CPF_2Responsavel.Text
+                };
+                AlunosMatriculados.Add(clase);
+                LtbMatricula_Aluno.Items.Add(clase);
+                BtnNovo_Click(sender, e);
+                DtpData_Nascimento.Text = "30/12/2015";
+            };
+            }
             LtbMatricula_Aluno.Items.Clear();
             foreach (var contato in AlunosMatriculados)
             {
@@ -151,7 +182,7 @@ namespace Forms_Projeto_CRUD
                 mensagem += "- Nome do aluno.\n";
                 preenchido = false;
             }
-            if (DtpData_Nascimento.Text == "12/30/2015")
+            if (DtpData_Nascimento.Text == "30/12/2015")
             {
                 mensagem += "- Data de nascimento.\n";
                 preenchido = false;
@@ -190,49 +221,5 @@ namespace Forms_Projeto_CRUD
             return preenchido;
         }
 
-        private void LblNome_2Responsavel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblCPF_1Responsavel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblNome_1Responsavel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblSexo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblMatricula_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblData_Nascimento_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblAluno_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblCPF_2Responsavel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
