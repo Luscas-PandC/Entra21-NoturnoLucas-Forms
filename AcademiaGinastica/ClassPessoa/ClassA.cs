@@ -4,14 +4,30 @@ using System.Text;
 
 namespace AcademiaGinastica.ClassPessoa
 {
-    public class ClassA : ClassP
+    public class Aluno : Pessoa
     {
         public string Turma { get; set; }
-        public decimal Mensalidade { get; set; }
+        public int Mensalidade { get; set; }
         public bool Paga { get; set; }  
-        public ClassA()
+        public string plano { get; set; }
+
+        public Aluno()
         {
             
+        }
+        public override string ToString()
+        {
+            string pago = "";
+            if(Paga)
+            {
+                pago = "pago";
+            }
+            else
+            {
+                pago = "Não pago";
+            }
+
+            return $"{Nome}, plano {plano}, {pago}";
         }
     }
 }

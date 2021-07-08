@@ -1,0 +1,15 @@
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\bin\Debug\netcoreapp3.1\AcademiaGinastica.exe
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\bin\Debug\netcoreapp3.1\AcademiaGinastica.deps.json
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\bin\Debug\netcoreapp3.1\AcademiaGinastica.runtimeconfig.json
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\bin\Debug\netcoreapp3.1\AcademiaGinastica.runtimeconfig.dev.json
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\bin\Debug\netcoreapp3.1\AcademiaGinastica.dll
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\bin\Debug\netcoreapp3.1\AcademiaGinastica.pdb
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.csproj.AssemblyReference.cache
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.Form1.resources
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.csproj.GenerateResource.cache
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.AssemblyInfoInputs.cache
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.AssemblyInfo.cs
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.csproj.CoreCompileInputs.cache
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.dll
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.pdb
+C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.genruntimeconfig.cache

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AcademiaGinastica.ClassPessoa
 {
-    public class ClassP
+    public class Pessoa
     {
         public string Nome { get; set; }
         public string CPF { get; set; }

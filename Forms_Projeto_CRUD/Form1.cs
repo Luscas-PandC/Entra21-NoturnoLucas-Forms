@@ -137,7 +137,6 @@ namespace Forms_Projeto_CRUD
             }
             else if (verificando == false)
             {
-                LtbMatricula_Aluno.(novo && verificando)
             {
                 ClassOO clase = new ClassOO
                 {
