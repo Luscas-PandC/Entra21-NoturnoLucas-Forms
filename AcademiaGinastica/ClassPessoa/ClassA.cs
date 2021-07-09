@@ -10,6 +10,8 @@ namespace AcademiaGinastica.ClassPessoa
         public int Mensalidade { get; set; }
         public bool Paga { get; set; }  
         public string plano { get; set; }
+        public bool Rbtn1 { get; set; }
+        public bool Rbtn2 { get; set; }
 
         public Aluno()
         {

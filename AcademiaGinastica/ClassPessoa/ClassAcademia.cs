@@ -4,41 +4,49 @@ using System.Text;
 
 namespace AcademiaGinastica.ClassPessoa
 {
-    public class ClassAcademia 
+    public class Academia 
     {
         public List<Aluno> AlunosAcademia { get; private set; }
 
-        public ClassAcademia()
+        public Academia()
         {
             AlunosAcademia = new List<Aluno>();
         }
 
-        public void AddClassA(string nome, string cpf, string rg, string turma)
+        public void AddClassA(string nome, string cpf, string rg, string turma, System.Windows.Forms.RadioButton radioBtn1, System.Windows.Forms.RadioButton radioBtn2)
         {
             Aluno aluno = new Aluno();
             aluno.Nome = nome;
             aluno.CPF = cpf;
             aluno.RG = rg;
+            aluno.Rbtn1 = radioBtn1.Checked;
+            aluno.Rbtn2 = radioBtn2.Checked;
             aluno.Turma = turma;
+            aluno.Paga = false;
+            aluno.plano = PlanoSelecionado(radioBtn1, radioBtn2);
             AlunosAcademia.Add(aluno);
         }
-        public void UpdateAluno(int indec, string nome, string cpf, string rg, string turma)
+        public void UpdateAluno(int ind, string nome, string cpf, string rg, string turma, System.Windows.Forms.RadioButton radioBtn1, System.Windows.Forms.RadioButton radioBtn2)
         {
-            AlunosAcademia[indec].Nome = nome;
-            AlunosAcademia[indec].CPF = cpf;
-            AlunosAcademia[indec].RG = rg;
-            AlunosAcademia[indec].Turma = turma;
+            AlunosAcademia[ind].Nome = nome;
+            AlunosAcademia[ind].CPF = cpf;
+            AlunosAcademia[ind].RG = rg;
+            AlunosAcademia[ind].Turma = turma;
+            AlunosAcademia[ind].Rbtn1 = radioBtn1.Checked;
+            AlunosAcademia[ind].Rbtn2 = radioBtn2.Checked;
+            AlunosAcademia[ind].plano = PlanoSelecionado(radioBtn1, radioBtn2);
         }
-        public void PlanoSelecionado(int indec, System.Windows.Forms.RadioButton radioBtn1, System.Windows.Forms.RadioButton radioBtn2)
+        public string PlanoSelecionado(System.Windows.Forms.RadioButton radioBtn1, System.Windows.Forms.RadioButton radioBtn2)
         {
             if(radioBtn1.Checked)
             {
-                AlunosAcademia[indec].plano = "Basic";
+               return "Basic";
             }
             if(radioBtn2.Checked)
             {
-                AlunosAcademia[indec].plano = "Advanced";
+                return "Advanced";
             }
+            return "";
         }
     }
 }
