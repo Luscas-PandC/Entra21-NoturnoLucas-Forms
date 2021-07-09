@@ -46,7 +46,7 @@ namespace AcademiaGinastica
             this.BtnNovo = new System.Windows.Forms.Button();
             this.BtnDeletar = new System.Windows.Forms.Button();
             this.BtnConfirmarPagamentos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnNovoAluno = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblNome
@@ -188,7 +188,7 @@ namespace AcademiaGinastica
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(121, 23);
             this.BtnNovo.TabIndex = 8;
-            this.BtnNovo.Text = "Novo Usuario";
+            this.BtnNovo.Text = "Novo Aluno";
             this.BtnNovo.UseVisualStyleBackColor = true;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
@@ -212,21 +212,22 @@ namespace AcademiaGinastica
             this.BtnConfirmarPagamentos.UseVisualStyleBackColor = true;
             this.BtnConfirmarPagamentos.Click += new System.EventHandler(this.BtnConfirmarPagamentos_Click);
             // 
-            // button1
+            // BtnNovoAluno
             // 
-            this.button1.Location = new System.Drawing.Point(464, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Novo Usuario";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnNovoAluno.Location = new System.Drawing.Point(464, 191);
+            this.BtnNovoAluno.Name = "BtnNovoAluno";
+            this.BtnNovoAluno.Size = new System.Drawing.Size(99, 23);
+            this.BtnNovoAluno.TabIndex = 13;
+            this.BtnNovoAluno.Text = "Novo Aluno";
+            this.BtnNovoAluno.UseVisualStyleBackColor = true;
+            this.BtnNovoAluno.Click += new System.EventHandler(this.BtnNovoAluno_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 268);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnNovoAluno);
             this.Controls.Add(this.BtnConfirmarPagamentos);
             this.Controls.Add(this.BtnDeletar);
             this.Controls.Add(this.BtnNovo);
@@ -270,7 +271,7 @@ namespace AcademiaGinastica
         private System.Windows.Forms.Button BtnNovo;
         private System.Windows.Forms.Button BtnDeletar;
         private System.Windows.Forms.Button BtnConfirmarPagamentos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnNovoAluno;
     }
 }
 

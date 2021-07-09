@@ -18,12 +18,9 @@ namespace AcademiaGinastica
         {
             InitializeComponent();
             academia = new Academia();
-            BtnDeletar.Hide();
-            BtnEditar.Hide();
-            BtnConfirmarPagamentos.Hide();
+            EsconderMenu2();
             CmbTurma.Text = "Manha";
         }
-
         private void atualizaListBox()
         {
             LbxCadastrados.Items.Clear();
@@ -32,7 +29,6 @@ namespace AcademiaGinastica
                 LbxCadastrados.Items.Add(aluno.ToString());
             }
         }
-
         private void BtnIncerir_Click(object sender, EventArgs e)
         {
             if(LbxCadastrados.SelectedIndex >= 0)
@@ -47,7 +43,6 @@ namespace AcademiaGinastica
                 RbtnAdvanced
                 );
                 BtnNovo_Click(sender, e);
-                BtnIncerir.Text = "Cadastrar Aluno";
             }
             else
             {
@@ -61,30 +56,27 @@ namespace AcademiaGinastica
                 );
             }
             atualizaListBox();
-            EsconderMenu2();
         }
-
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            
+            HabilitarInformacoes();
         }
-
         private void BtnDeletar_Click(object sender, EventArgs e)
         {
             if (LbxCadastrados.SelectedIndex >= 0)
             {
+                BtnNovo_Click(sender, e);
                 academia.AlunosAcademia.RemoveAt(LbxCadastrados.SelectedIndex);
                 atualizaListBox();
-                BtnNovo_Click(sender, e);
             }
         }
-
         private void BtnNovo_Click(object sender, EventArgs e)
         {
-            LbxCadastrados.SelectedIndex = -1;
-            BtnIncerir.Text = "Cadastrar Alunos";
-            EsconderMenu2();
-            TxtNome.Focus();
+            if (LbxCadastrados.SelectedIndex < 0)
+            {
+                TxtNome.Focus();
+            }
+
             TxtNome.Text = "";
             MtbCPF.Text = "";
             MtbRG.Text = "";
@@ -92,27 +84,35 @@ namespace AcademiaGinastica
             RbtnBasic.Checked = false;
             RbtnAdvanced.Checked = false;
         }
-
         private void BtnConfirmarPagamentos_Click(object sender, EventArgs e)
         {
-            academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Paga = true;
+            if (LbxCadastrados.SelectedIndex >= 0)
+            {
+                academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Paga = true;
+            }
             atualizaListBox();
         }
         private void LbxCadastrados_SelectedIndexChanged(object sender, EventArgs e)
         {
-            BtnDeletar.Show();
-            BtnEditar.Show();
-            BtnConfirmarPagamentos.Show();
+            ExibirMenu2();
+            ExibirInformacoes();
+            DesabilitarInformacoes();
             BtnIncerir.Hide();
             BtnNovo.Hide();
-            DesabilitarInformacoes();
-            ExibirInformacoes();
         }
         private void EsconderMenu2()
         {
             BtnDeletar.Hide();
             BtnEditar.Hide();
-            BtnConfirmarPagamentos.Hide();       
+            BtnConfirmarPagamentos.Hide();
+            BtnNovoAluno.Hide();
+        }
+        private void ExibirMenu2()
+        {
+            BtnDeletar.Show();
+            BtnEditar.Show();
+            BtnNovoAluno.Show();
+            BtnConfirmarPagamentos.Show();
         }
         private void DesabilitarInformacoes()
         {        
@@ -128,6 +128,20 @@ namespace AcademiaGinastica
             LblRG.Enabled = false;
             LblMensalidade.Enabled = false;
         }
+        private void HabilitarInformacoes()
+        {
+            TxtNome.Enabled = true;
+            CmbTurma.Enabled = true;
+            MtbCPF.Enabled = true;
+            MtbRG.Enabled = true;
+            RbtnAdvanced.Enabled = true;
+            RbtnBasic.Enabled = true;
+            LblNome.Enabled = true;
+            LblTurma.Enabled = true;
+            LblCPF.Enabled = true;
+            LblRG.Enabled = true;
+            LblMensalidade.Enabled = true;
+        }
         private void ExibirInformacoes()
         {
             if (LbxCadastrados.SelectedIndex >= 0)
@@ -138,7 +152,21 @@ namespace AcademiaGinastica
                 CmbTurma.Text = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Turma;
                 RbtnBasic.Checked = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Rbtn1;
                 RbtnAdvanced.Checked = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Rbtn2;
+                LblNome.Enabled = true;
+                LblTurma.Enabled = true;
+                LblCPF.Enabled = true;
+                LblRG.Enabled = true;
+                LblMensalidade.Enabled = true;
             }
+        }
+        private void BtnNovoAluno_Click(object sender, EventArgs e)
+        {
+            EsconderMenu2();
+            BtnIncerir.Show();
+            BtnNovo.Show();
+            LbxCadastrados.SelectedIndex = -1;
+            BtnNovo_Click(sender, e);
+
         }
     }
 }
