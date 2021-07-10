@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AcademiaGinastica
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form 
     {
         Academia academia;
         public Form1()
@@ -42,7 +42,6 @@ namespace AcademiaGinastica
                 RbtnBasic,
                 RbtnAdvanced
                 );
-                BtnNovo_Click(sender, e);
             }
             else
             {
@@ -60,6 +59,8 @@ namespace AcademiaGinastica
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             HabilitarInformacoes();
+            BtnIncerir.Show();
+            BtnIncerir.Text = "Atualizar";
         }
         private void BtnDeletar_Click(object sender, EventArgs e)
         {
@@ -161,12 +162,13 @@ namespace AcademiaGinastica
         }
         private void BtnNovoAluno_Click(object sender, EventArgs e)
         {
+            HabilitarInformacoes();
             EsconderMenu2();
             BtnIncerir.Show();
             BtnNovo.Show();
             LbxCadastrados.SelectedIndex = -1;
+            BtnIncerir.Text = "Cadastrar Aluno";
             BtnNovo_Click(sender, e);
-
         }
     }
 }

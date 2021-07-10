@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\AcademiaGinastica",
+    "\\AcademiaGinastica\\ClassPessoa",
     "\\Forms_Projeto_CRUD"
   ],
-  "SelectedNode": "\\Forms_Projeto_CRUD\\Form1.cs",
+  "SelectedNode": "\\AcademiaGinastica\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
