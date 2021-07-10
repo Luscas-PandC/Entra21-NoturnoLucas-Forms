@@ -77,7 +77,6 @@ namespace AcademiaGinastica
             {
                 TxtNome.Focus();
             }
-
             TxtNome.Text = "";
             MtbCPF.Text = "";
             MtbRG.Text = "";
@@ -95,11 +94,14 @@ namespace AcademiaGinastica
         }
         private void LbxCadastrados_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ExibirMenu2();
-            ExibirInformacoes();
-            DesabilitarInformacoes();
-            BtnIncerir.Hide();
-            BtnNovo.Hide();
+            if (LbxCadastrados.SelectedIndex >= 0)
+            {
+                ExibirMenu2();
+                ExibirInformacoes();
+                DesabilitarInformacoes();
+                BtnIncerir.Hide();
+                BtnNovo.Hide();
+            }
         }
         private void EsconderMenu2()
         {
@@ -166,9 +168,9 @@ namespace AcademiaGinastica
             EsconderMenu2();
             BtnIncerir.Show();
             BtnNovo.Show();
-            LbxCadastrados.SelectedIndex = -1;
             BtnIncerir.Text = "Cadastrar Aluno";
             BtnNovo_Click(sender, e);
+            LbxCadastrados.SelectedIndex = -1;
         }
     }
 }
