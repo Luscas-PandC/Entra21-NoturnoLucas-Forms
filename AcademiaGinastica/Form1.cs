@@ -37,7 +37,7 @@ namespace AcademiaGinastica
                 LbxCadastrados.SelectedIndex,
                 TxtNome.Text,
                 MtbCPF.Text,
-                MtbRG.Text,
+                MtbTelefone.Text,
                 CmbTurma.Text,
                 RbtnBasic,
                 RbtnAdvanced
@@ -48,7 +48,7 @@ namespace AcademiaGinastica
                 academia.AddClassA(
                 TxtNome.Text,
                 MtbCPF.Text,
-                MtbRG.Text,
+                MtbTelefone.Text,
                 CmbTurma.Text,
                 RbtnBasic,
                 RbtnAdvanced
@@ -79,7 +79,7 @@ namespace AcademiaGinastica
             }
             TxtNome.Text = "";
             MtbCPF.Text = "";
-            MtbRG.Text = "";
+            MtbTelefone.Text = "";
             CmbTurma.Text = "";
             RbtnBasic.Checked = false;
             RbtnAdvanced.Checked = false;
@@ -122,13 +122,13 @@ namespace AcademiaGinastica
             TxtNome.Enabled = false;
             CmbTurma.Enabled = false;
             MtbCPF.Enabled = false;
-            MtbRG.Enabled = false;
+            MtbTelefone.Enabled = false;
             RbtnAdvanced.Enabled = false;
             RbtnBasic.Enabled = false;
             LblNome.Enabled = false;
             LblTurma.Enabled = false;
             LblCPF.Enabled = false;
-            LblRG.Enabled = false;
+            LblTelefone.Enabled = false;
             LblMensalidade.Enabled = false;
         }
         private void HabilitarInformacoes()
@@ -136,13 +136,13 @@ namespace AcademiaGinastica
             TxtNome.Enabled = true;
             CmbTurma.Enabled = true;
             MtbCPF.Enabled = true;
-            MtbRG.Enabled = true;
+            MtbTelefone.Enabled = true;
             RbtnAdvanced.Enabled = true;
             RbtnBasic.Enabled = true;
             LblNome.Enabled = true;
             LblTurma.Enabled = true;
             LblCPF.Enabled = true;
-            LblRG.Enabled = true;
+            LblTelefone.Enabled = true;
             LblMensalidade.Enabled = true;
         }
         private void ExibirInformacoes()
@@ -151,14 +151,14 @@ namespace AcademiaGinastica
             {
                 TxtNome.Text = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Nome;
                 MtbCPF.Text = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].CPF;
-                MtbRG.Text = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].RG;
+                MtbTelefone.Text = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].RG;
                 CmbTurma.Text = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Turma;
                 RbtnBasic.Checked = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Rbtn1;
                 RbtnAdvanced.Checked = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Rbtn2;
                 LblNome.Enabled = true;
                 LblTurma.Enabled = true;
                 LblCPF.Enabled = true;
-                LblRG.Enabled = true;
+                LblTelefone.Enabled = true;
                 LblMensalidade.Enabled = true;
             }
         }
