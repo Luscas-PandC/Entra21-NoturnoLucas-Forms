@@ -8,7 +8,7 @@ namespace AcademiaGinastica.ClassPessoa
     public class Aluno : Pessoa
     {
         public string Turno { get; set; }
-        public Modalidade Modalidade { get; set; }
+        public FrmModalidade Modalidade { get; set; }
         public string Pagou { get; set; }  
 
         public Aluno(string nome, string telefone, string cpf, string turno)

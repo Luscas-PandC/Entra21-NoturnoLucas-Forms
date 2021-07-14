@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj": {}
+    "C:\\Users\\Luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj": {
+    "C:\\Users\\Luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj",
+        "projectUniqueName": "C:\\Users\\Luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj",
         "projectName": "Forms_Projeto_CRUD",
-        "projectPath": "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj",
-        "packagesPath": "C:\\Users\\luscas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\obj\\",
+        "projectPath": "C:\\Users\\Luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj",
+        "packagesPath": "C:\\Users\\Luscas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luscas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Luscas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

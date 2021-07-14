@@ -24,7 +24,7 @@ namespace AcademiaGinastica
         private void atualizaListBox()
         {
             LbxCadastrados.Items.Clear();
-            foreach (var aluno in academia.AlunosAcademia)
+            foreach (var aluno in academia.ListaAlunos)
             {
                 LbxCadastrados.Items.Add(aluno.ToString());
             }
@@ -33,25 +33,21 @@ namespace AcademiaGinastica
         {
             if(LbxCadastrados.SelectedIndex >= 0)
             {
-                academia.UpdateAluno(
+                academia.AtualizarAluno(
                 LbxCadastrados.SelectedIndex,
                 TxtNome.Text,
                 MtbCPF.Text,
                 MtbTelefone.Text,
-                CmbTurma.Text,
-                RbtnBasic,
-                RbtnAdvanced
+                CmbTurma.Text
                 );
             }
             else
             {
-                academia.AddClassA(
+                academia.AddAluno(
                 TxtNome.Text,
                 MtbCPF.Text,
                 MtbTelefone.Text,
-                CmbTurma.Text,
-                RbtnBasic,
-                RbtnAdvanced
+                CmbTurma.Text
                 );
             }
             atualizaListBox();
@@ -59,15 +55,15 @@ namespace AcademiaGinastica
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             HabilitarInformacoes();
-            BtnIncerir.Show();
-            BtnIncerir.Text = "Atualizar";
+            BtnCadastrarAluno.Show();
+            BtnCadastrarAluno.Text = "Atualizar";
         }
         private void BtnDeletar_Click(object sender, EventArgs e)
         {
             if (LbxCadastrados.SelectedIndex >= 0)
             {
                 BtnNovo_Click(sender, e);
-                academia.AlunosAcademia.RemoveAt(LbxCadastrados.SelectedIndex);
+                academia.ListaAlunos.RemoveAt(LbxCadastrados.SelectedIndex);
                 atualizaListBox();
             }
         }
@@ -81,14 +77,12 @@ namespace AcademiaGinastica
             MtbCPF.Text = "";
             MtbTelefone.Text = "";
             CmbTurma.Text = "";
-            RbtnBasic.Checked = false;
-            RbtnAdvanced.Checked = false;
         }
         private void BtnConfirmarPagamentos_Click(object sender, EventArgs e)
         {
             if (LbxCadastrados.SelectedIndex >= 0)
             {
-                academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Paga = true;
+                academia.ListaAlunos[LbxCadastrados.SelectedIndex].Pagou = "Sim.";
             }
             atualizaListBox();
         }
@@ -99,7 +93,7 @@ namespace AcademiaGinastica
                 ExibirMenu2();
                 ExibirInformacoes();
                 DesabilitarInformacoes();
-                BtnIncerir.Hide();
+                BtnCadastrarAluno.Hide();
                 BtnNovo.Hide();
             }
         }
@@ -123,8 +117,6 @@ namespace AcademiaGinastica
             CmbTurma.Enabled = false;
             MtbCPF.Enabled = false;
             MtbTelefone.Enabled = false;
-            RbtnAdvanced.Enabled = false;
-            RbtnBasic.Enabled = false;
             LblNome.Enabled = false;
             LblTurma.Enabled = false;
             LblCPF.Enabled = false;
@@ -137,8 +129,6 @@ namespace AcademiaGinastica
             CmbTurma.Enabled = true;
             MtbCPF.Enabled = true;
             MtbTelefone.Enabled = true;
-            RbtnAdvanced.Enabled = true;
-            RbtnBasic.Enabled = true;
             LblNome.Enabled = true;
             LblTurma.Enabled = true;
             LblCPF.Enabled = true;
@@ -149,12 +139,10 @@ namespace AcademiaGinastica
         {
             if (LbxCadastrados.SelectedIndex >= 0)
             {
-                TxtNome.Text = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Nome;
-                MtbCPF.Text = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].CPF;
-                MtbTelefone.Text = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].RG;
-                CmbTurma.Text = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Turma;
-                RbtnBasic.Checked = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Rbtn1;
-                RbtnAdvanced.Checked = academia.AlunosAcademia[LbxCadastrados.SelectedIndex].Rbtn2;
+                TxtNome.Text = academia.ListaAlunos[LbxCadastrados.SelectedIndex].Nome;
+                MtbCPF.Text = academia.ListaAlunos[LbxCadastrados.SelectedIndex].CPF;
+                MtbTelefone.Text = academia.ListaAlunos[LbxCadastrados.SelectedIndex].Telefone;
+                CmbTurma.Text = academia.ListaAlunos[LbxCadastrados.SelectedIndex].Turno;
                 LblNome.Enabled = true;
                 LblTurma.Enabled = true;
                 LblCPF.Enabled = true;
@@ -166,11 +154,17 @@ namespace AcademiaGinastica
         {
             HabilitarInformacoes();
             EsconderMenu2();
-            BtnIncerir.Show();
+            BtnCadastrarAluno.Show();
             BtnNovo.Show();
-            BtnIncerir.Text = "Cadastrar Aluno";
+            BtnCadastrarAluno.Text = "Cadastrar Aluno";
             BtnNovo_Click(sender, e);
             LbxCadastrados.SelectedIndex = -1;
         }
+
+        private void CmbModalidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
