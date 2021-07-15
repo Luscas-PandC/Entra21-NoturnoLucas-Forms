@@ -13,7 +13,11 @@ namespace AcademiaGinastica.Classes
 
         public double CalculaValor()
         {
-            return PrecoHora * VezesSemana * 4;
+            return (PrecoHora * 4) * VezesSemana * 4;
+        }
+        public override string ToString()
+        {
+            return $"{Nome}, Professor: {Professor}";
         }
     }
 }

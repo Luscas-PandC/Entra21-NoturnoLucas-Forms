@@ -9,13 +9,13 @@ namespace AcademiaGinastica.ClassPessoa
     {
         public List<Aluno> ListaAlunos { get; set; }
         public List<Professor> ListaProfessores { get; set; }
-        public List<Modalidade> Modalidades { get; set; }
+        public List<Modalidade> ListaModalidades { get; set; }
 
         public Academia()
         {
             ListaAlunos = new List<Aluno>();
             ListaProfessores = new List<Professor>();
-            Modalidades = new List<Modalidade>();
+            ListaModalidades = new List<Modalidade>();
         }
 
         public void AddAluno(string nome, string cpf, string telefone, string turno)
@@ -34,9 +34,15 @@ namespace AcademiaGinastica.ClassPessoa
             });
         }
 
-        public void AddModalidade()
+        public void AddModalidade(Professor professor, int vezesSemana, double precoHora, string nome)
         {
-            Modalidades.Add(new Modalidade());
+            ListaModalidades.Add(new Modalidade()
+            {
+                Professor = professor,
+                VezesSemana = vezesSemana,
+                PrecoHora = precoHora,
+                Nome = nome
+            });
         }
 
         public void AtualizarAluno(
@@ -73,10 +79,10 @@ namespace AcademiaGinastica.ClassPessoa
             Professor professor,
             int vezesSemana)
         {
-            Modalidades[indice].Nome = nome;
-            Modalidades[indice].PrecoHora = precoHora;
-            Modalidades[indice].Professor = professor;
-            Modalidades[indice].VezesSemana = vezesSemana;
+            ListaModalidades[indice].Nome = nome;
+            ListaModalidades[indice].PrecoHora = precoHora;
+            ListaModalidades[indice].Professor = professor;
+            ListaModalidades[indice].VezesSemana = vezesSemana;
         }
 
         public void DeletarAluno(int indice)
@@ -87,6 +93,11 @@ namespace AcademiaGinastica.ClassPessoa
         public void DeletarProfessor(int indice)
         {
             ListaProfessores.RemoveAt(indice);
+        }
+
+        public void DeletarModalidade(int indice)
+        {
+            ListaModalidades.RemoveAt(indice);
         }
     }
 }

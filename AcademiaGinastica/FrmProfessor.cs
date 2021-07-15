@@ -22,11 +22,27 @@ namespace AcademiaGinastica
 
         }
 
+        private void AtualizarLista()
+        {
+            LbxCadastrados.Items.Clear();
+            foreach(var itens in _academia.ListaProfessores)
+            {
+                LbxCadastrados.Items.Add(itens.ToString());
+            }
+        }
+        private void Limpar()
+        {
+            TxtNome.Clear();
+            MtbCPF.Clear();
+            MtbTelefone.Clear();
+            CmbTurno.SelectedItem = null;
+        }
+
         private void LbxCadastrados_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (LbxCadastrados.SelectedIndex >= 0)
             {
-                BtnCadastrarProfessor.Text = "Atulizar";
+                BtnCadastrarProfessor.Text = "Atualizar";
                 BtnNovo.Hide();
                 BtnNovoProfessor.Show();
                 BtnDeletar.Show();
@@ -52,21 +68,6 @@ namespace AcademiaGinastica
                 _academia.AtualizarProfessor(selecInde, TxtNome.Text, MtbTelefone.Text, MtbCPF.Text, CmbTurno.Text);
             }
             AtualizarLista();
-        }
-        private void AtualizarLista()
-        {
-            LbxCadastrados.Items.Clear();
-            foreach(var itens in _academia.ListaProfessores)
-            {
-                LbxCadastrados.Items.Add(itens.ToString());
-            }
-        }
-        private void Limpar()
-        {
-            TxtNome.Clear();
-            MtbCPF.Clear();
-            MtbTelefone.Clear();
-            CmbTurno.SelectedItem = null;
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)

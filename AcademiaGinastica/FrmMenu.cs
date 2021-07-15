@@ -23,5 +23,11 @@ namespace AcademiaGinastica
             FrmProfessor frmProfessor = new FrmProfessor(academia);
             frmProfessor.Show();
         }
+
+        private void BtnModalidade_Click(object sender, EventArgs e)
+        {
+            FrmModalidade frmModalidade = new FrmModalidade(academia);
+            frmModalidade.Show();
+        }
     }
 }

@@ -31,42 +31,57 @@ namespace AcademiaGinastica
         {
             this.CmbProfessor = new System.Windows.Forms.ComboBox();
             this.CmbDiasSemanas = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblProfessor = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtNomeModalidade = new System.Windows.Forms.TextBox();
-            this.LblMensalidade = new System.Windows.Forms.Label();
+            this.BtnNovaModalidade = new System.Windows.Forms.Button();
+            this.BtnDeletar = new System.Windows.Forms.Button();
+            this.LbxCadastrados = new System.Windows.Forms.ListBox();
+            this.BtnNovo = new System.Windows.Forms.Button();
+            this.BtnCadastrarModalidade = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.MskPrecoHora = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // CmbProfessor
             // 
+            this.CmbProfessor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbProfessor.FormattingEnabled = true;
-            this.CmbProfessor.Location = new System.Drawing.Point(92, 78);
+            this.CmbProfessor.Location = new System.Drawing.Point(35, 47);
             this.CmbProfessor.Name = "CmbProfessor";
             this.CmbProfessor.Size = new System.Drawing.Size(121, 23);
             this.CmbProfessor.TabIndex = 0;
             // 
             // CmbDiasSemanas
             // 
+            this.CmbDiasSemanas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbDiasSemanas.FormattingEnabled = true;
-            this.CmbDiasSemanas.Location = new System.Drawing.Point(302, 78);
+            this.CmbDiasSemanas.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.CmbDiasSemanas.Location = new System.Drawing.Point(182, 47);
             this.CmbDiasSemanas.Name = "CmbDiasSemanas";
             this.CmbDiasSemanas.Size = new System.Drawing.Size(121, 23);
             this.CmbDiasSemanas.TabIndex = 1;
             // 
-            // label1
+            // LblProfessor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Professor";
+            this.LblProfessor.AutoSize = true;
+            this.LblProfessor.Location = new System.Drawing.Point(35, 29);
+            this.LblProfessor.Name = "LblProfessor";
+            this.LblProfessor.Size = new System.Drawing.Size(56, 15);
+            this.LblProfessor.TabIndex = 2;
+            this.LblProfessor.Text = "Professor";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(302, 47);
+            this.label2.Location = new System.Drawing.Point(182, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 15);
             this.label2.TabIndex = 3;
@@ -75,7 +90,7 @@ namespace AcademiaGinastica
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(92, 151);
+            this.label3.Location = new System.Drawing.Point(35, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 15);
             this.label3.TabIndex = 4;
@@ -83,30 +98,93 @@ namespace AcademiaGinastica
             // 
             // TxtNomeModalidade
             // 
-            this.TxtNomeModalidade.Location = new System.Drawing.Point(92, 191);
+            this.TxtNomeModalidade.Location = new System.Drawing.Point(35, 122);
             this.TxtNomeModalidade.Name = "TxtNomeModalidade";
-            this.TxtNomeModalidade.Size = new System.Drawing.Size(100, 23);
+            this.TxtNomeModalidade.Size = new System.Drawing.Size(121, 23);
             this.TxtNomeModalidade.TabIndex = 5;
             // 
-            // LblMensalidade
+            // BtnNovaModalidade
             // 
-            this.LblMensalidade.AutoSize = true;
-            this.LblMensalidade.Location = new System.Drawing.Point(407, 186);
-            this.LblMensalidade.Name = "LblMensalidade";
-            this.LblMensalidade.Size = new System.Drawing.Size(80, 15);
-            this.LblMensalidade.TabIndex = 8;
-            this.LblMensalidade.Text = "Mensalidade: ";
+            this.BtnNovaModalidade.Location = new System.Drawing.Point(342, 194);
+            this.BtnNovaModalidade.Name = "BtnNovaModalidade";
+            this.BtnNovaModalidade.Size = new System.Drawing.Size(120, 23);
+            this.BtnNovaModalidade.TabIndex = 46;
+            this.BtnNovaModalidade.Text = "Nova Modalidade";
+            this.BtnNovaModalidade.UseVisualStyleBackColor = true;
+            this.BtnNovaModalidade.Click += new System.EventHandler(this.BtnNovaModalidade_Click);
+            // 
+            // BtnDeletar
+            // 
+            this.BtnDeletar.Location = new System.Drawing.Point(483, 194);
+            this.BtnDeletar.Name = "BtnDeletar";
+            this.BtnDeletar.Size = new System.Drawing.Size(99, 23);
+            this.BtnDeletar.TabIndex = 45;
+            this.BtnDeletar.Text = "Deletar";
+            this.BtnDeletar.UseVisualStyleBackColor = true;
+            this.BtnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
+            // 
+            // LbxCadastrados
+            // 
+            this.LbxCadastrados.FormattingEnabled = true;
+            this.LbxCadastrados.ItemHeight = 15;
+            this.LbxCadastrados.Location = new System.Drawing.Point(342, 24);
+            this.LbxCadastrados.Name = "LbxCadastrados";
+            this.LbxCadastrados.Size = new System.Drawing.Size(309, 154);
+            this.LbxCadastrados.TabIndex = 44;
+            this.LbxCadastrados.SelectedIndexChanged += new System.EventHandler(this.LbxCadastrados_SelectedIndexChanged);
+            // 
+            // BtnNovo
+            // 
+            this.BtnNovo.Location = new System.Drawing.Point(182, 180);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(121, 23);
+            this.BtnNovo.TabIndex = 43;
+            this.BtnNovo.Text = "Nova Modalidade";
+            this.BtnNovo.UseVisualStyleBackColor = true;
+            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
+            // 
+            // BtnCadastrarModalidade
+            // 
+            this.BtnCadastrarModalidade.Location = new System.Drawing.Point(35, 180);
+            this.BtnCadastrarModalidade.Name = "BtnCadastrarModalidade";
+            this.BtnCadastrarModalidade.Size = new System.Drawing.Size(131, 23);
+            this.BtnCadastrarModalidade.TabIndex = 42;
+            this.BtnCadastrarModalidade.Text = "Cadastrar Modalidade";
+            this.BtnCadastrarModalidade.UseVisualStyleBackColor = true;
+            this.BtnCadastrarModalidade.Click += new System.EventHandler(this.BtnCadastrarModalidade_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(181, 104);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 15);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Preço por Hora";
+            // 
+            // MskPrecoHora
+            // 
+            this.MskPrecoHora.Location = new System.Drawing.Point(182, 122);
+            this.MskPrecoHora.Name = "MskPrecoHora";
+            this.MskPrecoHora.Size = new System.Drawing.Size(121, 23);
+            this.MskPrecoHora.TabIndex = 48;
             // 
             // FrmModalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 283);
-            this.Controls.Add(this.LblMensalidade);
+            this.ClientSize = new System.Drawing.Size(698, 253);
+            this.Controls.Add(this.MskPrecoHora);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BtnNovaModalidade);
+            this.Controls.Add(this.BtnDeletar);
+            this.Controls.Add(this.LbxCadastrados);
+            this.Controls.Add(this.BtnNovo);
+            this.Controls.Add(this.BtnCadastrarModalidade);
             this.Controls.Add(this.TxtNomeModalidade);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblProfessor);
             this.Controls.Add(this.CmbDiasSemanas);
             this.Controls.Add(this.CmbProfessor);
             this.Name = "FrmModalidade";
@@ -120,10 +198,16 @@ namespace AcademiaGinastica
 
         private System.Windows.Forms.ComboBox CmbProfessor;
         private System.Windows.Forms.ComboBox CmbDiasSemanas;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblProfessor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtNomeModalidade;
-        private System.Windows.Forms.Label LblMensalidade;
+        private System.Windows.Forms.Button BtnNovaModalidade;
+        private System.Windows.Forms.Button BtnDeletar;
+        private System.Windows.Forms.ListBox LbxCadastrados;
+        private System.Windows.Forms.Button BtnNovo;
+        private System.Windows.Forms.Button BtnCadastrarModalidade;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox MskPrecoHora;
     }
 }
