@@ -8,7 +8,9 @@ namespace AcademiaGinastica.ClassPessoa
     public class Academia
     {
         public List<Aluno> ListaAlunos { get; set; }
+
         public List<Professor> ListaProfessores { get; set; }
+
         public List<Modalidade> ListaModalidades { get; set; }
 
         public Academia()
@@ -18,9 +20,9 @@ namespace AcademiaGinastica.ClassPessoa
             ListaModalidades = new List<Modalidade>();
         }
 
-        public void AddAluno(string nome, string cpf, string telefone, string turno)
+        public void AddAluno(string nome, string cpf, string telefone, Modalidade modalidade)
         {
-            ListaAlunos.Add(new Aluno(nome, telefone, cpf, turno));
+            ListaAlunos.Add(new Aluno(nome, cpf, telefone, modalidade));
         }
 
         public void AddProfessor(string nome, string telefone, string cpf, string turno)
@@ -50,13 +52,13 @@ namespace AcademiaGinastica.ClassPessoa
             string nome,
             string telefone,
             string cpf,
-            string turno
+            Modalidade modalidade
             )
         {
             ListaAlunos[indice].Nome = nome;
             ListaAlunos[indice].Telefone = telefone;
             ListaAlunos[indice].CPF = cpf;
-            ListaAlunos[indice].Turno = turno;
+            ListaAlunos[indice].Modalidade = modalidade;
         }
 
         public void AtualizarProfessor(

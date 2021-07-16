@@ -5,7 +5,6 @@ C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGin
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\bin\Debug\netcoreapp3.1\AcademiaGinastica.dll
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\bin\Debug\netcoreapp3.1\AcademiaGinastica.pdb
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.csproj.AssemblyReference.cache
-C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.Form1.resources
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.csproj.GenerateResource.cache
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.AssemblyInfoInputs.cache
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.AssemblyInfo.cs
@@ -16,3 +15,4 @@ C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGin
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.FrmMenu.resources
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.FrmModalidade.resources
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.FrmProfessor.resources
+C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.FrmAluno.resources

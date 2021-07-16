@@ -48,7 +48,7 @@ namespace AcademiaGinastica
             // 
             this.CmbProfessor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbProfessor.FormattingEnabled = true;
-            this.CmbProfessor.Location = new System.Drawing.Point(35, 47);
+            this.CmbProfessor.Location = new System.Drawing.Point(23, 47);
             this.CmbProfessor.Name = "CmbProfessor";
             this.CmbProfessor.Size = new System.Drawing.Size(121, 23);
             this.CmbProfessor.TabIndex = 0;
@@ -64,7 +64,7 @@ namespace AcademiaGinastica
             "4",
             "5",
             "6"});
-            this.CmbDiasSemanas.Location = new System.Drawing.Point(182, 47);
+            this.CmbDiasSemanas.Location = new System.Drawing.Point(170, 47);
             this.CmbDiasSemanas.Name = "CmbDiasSemanas";
             this.CmbDiasSemanas.Size = new System.Drawing.Size(121, 23);
             this.CmbDiasSemanas.TabIndex = 1;
@@ -72,7 +72,7 @@ namespace AcademiaGinastica
             // LblProfessor
             // 
             this.LblProfessor.AutoSize = true;
-            this.LblProfessor.Location = new System.Drawing.Point(35, 29);
+            this.LblProfessor.Location = new System.Drawing.Point(23, 29);
             this.LblProfessor.Name = "LblProfessor";
             this.LblProfessor.Size = new System.Drawing.Size(56, 15);
             this.LblProfessor.TabIndex = 2;
@@ -81,7 +81,7 @@ namespace AcademiaGinastica
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(182, 29);
+            this.label2.Location = new System.Drawing.Point(170, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 15);
             this.label2.TabIndex = 3;
@@ -90,7 +90,7 @@ namespace AcademiaGinastica
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 104);
+            this.label3.Location = new System.Drawing.Point(23, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 15);
             this.label3.TabIndex = 4;
@@ -98,16 +98,16 @@ namespace AcademiaGinastica
             // 
             // TxtNomeModalidade
             // 
-            this.TxtNomeModalidade.Location = new System.Drawing.Point(35, 122);
+            this.TxtNomeModalidade.Location = new System.Drawing.Point(23, 122);
             this.TxtNomeModalidade.Name = "TxtNomeModalidade";
             this.TxtNomeModalidade.Size = new System.Drawing.Size(121, 23);
             this.TxtNomeModalidade.TabIndex = 5;
             // 
             // BtnNovaModalidade
             // 
-            this.BtnNovaModalidade.Location = new System.Drawing.Point(342, 194);
+            this.BtnNovaModalidade.Location = new System.Drawing.Point(330, 194);
             this.BtnNovaModalidade.Name = "BtnNovaModalidade";
-            this.BtnNovaModalidade.Size = new System.Drawing.Size(120, 23);
+            this.BtnNovaModalidade.Size = new System.Drawing.Size(113, 23);
             this.BtnNovaModalidade.TabIndex = 46;
             this.BtnNovaModalidade.Text = "Nova Modalidade";
             this.BtnNovaModalidade.UseVisualStyleBackColor = true;
@@ -115,9 +115,9 @@ namespace AcademiaGinastica
             // 
             // BtnDeletar
             // 
-            this.BtnDeletar.Location = new System.Drawing.Point(483, 194);
+            this.BtnDeletar.Location = new System.Drawing.Point(460, 194);
             this.BtnDeletar.Name = "BtnDeletar";
-            this.BtnDeletar.Size = new System.Drawing.Size(99, 23);
+            this.BtnDeletar.Size = new System.Drawing.Size(113, 23);
             this.BtnDeletar.TabIndex = 45;
             this.BtnDeletar.Text = "Deletar";
             this.BtnDeletar.UseVisualStyleBackColor = true;
@@ -127,7 +127,7 @@ namespace AcademiaGinastica
             // 
             this.LbxCadastrados.FormattingEnabled = true;
             this.LbxCadastrados.ItemHeight = 15;
-            this.LbxCadastrados.Location = new System.Drawing.Point(342, 24);
+            this.LbxCadastrados.Location = new System.Drawing.Point(330, 24);
             this.LbxCadastrados.Name = "LbxCadastrados";
             this.LbxCadastrados.Size = new System.Drawing.Size(309, 154);
             this.LbxCadastrados.TabIndex = 44;
@@ -135,7 +135,7 @@ namespace AcademiaGinastica
             // 
             // BtnNovo
             // 
-            this.BtnNovo.Location = new System.Drawing.Point(182, 180);
+            this.BtnNovo.Location = new System.Drawing.Point(170, 180);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(121, 23);
             this.BtnNovo.TabIndex = 43;
@@ -145,9 +145,9 @@ namespace AcademiaGinastica
             // 
             // BtnCadastrarModalidade
             // 
-            this.BtnCadastrarModalidade.Location = new System.Drawing.Point(35, 180);
+            this.BtnCadastrarModalidade.Location = new System.Drawing.Point(23, 180);
             this.BtnCadastrarModalidade.Name = "BtnCadastrarModalidade";
-            this.BtnCadastrarModalidade.Size = new System.Drawing.Size(131, 23);
+            this.BtnCadastrarModalidade.Size = new System.Drawing.Size(121, 23);
             this.BtnCadastrarModalidade.TabIndex = 42;
             this.BtnCadastrarModalidade.Text = "Cadastrar Modalidade";
             this.BtnCadastrarModalidade.UseVisualStyleBackColor = true;
@@ -156,7 +156,7 @@ namespace AcademiaGinastica
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(181, 104);
+            this.label1.Location = new System.Drawing.Point(169, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 15);
             this.label1.TabIndex = 47;
@@ -164,7 +164,7 @@ namespace AcademiaGinastica
             // 
             // MskPrecoHora
             // 
-            this.MskPrecoHora.Location = new System.Drawing.Point(182, 122);
+            this.MskPrecoHora.Location = new System.Drawing.Point(170, 122);
             this.MskPrecoHora.Name = "MskPrecoHora";
             this.MskPrecoHora.Size = new System.Drawing.Size(121, 23);
             this.MskPrecoHora.TabIndex = 48;

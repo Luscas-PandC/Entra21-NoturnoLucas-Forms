@@ -46,9 +46,9 @@ namespace AcademiaGinastica
             // 
             // BtnNovo
             // 
-            this.BtnNovo.Location = new System.Drawing.Point(173, 151);
+            this.BtnNovo.Location = new System.Drawing.Point(184, 151);
             this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(121, 23);
+            this.BtnNovo.Size = new System.Drawing.Size(120, 23);
             this.BtnNovo.TabIndex = 25;
             this.BtnNovo.Text = "Novo Professor";
             this.BtnNovo.UseVisualStyleBackColor = true;
@@ -56,7 +56,7 @@ namespace AcademiaGinastica
             // 
             // BtnCadastrarProfessor
             // 
-            this.BtnCadastrarProfessor.Location = new System.Drawing.Point(34, 151);
+            this.BtnCadastrarProfessor.Location = new System.Drawing.Point(28, 151);
             this.BtnCadastrarProfessor.Name = "BtnCadastrarProfessor";
             this.BtnCadastrarProfessor.Size = new System.Drawing.Size(120, 23);
             this.BtnCadastrarProfessor.TabIndex = 24;
@@ -125,7 +125,7 @@ namespace AcademiaGinastica
             // 
             // BtnNovoProfessor
             // 
-            this.BtnNovoProfessor.Location = new System.Drawing.Point(344, 197);
+            this.BtnNovoProfessor.Location = new System.Drawing.Point(328, 197);
             this.BtnNovoProfessor.Name = "BtnNovoProfessor";
             this.BtnNovoProfessor.Size = new System.Drawing.Size(99, 23);
             this.BtnNovoProfessor.TabIndex = 41;
@@ -135,7 +135,7 @@ namespace AcademiaGinastica
             // 
             // BtnDeletar
             // 
-            this.BtnDeletar.Location = new System.Drawing.Point(458, 197);
+            this.BtnDeletar.Location = new System.Drawing.Point(447, 197);
             this.BtnDeletar.Name = "BtnDeletar";
             this.BtnDeletar.Size = new System.Drawing.Size(99, 23);
             this.BtnDeletar.TabIndex = 40;
@@ -147,9 +147,9 @@ namespace AcademiaGinastica
             // 
             this.LbxCadastrados.FormattingEnabled = true;
             this.LbxCadastrados.ItemHeight = 15;
-            this.LbxCadastrados.Location = new System.Drawing.Point(344, 27);
+            this.LbxCadastrados.Location = new System.Drawing.Point(328, 27);
             this.LbxCadastrados.Name = "LbxCadastrados";
-            this.LbxCadastrados.Size = new System.Drawing.Size(309, 154);
+            this.LbxCadastrados.Size = new System.Drawing.Size(319, 154);
             this.LbxCadastrados.TabIndex = 38;
             this.LbxCadastrados.SelectedIndexChanged += new System.EventHandler(this.LbxCadastrados_SelectedIndexChanged);
             // 
@@ -161,7 +161,7 @@ namespace AcademiaGinastica
             "Matutino",
             "Vespertino",
             "Noturno"});
-            this.CmbTurno.Location = new System.Drawing.Point(184, 98);
+            this.CmbTurno.Location = new System.Drawing.Point(183, 98);
             this.CmbTurno.Name = "CmbTurno";
             this.CmbTurno.Size = new System.Drawing.Size(121, 23);
             this.CmbTurno.TabIndex = 42;
@@ -186,6 +186,7 @@ namespace AcademiaGinastica
             this.Controls.Add(this.LblTelefone);
             this.Name = "FrmProfessor";
             this.Text = "FrmProfessor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmProfessor_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

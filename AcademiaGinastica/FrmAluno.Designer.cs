@@ -1,7 +1,7 @@
 ﻿
 namespace AcademiaGinastica
 {
-    partial class Form1
+    partial class FrmAluno
     {
         /// <summary>
         ///  Required designer variable.
@@ -37,17 +37,18 @@ namespace AcademiaGinastica
             this.TxtNome = new System.Windows.Forms.TextBox();
             this.MtbCPF = new System.Windows.Forms.MaskedTextBox();
             this.MtbTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.CmbTurma = new System.Windows.Forms.ComboBox();
             this.LbxCadastrados = new System.Windows.Forms.ListBox();
             this.BtnCadastrarAluno = new System.Windows.Forms.Button();
-            this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnNovo = new System.Windows.Forms.Button();
             this.BtnDeletar = new System.Windows.Forms.Button();
             this.BtnConfirmarPagamentos = new System.Windows.Forms.Button();
             this.BtnNovoAluno = new System.Windows.Forms.Button();
             this.LblModalidade = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtMensalidade = new System.Windows.Forms.TextBox();
             this.CmbModalidade = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtProfessor = new System.Windows.Forms.TextBox();
+            this.TxtTurno = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LblNome
@@ -80,7 +81,7 @@ namespace AcademiaGinastica
             // LblMensalidade
             // 
             this.LblMensalidade.AutoSize = true;
-            this.LblMensalidade.Location = new System.Drawing.Point(155, 145);
+            this.LblMensalidade.Location = new System.Drawing.Point(156, 208);
             this.LblMensalidade.Name = "LblMensalidade";
             this.LblMensalidade.Size = new System.Drawing.Size(74, 15);
             this.LblMensalidade.TabIndex = 5;
@@ -89,17 +90,17 @@ namespace AcademiaGinastica
             // LblTurma
             // 
             this.LblTurma.AutoSize = true;
-            this.LblTurma.Location = new System.Drawing.Point(155, 21);
+            this.LblTurma.Location = new System.Drawing.Point(24, 209);
             this.LblTurma.Name = "LblTurma";
-            this.LblTurma.Size = new System.Drawing.Size(42, 15);
+            this.LblTurma.Size = new System.Drawing.Size(39, 15);
             this.LblTurma.TabIndex = 4;
-            this.LblTurma.Text = "Turma";
+            this.LblTurma.Text = "Turno";
             // 
             // TxtNome
             // 
             this.TxtNome.Location = new System.Drawing.Point(24, 39);
             this.TxtNome.Name = "TxtNome";
-            this.TxtNome.Size = new System.Drawing.Size(120, 23);
+            this.TxtNome.Size = new System.Drawing.Size(237, 23);
             this.TxtNome.TabIndex = 1;
             // 
             // MtbCPF
@@ -107,35 +108,22 @@ namespace AcademiaGinastica
             this.MtbCPF.Location = new System.Drawing.Point(24, 97);
             this.MtbCPF.Mask = "000,000,000-00";
             this.MtbCPF.Name = "MtbCPF";
-            this.MtbCPF.Size = new System.Drawing.Size(120, 23);
+            this.MtbCPF.Size = new System.Drawing.Size(105, 23);
             this.MtbCPF.TabIndex = 3;
             // 
             // MtbTelefone
             // 
-            this.MtbTelefone.Location = new System.Drawing.Point(155, 97);
+            this.MtbTelefone.Location = new System.Drawing.Point(156, 97);
             this.MtbTelefone.Mask = "(00) 00000-0000";
             this.MtbTelefone.Name = "MtbTelefone";
-            this.MtbTelefone.Size = new System.Drawing.Size(121, 23);
+            this.MtbTelefone.Size = new System.Drawing.Size(105, 23);
             this.MtbTelefone.TabIndex = 4;
-            // 
-            // CmbTurma
-            // 
-            this.CmbTurma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbTurma.FormattingEnabled = true;
-            this.CmbTurma.Items.AddRange(new object[] {
-            "Manha",
-            "Tarde",
-            "Noite"});
-            this.CmbTurma.Location = new System.Drawing.Point(155, 39);
-            this.CmbTurma.Name = "CmbTurma";
-            this.CmbTurma.Size = new System.Drawing.Size(121, 23);
-            this.CmbTurma.TabIndex = 2;
             // 
             // LbxCadastrados
             // 
             this.LbxCadastrados.FormattingEnabled = true;
             this.LbxCadastrados.ItemHeight = 15;
-            this.LbxCadastrados.Location = new System.Drawing.Point(359, 21);
+            this.LbxCadastrados.Location = new System.Drawing.Point(300, 39);
             this.LbxCadastrados.Name = "LbxCadastrados";
             this.LbxCadastrados.Size = new System.Drawing.Size(309, 154);
             this.LbxCadastrados.TabIndex = 9;
@@ -143,29 +131,19 @@ namespace AcademiaGinastica
             // 
             // BtnCadastrarAluno
             // 
-            this.BtnCadastrarAluno.Location = new System.Drawing.Point(24, 226);
+            this.BtnCadastrarAluno.Location = new System.Drawing.Point(24, 278);
             this.BtnCadastrarAluno.Name = "BtnCadastrarAluno";
-            this.BtnCadastrarAluno.Size = new System.Drawing.Size(120, 23);
+            this.BtnCadastrarAluno.Size = new System.Drawing.Size(105, 23);
             this.BtnCadastrarAluno.TabIndex = 7;
             this.BtnCadastrarAluno.Text = "Cadastrar Aluno";
             this.BtnCadastrarAluno.UseVisualStyleBackColor = true;
             this.BtnCadastrarAluno.Click += new System.EventHandler(this.BtnIncerir_Click);
             // 
-            // BtnEditar
-            // 
-            this.BtnEditar.Location = new System.Drawing.Point(359, 191);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(99, 23);
-            this.BtnEditar.TabIndex = 10;
-            this.BtnEditar.Text = "Exibir";
-            this.BtnEditar.UseVisualStyleBackColor = true;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
             // BtnNovo
             // 
-            this.BtnNovo.Location = new System.Drawing.Point(155, 226);
+            this.BtnNovo.Location = new System.Drawing.Point(156, 278);
             this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(121, 23);
+            this.BtnNovo.Size = new System.Drawing.Size(105, 23);
             this.BtnNovo.TabIndex = 8;
             this.BtnNovo.Text = "Novo Aluno";
             this.BtnNovo.UseVisualStyleBackColor = true;
@@ -173,7 +151,7 @@ namespace AcademiaGinastica
             // 
             // BtnDeletar
             // 
-            this.BtnDeletar.Location = new System.Drawing.Point(569, 191);
+            this.BtnDeletar.Location = new System.Drawing.Point(405, 209);
             this.BtnDeletar.Name = "BtnDeletar";
             this.BtnDeletar.Size = new System.Drawing.Size(99, 23);
             this.BtnDeletar.TabIndex = 11;
@@ -183,9 +161,9 @@ namespace AcademiaGinastica
             // 
             // BtnConfirmarPagamentos
             // 
-            this.BtnConfirmarPagamentos.Location = new System.Drawing.Point(359, 226);
+            this.BtnConfirmarPagamentos.Location = new System.Drawing.Point(300, 244);
             this.BtnConfirmarPagamentos.Name = "BtnConfirmarPagamentos";
-            this.BtnConfirmarPagamentos.Size = new System.Drawing.Size(144, 23);
+            this.BtnConfirmarPagamentos.Size = new System.Drawing.Size(204, 23);
             this.BtnConfirmarPagamentos.TabIndex = 12;
             this.BtnConfirmarPagamentos.Text = "Confirmar Pagamentos";
             this.BtnConfirmarPagamentos.UseVisualStyleBackColor = true;
@@ -193,7 +171,7 @@ namespace AcademiaGinastica
             // 
             // BtnNovoAluno
             // 
-            this.BtnNovoAluno.Location = new System.Drawing.Point(464, 191);
+            this.BtnNovoAluno.Location = new System.Drawing.Point(300, 209);
             this.BtnNovoAluno.Name = "BtnNovoAluno";
             this.BtnNovoAluno.Size = new System.Drawing.Size(99, 23);
             this.BtnNovoAluno.TabIndex = 13;
@@ -210,45 +188,66 @@ namespace AcademiaGinastica
             this.LblModalidade.TabIndex = 14;
             this.LblModalidade.Text = "Modalidade";
             // 
-            // textBox1
+            // TxtMensalidade
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(155, 163);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 23);
-            this.textBox1.TabIndex = 15;
+            this.TxtMensalidade.Location = new System.Drawing.Point(155, 226);
+            this.TxtMensalidade.Name = "TxtMensalidade";
+            this.TxtMensalidade.ReadOnly = true;
+            this.TxtMensalidade.Size = new System.Drawing.Size(106, 23);
+            this.TxtMensalidade.TabIndex = 15;
             // 
             // CmbModalidade
             // 
             this.CmbModalidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbModalidade.FormattingEnabled = true;
-            this.CmbModalidade.Items.AddRange(new object[] {
-            "Musculação",
-            "Preparação Fisica",
-            "Dança",
-            "Crossfit"});
             this.CmbModalidade.Location = new System.Drawing.Point(24, 163);
             this.CmbModalidade.Name = "CmbModalidade";
-            this.CmbModalidade.Size = new System.Drawing.Size(120, 23);
+            this.CmbModalidade.Size = new System.Drawing.Size(105, 23);
             this.CmbModalidade.TabIndex = 16;
             this.CmbModalidade.SelectedIndexChanged += new System.EventHandler(this.CmbModalidade_SelectedIndexChanged);
             // 
-            // Form1
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(155, 145);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 15);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Professor";
+            // 
+            // TxtProfessor
+            // 
+            this.TxtProfessor.Location = new System.Drawing.Point(156, 163);
+            this.TxtProfessor.Name = "TxtProfessor";
+            this.TxtProfessor.ReadOnly = true;
+            this.TxtProfessor.Size = new System.Drawing.Size(105, 23);
+            this.TxtProfessor.TabIndex = 18;
+            // 
+            // TxtTurno
+            // 
+            this.TxtTurno.Location = new System.Drawing.Point(24, 227);
+            this.TxtTurno.Name = "TxtTurno";
+            this.TxtTurno.ReadOnly = true;
+            this.TxtTurno.Size = new System.Drawing.Size(105, 23);
+            this.TxtTurno.TabIndex = 19;
+            // 
+            // FrmAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 268);
+            this.ClientSize = new System.Drawing.Size(637, 325);
+            this.Controls.Add(this.TxtTurno);
+            this.Controls.Add(this.TxtProfessor);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.CmbModalidade);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtMensalidade);
             this.Controls.Add(this.LblModalidade);
             this.Controls.Add(this.BtnNovoAluno);
             this.Controls.Add(this.BtnConfirmarPagamentos);
             this.Controls.Add(this.BtnDeletar);
             this.Controls.Add(this.BtnNovo);
-            this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnCadastrarAluno);
             this.Controls.Add(this.LbxCadastrados);
-            this.Controls.Add(this.CmbTurma);
             this.Controls.Add(this.MtbTelefone);
             this.Controls.Add(this.MtbCPF);
             this.Controls.Add(this.TxtNome);
@@ -257,7 +256,7 @@ namespace AcademiaGinastica
             this.Controls.Add(this.LblTelefone);
             this.Controls.Add(this.LblCPF);
             this.Controls.Add(this.LblNome);
-            this.Name = "Form1";
+            this.Name = "FrmAluno";
             this.Text = "Academia Ginastica";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -274,17 +273,18 @@ namespace AcademiaGinastica
         private System.Windows.Forms.TextBox TxtNome;
         private System.Windows.Forms.MaskedTextBox MtbCPF;
         private System.Windows.Forms.MaskedTextBox MtbTelefone;
-        private System.Windows.Forms.ComboBox CmbTurma;
         private System.Windows.Forms.ListBox LbxCadastrados;
         private System.Windows.Forms.Button BtnCadastrarAluno;
-        private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnNovo;
         private System.Windows.Forms.Button BtnDeletar;
         private System.Windows.Forms.Button BtnConfirmarPagamentos;
         private System.Windows.Forms.Button BtnNovoAluno;
         private System.Windows.Forms.Label LblModalidade;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtMensalidade;
         private System.Windows.Forms.ComboBox CmbModalidade;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TxtProfessor;
+        private System.Windows.Forms.TextBox TxtTurno;
     }
 }
 

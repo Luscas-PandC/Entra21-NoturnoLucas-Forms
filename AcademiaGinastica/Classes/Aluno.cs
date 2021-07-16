@@ -7,21 +7,22 @@ namespace AcademiaGinastica.ClassPessoa
 {
     public class Aluno : Pessoa
     {
-        public string Turno { get; set; }
-        public FrmModalidade Modalidade { get; set; }
+        public Modalidade Modalidade { get; set; }
+
         public string Pagou { get; set; }  
 
-        public Aluno(string nome, string telefone, string cpf, string turno)
+        public Aluno(string nome, string cpf, string telefone, Modalidade modalidade)
         {
             Nome = nome;
-            Telefone = telefone;
             CPF = cpf;
-            Turno = turno;
+            Telefone = telefone;
             Pagou = "Não.";
+            Modalidade = modalidade;
         }
+
         public override string ToString()
         {
-            return $"{Nome} - {Turno} - {Modalidade} - Pagou: {Pagou}";
+            return $"{Nome} - {Modalidade.Nome}- {Modalidade.Professor.Turno} - Pagou: {Pagou}";
         }
     }
 }

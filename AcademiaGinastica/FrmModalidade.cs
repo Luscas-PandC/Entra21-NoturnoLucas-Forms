@@ -12,42 +12,23 @@ namespace AcademiaGinastica
     public partial class FrmModalidade : Form
     {
         Academia _academia;
+
+        FrmMenu _frmMenu;
+
         int indice = -1;
-        public FrmModalidade(Academia academia)
+
+        public FrmModalidade(Academia academia, FrmMenu frmMenu)
         {
             InitializeComponent();
             _academia = academia;
+            _frmMenu = frmMenu;
             PreenchendoCmbProfessor();
             BtnNovaModalidade.Hide();
             BtnDeletar.Hide();
+            AtualizarLbx();
         }
 
-        public void PreenchendoCmbProfessor()
-        {
-            foreach (var item in _academia.ListaProfessores)
-            {
-                CmbProfessor.Items.Add(item);
-            }
-        }
-
-        public void Limpar()
-        {
-            CmbProfessor.SelectedItem = null;
-            CmbDiasSemanas.SelectedItem = null;
-            TxtNomeModalidade.Clear();
-            MskPrecoHora.Clear();
-        }
-
-        public void AtualizarLbx()
-        {
-            LbxCadastrados.Items.Clear();
-            foreach (var item in _academia.ListaModalidades)
-            {
-                LbxCadastrados.Items.Add(item);
-            }
-        }
-
-        public void BtnCadastrarModalidade_Click(object sender, EventArgs e)
+        private void BtnCadastrarModalidade_Click(object sender, EventArgs e)
         {
             if (indice >= 0)
             {
@@ -68,14 +49,9 @@ namespace AcademiaGinastica
                     TxtNomeModalidade.Text
                     );
                 Limpar();
+                _frmMenu.VerificandoListas();
             }
             AtualizarLbx();
-        }
-
-        private void BtnNovo_Click(object sender, EventArgs e)
-        {
-            Limpar();
-            LbxCadastrados.SelectedIndex = -1;
         }
 
         private void BtnDeletar_Click(object sender, EventArgs e)
@@ -84,8 +60,21 @@ namespace AcademiaGinastica
             {
                 _academia.DeletarModalidade(LbxCadastrados.SelectedIndex);
                 AtualizarLbx();
-                Limpar();
+                if (LbxCadastrados.Items.Count == 0)
+                {
+                    BtnNovaModalidade_Click(sender, e);
+                }
+                else
+                {
+                    LbxCadastrados.SelectedIndex = 0;
+                }
             }
+        }
+
+        private void BtnNovo_Click(object sender, EventArgs e)
+        {
+            Limpar();
+            LbxCadastrados.SelectedIndex = -1;
         }
 
         private void BtnNovaModalidade_Click(object sender, EventArgs e)
@@ -108,10 +97,35 @@ namespace AcademiaGinastica
                 BtnDeletar.Show();
                 BtnNovo.Hide();
                 CmbProfessor.SelectedItem = _academia.ListaModalidades[indice].Professor;
-                CmbDiasSemanas.SelectedItem = _academia.ListaModalidades[indice].VezesSemana;
+                CmbDiasSemanas.SelectedIndex = _academia.ListaModalidades[indice].VezesSemana -1;
                 TxtNomeModalidade.Text = _academia.ListaModalidades[indice].Nome;
                 MskPrecoHora.Text = _academia.ListaModalidades[indice].PrecoHora.ToString();
             }
+        }
+
+        public void PreenchendoCmbProfessor()
+        {
+            foreach (var item in _academia.ListaProfessores)
+            {
+                CmbProfessor.Items.Add(item);
+            }
+        }
+
+        public void AtualizarLbx()
+        {
+            LbxCadastrados.Items.Clear();
+            foreach (var item in _academia.ListaModalidades)
+            {
+                LbxCadastrados.Items.Add(item);
+            }
+        }
+
+        public void Limpar()
+        {
+            CmbProfessor.SelectedItem = null;
+            CmbDiasSemanas.SelectedItem = null;
+            TxtNomeModalidade.Clear();
+            MskPrecoHora.Clear();
         }
     }
 }

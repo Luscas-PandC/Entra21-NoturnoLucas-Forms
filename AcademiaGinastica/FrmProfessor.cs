@@ -12,46 +12,20 @@ namespace AcademiaGinastica
     public partial class FrmProfessor : Form
     {
         Academia _academia;
+
+        FrmMenu _frmMenu;
+
         int selecInde = -1;
-        public FrmProfessor(Academia academia)
+
+        public FrmProfessor(Academia academia, FrmMenu frmMenu)
         {
             InitializeComponent();
             _academia = academia;
+            _frmMenu = frmMenu;
+
             BtnNovoProfessor.Hide();
             BtnDeletar.Hide();
-
-        }
-
-        private void AtualizarLista()
-        {
-            LbxCadastrados.Items.Clear();
-            foreach(var itens in _academia.ListaProfessores)
-            {
-                LbxCadastrados.Items.Add(itens.ToString());
-            }
-        }
-        private void Limpar()
-        {
-            TxtNome.Clear();
-            MtbCPF.Clear();
-            MtbTelefone.Clear();
-            CmbTurno.SelectedItem = null;
-        }
-
-        private void LbxCadastrados_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (LbxCadastrados.SelectedIndex >= 0)
-            {
-                BtnCadastrarProfessor.Text = "Atualizar";
-                BtnNovo.Hide();
-                BtnNovoProfessor.Show();
-                BtnDeletar.Show();
-                selecInde = LbxCadastrados.SelectedIndex;
-                TxtNome.Text = _academia.ListaProfessores[LbxCadastrados.SelectedIndex].Nome;
-                MtbCPF.Text = _academia.ListaProfessores[LbxCadastrados.SelectedIndex].CPF;
-                MtbTelefone.Text = _academia.ListaProfessores[LbxCadastrados.SelectedIndex].Telefone;
-                CmbTurno.SelectedItem = _academia.ListaProfessores[LbxCadastrados.SelectedIndex].Turno;
-            }
+            AtualizarLista();
         }
 
         private void BtnCadastrarProfessor_Click(object sender, EventArgs e)
@@ -61,13 +35,29 @@ namespace AcademiaGinastica
             {
                 _academia.AddProfessor(TxtNome.Text, MtbTelefone.Text, MtbCPF.Text, CmbTurno.Text);
                 Limpar();
-
             }
             else
             {
                 _academia.AtualizarProfessor(selecInde, TxtNome.Text, MtbTelefone.Text, MtbCPF.Text, CmbTurno.Text);
             }
             AtualizarLista();
+        }
+
+        private void BtnDeletar_Click(object sender, EventArgs e)
+        {
+            if (LbxCadastrados.SelectedIndex >= 0)
+            {
+                _academia.DeletarProfessor(LbxCadastrados.SelectedIndex);
+                AtualizarLista();
+                if (LbxCadastrados.Items.Count == 0)
+                {
+                    BtnNovoProfessor_Click(sender, e);
+                }
+                else
+                {
+                    LbxCadastrados.SelectedIndex = 0;
+                }
+            }
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
@@ -88,21 +78,42 @@ namespace AcademiaGinastica
             BtnNovoProfessor.Hide();
         }
 
-        private void BtnDeletar_Click(object sender, EventArgs e)
+        private void LbxCadastrados_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (LbxCadastrados.SelectedIndex >= 0)
             {
-                _academia.DeletarProfessor(LbxCadastrados.SelectedIndex);
-                AtualizarLista();
-                if (LbxCadastrados.Items.Count == 0)
-                {
-                    BtnNovoProfessor_Click(sender, e);
-                }
-                else
-                {
-                    LbxCadastrados.SelectedIndex = 0;
-                }
+                BtnCadastrarProfessor.Text = "Atualizar";
+                BtnNovo.Hide();
+                BtnNovoProfessor.Show();
+                BtnDeletar.Show();
+                selecInde = LbxCadastrados.SelectedIndex;
+                TxtNome.Text = _academia.ListaProfessores[LbxCadastrados.SelectedIndex].Nome;
+                MtbCPF.Text = _academia.ListaProfessores[LbxCadastrados.SelectedIndex].CPF;
+                MtbTelefone.Text = _academia.ListaProfessores[LbxCadastrados.SelectedIndex].Telefone;
+                CmbTurno.SelectedItem = _academia.ListaProfessores[LbxCadastrados.SelectedIndex].Turno;
             }
+        }
+
+        private void AtualizarLista()
+        {
+            LbxCadastrados.Items.Clear();
+            foreach(var itens in _academia.ListaProfessores)
+            {
+                LbxCadastrados.Items.Add(itens.ToString());
+            }
+        }
+
+        private void Limpar()
+        {
+            TxtNome.Clear();
+            MtbCPF.Clear();
+            MtbTelefone.Clear();
+            CmbTurno.SelectedItem = null;
+        }
+
+        private void FrmProfessor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _frmMenu.VerificandoListas();
         }
     }
 }
