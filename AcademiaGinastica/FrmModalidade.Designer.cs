@@ -51,7 +51,7 @@ namespace AcademiaGinastica
             this.CmbProfessor.Location = new System.Drawing.Point(23, 47);
             this.CmbProfessor.Name = "CmbProfessor";
             this.CmbProfessor.Size = new System.Drawing.Size(121, 23);
-            this.CmbProfessor.TabIndex = 0;
+            this.CmbProfessor.TabIndex = 1;
             // 
             // CmbDiasSemanas
             // 
@@ -67,7 +67,7 @@ namespace AcademiaGinastica
             this.CmbDiasSemanas.Location = new System.Drawing.Point(170, 47);
             this.CmbDiasSemanas.Name = "CmbDiasSemanas";
             this.CmbDiasSemanas.Size = new System.Drawing.Size(121, 23);
-            this.CmbDiasSemanas.TabIndex = 1;
+            this.CmbDiasSemanas.TabIndex = 2;
             // 
             // LblProfessor
             // 
@@ -101,24 +101,24 @@ namespace AcademiaGinastica
             this.TxtNomeModalidade.Location = new System.Drawing.Point(23, 122);
             this.TxtNomeModalidade.Name = "TxtNomeModalidade";
             this.TxtNomeModalidade.Size = new System.Drawing.Size(121, 23);
-            this.TxtNomeModalidade.TabIndex = 5;
+            this.TxtNomeModalidade.TabIndex = 3;
             // 
             // BtnNovaModalidade
             // 
-            this.BtnNovaModalidade.Location = new System.Drawing.Point(330, 194);
+            this.BtnNovaModalidade.Location = new System.Drawing.Point(330, 180);
             this.BtnNovaModalidade.Name = "BtnNovaModalidade";
             this.BtnNovaModalidade.Size = new System.Drawing.Size(113, 23);
-            this.BtnNovaModalidade.TabIndex = 46;
+            this.BtnNovaModalidade.TabIndex = 8;
             this.BtnNovaModalidade.Text = "Nova Modalidade";
             this.BtnNovaModalidade.UseVisualStyleBackColor = true;
             this.BtnNovaModalidade.Click += new System.EventHandler(this.BtnNovaModalidade_Click);
             // 
             // BtnDeletar
             // 
-            this.BtnDeletar.Location = new System.Drawing.Point(460, 194);
+            this.BtnDeletar.Location = new System.Drawing.Point(459, 180);
             this.BtnDeletar.Name = "BtnDeletar";
             this.BtnDeletar.Size = new System.Drawing.Size(113, 23);
-            this.BtnDeletar.TabIndex = 45;
+            this.BtnDeletar.TabIndex = 9;
             this.BtnDeletar.Text = "Deletar";
             this.BtnDeletar.UseVisualStyleBackColor = true;
             this.BtnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
@@ -127,10 +127,10 @@ namespace AcademiaGinastica
             // 
             this.LbxCadastrados.FormattingEnabled = true;
             this.LbxCadastrados.ItemHeight = 15;
-            this.LbxCadastrados.Location = new System.Drawing.Point(330, 24);
+            this.LbxCadastrados.Location = new System.Drawing.Point(330, 29);
             this.LbxCadastrados.Name = "LbxCadastrados";
-            this.LbxCadastrados.Size = new System.Drawing.Size(309, 154);
-            this.LbxCadastrados.TabIndex = 44;
+            this.LbxCadastrados.Size = new System.Drawing.Size(309, 139);
+            this.LbxCadastrados.TabIndex = 7;
             this.LbxCadastrados.SelectedIndexChanged += new System.EventHandler(this.LbxCadastrados_SelectedIndexChanged);
             // 
             // BtnNovo
@@ -138,7 +138,7 @@ namespace AcademiaGinastica
             this.BtnNovo.Location = new System.Drawing.Point(170, 180);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(121, 23);
-            this.BtnNovo.TabIndex = 43;
+            this.BtnNovo.TabIndex = 6;
             this.BtnNovo.Text = "Nova Modalidade";
             this.BtnNovo.UseVisualStyleBackColor = true;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
@@ -148,7 +148,7 @@ namespace AcademiaGinastica
             this.BtnCadastrarModalidade.Location = new System.Drawing.Point(23, 180);
             this.BtnCadastrarModalidade.Name = "BtnCadastrarModalidade";
             this.BtnCadastrarModalidade.Size = new System.Drawing.Size(121, 23);
-            this.BtnCadastrarModalidade.TabIndex = 42;
+            this.BtnCadastrarModalidade.TabIndex = 5;
             this.BtnCadastrarModalidade.Text = "Cadastrar Modalidade";
             this.BtnCadastrarModalidade.UseVisualStyleBackColor = true;
             this.BtnCadastrarModalidade.Click += new System.EventHandler(this.BtnCadastrarModalidade_Click);
@@ -167,13 +167,14 @@ namespace AcademiaGinastica
             this.MskPrecoHora.Location = new System.Drawing.Point(170, 122);
             this.MskPrecoHora.Name = "MskPrecoHora";
             this.MskPrecoHora.Size = new System.Drawing.Size(121, 23);
-            this.MskPrecoHora.TabIndex = 48;
+            this.MskPrecoHora.TabIndex = 4;
+            this.MskPrecoHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MskPrecoHora_KeyPress);
             // 
             // FrmModalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 253);
+            this.ClientSize = new System.Drawing.Size(657, 224);
             this.Controls.Add(this.MskPrecoHora);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnNovaModalidade);
@@ -187,8 +188,11 @@ namespace AcademiaGinastica
             this.Controls.Add(this.LblProfessor);
             this.Controls.Add(this.CmbDiasSemanas);
             this.Controls.Add(this.CmbProfessor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmModalidade";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modalidade";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmModalidade_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

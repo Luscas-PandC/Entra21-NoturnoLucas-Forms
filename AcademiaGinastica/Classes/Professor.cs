@@ -8,6 +8,7 @@ namespace AcademiaGinastica.Classes
     public class Professor : Pessoa
     {
         public string Turno { get; set; }
+
         public double SalarioHora { get; set; }
 
         public override string ToString()
@@ -16,4 +17,3 @@ namespace AcademiaGinastica.Classes
         }
     }
 }
-A

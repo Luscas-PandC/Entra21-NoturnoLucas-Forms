@@ -72,7 +72,9 @@ namespace AcademiaGinastica
             this.Controls.Add(this.BtnAlunos);
             this.Controls.Add(this.BtnModalidade);
             this.Controls.Add(this.btnProfessores);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenu";
             this.ResumeLayout(false);
 

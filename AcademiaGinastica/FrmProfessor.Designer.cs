@@ -31,8 +31,8 @@ namespace AcademiaGinastica
         {
             this.BtnNovo = new System.Windows.Forms.Button();
             this.BtnCadastrarProfessor = new System.Windows.Forms.Button();
-            this.MtbTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.MtbCPF = new System.Windows.Forms.MaskedTextBox();
+            this.MskTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.MskCPF = new System.Windows.Forms.MaskedTextBox();
             this.TxtNome = new System.Windows.Forms.TextBox();
             this.LblTelefone = new System.Windows.Forms.Label();
             this.LblNome = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@ namespace AcademiaGinastica
             this.BtnNovo.Location = new System.Drawing.Point(184, 151);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(120, 23);
-            this.BtnNovo.TabIndex = 25;
+            this.BtnNovo.TabIndex = 6;
             this.BtnNovo.Text = "Novo Professor";
             this.BtnNovo.UseVisualStyleBackColor = true;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
@@ -59,33 +59,33 @@ namespace AcademiaGinastica
             this.BtnCadastrarProfessor.Location = new System.Drawing.Point(28, 151);
             this.BtnCadastrarProfessor.Name = "BtnCadastrarProfessor";
             this.BtnCadastrarProfessor.Size = new System.Drawing.Size(120, 23);
-            this.BtnCadastrarProfessor.TabIndex = 24;
+            this.BtnCadastrarProfessor.TabIndex = 5;
             this.BtnCadastrarProfessor.Text = "Cadastrar Professor";
             this.BtnCadastrarProfessor.UseVisualStyleBackColor = true;
             this.BtnCadastrarProfessor.Click += new System.EventHandler(this.BtnCadastrarProfessor_Click);
             // 
-            // MtbTelefone
+            // MskTelefone
             // 
-            this.MtbTelefone.Location = new System.Drawing.Point(183, 45);
-            this.MtbTelefone.Mask = "(00) 00000-0000";
-            this.MtbTelefone.Name = "MtbTelefone";
-            this.MtbTelefone.Size = new System.Drawing.Size(121, 23);
-            this.MtbTelefone.TabIndex = 21;
+            this.MskTelefone.Location = new System.Drawing.Point(183, 45);
+            this.MskTelefone.Mask = "(00) 00000-0000";
+            this.MskTelefone.Name = "MskTelefone";
+            this.MskTelefone.Size = new System.Drawing.Size(121, 23);
+            this.MskTelefone.TabIndex = 2;
             // 
-            // MtbCPF
+            // MskCPF
             // 
-            this.MtbCPF.Location = new System.Drawing.Point(28, 98);
-            this.MtbCPF.Mask = "000,000,000-00";
-            this.MtbCPF.Name = "MtbCPF";
-            this.MtbCPF.Size = new System.Drawing.Size(120, 23);
-            this.MtbCPF.TabIndex = 20;
+            this.MskCPF.Location = new System.Drawing.Point(28, 98);
+            this.MskCPF.Mask = "000,000,000-00";
+            this.MskCPF.Name = "MskCPF";
+            this.MskCPF.Size = new System.Drawing.Size(120, 23);
+            this.MskCPF.TabIndex = 3;
             // 
             // TxtNome
             // 
             this.TxtNome.Location = new System.Drawing.Point(28, 45);
             this.TxtNome.Name = "TxtNome";
             this.TxtNome.Size = new System.Drawing.Size(120, 23);
-            this.TxtNome.TabIndex = 17;
+            this.TxtNome.TabIndex = 1;
             // 
             // LblTelefone
             // 
@@ -125,20 +125,20 @@ namespace AcademiaGinastica
             // 
             // BtnNovoProfessor
             // 
-            this.BtnNovoProfessor.Location = new System.Drawing.Point(328, 197);
+            this.BtnNovoProfessor.Location = new System.Drawing.Point(341, 151);
             this.BtnNovoProfessor.Name = "BtnNovoProfessor";
             this.BtnNovoProfessor.Size = new System.Drawing.Size(99, 23);
-            this.BtnNovoProfessor.TabIndex = 41;
+            this.BtnNovoProfessor.TabIndex = 8;
             this.BtnNovoProfessor.Text = "Novo Professor";
             this.BtnNovoProfessor.UseVisualStyleBackColor = true;
             this.BtnNovoProfessor.Click += new System.EventHandler(this.BtnNovoProfessor_Click);
             // 
             // BtnDeletar
             // 
-            this.BtnDeletar.Location = new System.Drawing.Point(447, 197);
+            this.BtnDeletar.Location = new System.Drawing.Point(460, 151);
             this.BtnDeletar.Name = "BtnDeletar";
             this.BtnDeletar.Size = new System.Drawing.Size(99, 23);
-            this.BtnDeletar.TabIndex = 40;
+            this.BtnDeletar.TabIndex = 9;
             this.BtnDeletar.Text = "Deletar";
             this.BtnDeletar.UseVisualStyleBackColor = true;
             this.BtnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
@@ -147,10 +147,10 @@ namespace AcademiaGinastica
             // 
             this.LbxCadastrados.FormattingEnabled = true;
             this.LbxCadastrados.ItemHeight = 15;
-            this.LbxCadastrados.Location = new System.Drawing.Point(328, 27);
+            this.LbxCadastrados.Location = new System.Drawing.Point(341, 27);
             this.LbxCadastrados.Name = "LbxCadastrados";
-            this.LbxCadastrados.Size = new System.Drawing.Size(319, 154);
-            this.LbxCadastrados.TabIndex = 38;
+            this.LbxCadastrados.Size = new System.Drawing.Size(306, 94);
+            this.LbxCadastrados.TabIndex = 7;
             this.LbxCadastrados.SelectedIndexChanged += new System.EventHandler(this.LbxCadastrados_SelectedIndexChanged);
             // 
             // CmbTurno
@@ -164,13 +164,13 @@ namespace AcademiaGinastica
             this.CmbTurno.Location = new System.Drawing.Point(183, 98);
             this.CmbTurno.Name = "CmbTurno";
             this.CmbTurno.Size = new System.Drawing.Size(121, 23);
-            this.CmbTurno.TabIndex = 42;
+            this.CmbTurno.TabIndex = 4;
             // 
             // FrmProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 240);
+            this.ClientSize = new System.Drawing.Size(685, 212);
             this.Controls.Add(this.CmbTurno);
             this.Controls.Add(this.BtnNovoProfessor);
             this.Controls.Add(this.BtnDeletar);
@@ -180,11 +180,13 @@ namespace AcademiaGinastica
             this.Controls.Add(this.LblNome);
             this.Controls.Add(this.BtnNovo);
             this.Controls.Add(this.BtnCadastrarProfessor);
-            this.Controls.Add(this.MtbTelefone);
-            this.Controls.Add(this.MtbCPF);
+            this.Controls.Add(this.MskTelefone);
+            this.Controls.Add(this.MskCPF);
             this.Controls.Add(this.TxtNome);
             this.Controls.Add(this.LblTelefone);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmProfessor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProfessor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmProfessor_FormClosing);
             this.ResumeLayout(false);
@@ -195,8 +197,8 @@ namespace AcademiaGinastica
         #endregion
         private System.Windows.Forms.Button BtnNovo;
         private System.Windows.Forms.Button BtnCadastrarProfessor;
-        private System.Windows.Forms.MaskedTextBox MtbTelefone;
-        private System.Windows.Forms.MaskedTextBox MtbCPF;
+        private System.Windows.Forms.MaskedTextBox MskTelefone;
+        private System.Windows.Forms.MaskedTextBox MskCPF;
         private System.Windows.Forms.TextBox TxtNome;
         private System.Windows.Forms.Label LblTelefone;
         private System.Windows.Forms.Label LblNome;

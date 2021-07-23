@@ -12,9 +12,13 @@ using System.Windows.Forms;
 
 namespace AcademiaGinastica
 {
-    public partial class FrmAluno : Form 
+    public partial class FrmAluno : Form, IVerificando
     {
         Academia _academia;
+
+        string nome;
+
+        int indice = -1;
 
         public FrmAluno(Academia academia)
         {
@@ -30,27 +34,29 @@ namespace AcademiaGinastica
 
         private void BtnIncerir_Click(object sender, EventArgs e)
         {
-            if(LbxCadastrados.SelectedIndex >= 0)
+            if(indice >= 0 && VerificandoCadastro())
             {
                 _academia.AtualizarAluno(
-                LbxCadastrados.SelectedIndex,
+                indice,
                 TxtNome.Text,
-                MtbCPF.Text,
-                MtbTelefone.Text,
+                MskCPF.Text,
+                MskTelefone.Text,
                 (Modalidade)CmbModalidade.SelectedItem
                 );
+                nome = TxtNome.Text;
             }
-            else
+            else if (indice < 0 && VerificandoCadastro())
             {
                 _academia.AddAluno(
                 TxtNome.Text,
-                MtbCPF.Text,
-                MtbTelefone.Text,
+                MskCPF.Text,
+                MskTelefone.Text,
                 (Modalidade)CmbModalidade.SelectedItem
                 );
                 BtnNovo_Click(sender, e);
             }
             atualizaListBox();
+            TxtNome.Focus();
         }
 
         private void BtnDeletar_Click(object sender, EventArgs e)
@@ -75,8 +81,8 @@ namespace AcademiaGinastica
             TxtNome.Focus();
             BtnCadastrarAluno.Text = "Cadastrar Aluno";
             TxtNome.Text = "";
-            MtbCPF.Text = "";
-            MtbTelefone.Text = "";
+            MskCPF.Text = "";
+            MskTelefone.Text = "";
             CmbModalidade.SelectedIndex = -1;
             TxtProfessor.Text = "";
             TxtTurno.Text = "";
@@ -90,6 +96,7 @@ namespace AcademiaGinastica
             BtnNovo.Show();
             BtnNovo_Click(sender, e);
             LbxCadastrados.SelectedIndex = -1;
+            indice = -1;
         }
 
         private void BtnConfirmarPagamentos_Click(object sender, EventArgs e)
@@ -113,18 +120,19 @@ namespace AcademiaGinastica
 
         private void LbxCadastrados_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int indice = LbxCadastrados.SelectedIndex;
+            indice = LbxCadastrados.SelectedIndex;
             if (indice >= 0)
             {
+                nome = _academia.ListaAlunos[indice].Nome;
                 BtnDeletar.Show();
                 BtnNovoAluno.Show();
                 BtnConfirmarPagamentos.Show();
                 BtnNovo.Hide();
                 BtnCadastrarAluno.Text = "Atualizar";
-                TxtNome.Text = _academia.ListaAlunos[LbxCadastrados.SelectedIndex].Nome;
-                MtbCPF.Text = _academia.ListaAlunos[LbxCadastrados.SelectedIndex].CPF;
-                MtbTelefone.Text = _academia.ListaAlunos[LbxCadastrados.SelectedIndex].Telefone;
-                CmbModalidade.SelectedItem = _academia.ListaAlunos[LbxCadastrados.SelectedIndex].Modalidade;
+                TxtNome.Text = _academia.ListaAlunos[indice].Nome;
+                MskCPF.Text = _academia.ListaAlunos[indice].CPF;
+                MskTelefone.Text = _academia.ListaAlunos[indice].Telefone;
+                CmbModalidade.SelectedItem = _academia.ListaAlunos[indice].Modalidade;
             }
         }
 
@@ -142,6 +150,56 @@ namespace AcademiaGinastica
             BtnDeletar.Hide();
             BtnConfirmarPagamentos.Hide();
             BtnNovoAluno.Hide();
+        }
+
+        public bool VerificandoCadastro()
+        {
+            bool preenchido = true;
+            string mensagem = "Por favor informe os seguintes itens:\n";
+
+            if (TxtNome.Text.Length == 0)
+            {
+                mensagem += "- Nome.\n";
+                preenchido = false;
+            }
+            if (MskCPF.Text.Length < 14)
+            {
+                mensagem += "- CPF.\n";
+                preenchido = false;
+            }
+            if (MskTelefone.Text.Length < 15)
+            {
+                mensagem += "- Telefone.\n";
+                preenchido = false;
+            }
+            if (CmbModalidade.SelectedIndex < 0)
+            {
+                mensagem += "- Modalidade.\n";
+                preenchido = false;
+            }
+            foreach (var item in _academia.ListaAlunos)
+            {
+                if (item.Nome == TxtNome.Text && indice < 0)
+                {
+                    MessageBox.Show("ALUNO JÁ CADASTRADO!!!");
+                    preenchido = false;
+                    return preenchido;
+                }
+                if (indice >= 0 && nome != TxtNome.Text)
+                {
+                    if (item.Nome == TxtNome.Text)
+                    {
+                        MessageBox.Show("ALUNO JÁ CADASTRADO!!!");
+                        preenchido = false;
+                        return preenchido;
+                    }
+                }
+            }
+            if (!preenchido)
+            {
+                MessageBox.Show(mensagem);
+            }
+            return preenchido;
         }
     }
 }

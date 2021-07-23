@@ -1,4 +1,5 @@
-﻿using AcademiaGinastica.ClassPessoa;
+﻿using AcademiaGinastica.Classes;
+using AcademiaGinastica.ClassPessoa;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,13 +10,15 @@ using System.Windows.Forms;
 
 namespace AcademiaGinastica
 {
-    public partial class FrmModalidade : Form
+    public partial class FrmModalidade : Form, IVerificando
     {
         Academia _academia;
 
         FrmMenu _frmMenu;
 
         int indice = -1;
+
+        string nome;
 
         public FrmModalidade(Academia academia, FrmMenu frmMenu)
         {
@@ -30,7 +33,7 @@ namespace AcademiaGinastica
 
         private void BtnCadastrarModalidade_Click(object sender, EventArgs e)
         {
-            if (indice >= 0)
+            if (indice >= 0 && VerificandoCadastro())
             {
                 _academia.AtualizarModalidade(
                     indice,
@@ -39,8 +42,9 @@ namespace AcademiaGinastica
                     (Classes.Professor)CmbProfessor.SelectedItem,
                     Convert.ToInt32(CmbDiasSemanas.SelectedItem)
                     );
+                nome = TxtNomeModalidade.Text;
             }
-            else
+            else if (indice <0 && VerificandoCadastro())
             {
                 _academia.AddModalidade(
                     (Classes.Professor)CmbProfessor.SelectedItem,
@@ -49,24 +53,41 @@ namespace AcademiaGinastica
                     TxtNomeModalidade.Text
                     );
                 Limpar();
-                _frmMenu.VerificandoListas();
             }
             AtualizarLbx();
+            CmbProfessor.Focus();
         }
 
         private void BtnDeletar_Click(object sender, EventArgs e)
         {
             if (LbxCadastrados.SelectedIndex >= 0)
             {
-                _academia.DeletarModalidade(LbxCadastrados.SelectedIndex);
-                AtualizarLbx();
-                if (LbxCadastrados.Items.Count == 0)
+                bool cadastrado = false; 
+                foreach (var item in _academia.ListaAlunos)
                 {
-                    BtnNovaModalidade_Click(sender, e);
+                    if (item.Modalidade.Nome == TxtNomeModalidade.Text)
+                    {
+                        cadastrado = true;
+                    }
+                }
+
+                if (cadastrado)
+                {
+                    MessageBox.Show("Modalidade não pode ser deletada pois a alunos cadastrados nela!\nExclua o aluno primeiro.");
                 }
                 else
                 {
-                    LbxCadastrados.SelectedIndex = 0;
+                    _academia.DeletarModalidade(LbxCadastrados.SelectedIndex);
+                    AtualizarLbx();
+                    if (LbxCadastrados.Items.Count == 0)
+                    {
+                        BtnNovaModalidade_Click(sender, e);
+                    }
+                    else
+                    {
+                        LbxCadastrados.SelectedIndex = 0;
+                    }
+                    CmbProfessor.Focus();
                 }
             }
         }
@@ -75,6 +96,7 @@ namespace AcademiaGinastica
         {
             Limpar();
             LbxCadastrados.SelectedIndex = -1;
+            CmbProfessor.Focus();
         }
 
         private void BtnNovaModalidade_Click(object sender, EventArgs e)
@@ -82,16 +104,20 @@ namespace AcademiaGinastica
             Limpar();
             BtnCadastrarModalidade.Text = "Cadastrar Modalidade";
             indice = -1;
+            LbxCadastrados.SelectedIndex = -1;
             BtnNovaModalidade.Hide();
             BtnDeletar.Hide();
             BtnNovo.Show();
+            CmbProfessor.Focus();
         }
 
         private void LbxCadastrados_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(LbxCadastrados.SelectedIndex >= 0 )
+            indice = LbxCadastrados.SelectedIndex;
+
+            if (indice >= 0 )
             {
-                indice = LbxCadastrados.SelectedIndex;
+                nome = _academia.ListaModalidades[indice].Nome;
                 BtnCadastrarModalidade.Text = "Atualizar";
                 BtnNovaModalidade.Show();
                 BtnDeletar.Show();
@@ -126,6 +152,76 @@ namespace AcademiaGinastica
             CmbDiasSemanas.SelectedItem = null;
             TxtNomeModalidade.Clear();
             MskPrecoHora.Clear();
+        }
+
+        private void FrmModalidade_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _frmMenu.VerificandoListas();
+        }
+
+        public bool VerificandoCadastro()
+        {
+            bool preenchido = true;
+            string mensagem = "Por favor insira os seguintes itens:\n";
+
+            if (CmbProfessor.SelectedIndex <0)
+            {
+                mensagem += "- Professor.\n";
+                preenchido = false;
+            }
+
+            if (CmbDiasSemanas.SelectedIndex <0)
+            {
+                mensagem += "- Dias da semana.\n";
+                preenchido = false;
+            }
+            if (TxtNomeModalidade.Text.Length == 0)
+            {
+                mensagem += "- Nome.\n";
+                preenchido = false;
+            }
+
+            if (MskPrecoHora.Text == "")
+            {
+                mensagem += "- Preço por Hora.\n";
+                preenchido = false;
+            }
+
+            foreach (var item in _academia.ListaModalidades)
+            {
+                if (item.Nome == TxtNomeModalidade.Text && indice <0)
+                {
+                    MessageBox.Show("MODALIDADE JÁ CADASTRADO!!!");
+                    preenchido = false;
+                    return preenchido;
+                }
+
+                if (indice >= 0 && nome != TxtNomeModalidade.Text)
+                {
+                    if (item.Nome == TxtNomeModalidade.Text)
+                    {
+                        MessageBox.Show("MODALIDADE JÁ CADASTRADO!!!");
+                        preenchido = false;
+                        return preenchido;
+                    }
+                }
+            }
+
+            if (!preenchido)
+            {
+                MessageBox.Show(mensagem);
+            }
+            return preenchido;
+        }
+
+        private void MskPrecoHora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Se a tecla digitada não for número e nem backspace
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08)
+            {
+                //Atribui True no Handled para cancelar o evento
+                e.Handled = true;
+            }
         }
     }
 }

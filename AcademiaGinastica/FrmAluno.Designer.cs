@@ -35,8 +35,8 @@ namespace AcademiaGinastica
             this.LblMensalidade = new System.Windows.Forms.Label();
             this.LblTurma = new System.Windows.Forms.Label();
             this.TxtNome = new System.Windows.Forms.TextBox();
-            this.MtbCPF = new System.Windows.Forms.MaskedTextBox();
-            this.MtbTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.MskCPF = new System.Windows.Forms.MaskedTextBox();
+            this.MskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.LbxCadastrados = new System.Windows.Forms.ListBox();
             this.BtnCadastrarAluno = new System.Windows.Forms.Button();
             this.BtnNovo = new System.Windows.Forms.Button();
@@ -103,21 +103,21 @@ namespace AcademiaGinastica
             this.TxtNome.Size = new System.Drawing.Size(237, 23);
             this.TxtNome.TabIndex = 1;
             // 
-            // MtbCPF
+            // MskCPF
             // 
-            this.MtbCPF.Location = new System.Drawing.Point(24, 97);
-            this.MtbCPF.Mask = "000,000,000-00";
-            this.MtbCPF.Name = "MtbCPF";
-            this.MtbCPF.Size = new System.Drawing.Size(105, 23);
-            this.MtbCPF.TabIndex = 3;
+            this.MskCPF.Location = new System.Drawing.Point(24, 97);
+            this.MskCPF.Mask = "000,000,000-00";
+            this.MskCPF.Name = "MskCPF";
+            this.MskCPF.Size = new System.Drawing.Size(105, 23);
+            this.MskCPF.TabIndex = 2;
             // 
-            // MtbTelefone
+            // MskTelefone
             // 
-            this.MtbTelefone.Location = new System.Drawing.Point(156, 97);
-            this.MtbTelefone.Mask = "(00) 00000-0000";
-            this.MtbTelefone.Name = "MtbTelefone";
-            this.MtbTelefone.Size = new System.Drawing.Size(105, 23);
-            this.MtbTelefone.TabIndex = 4;
+            this.MskTelefone.Location = new System.Drawing.Point(156, 97);
+            this.MskTelefone.Mask = "(00) 00000-0000";
+            this.MskTelefone.Name = "MskTelefone";
+            this.MskTelefone.Size = new System.Drawing.Size(105, 23);
+            this.MskTelefone.TabIndex = 3;
             // 
             // LbxCadastrados
             // 
@@ -125,8 +125,8 @@ namespace AcademiaGinastica
             this.LbxCadastrados.ItemHeight = 15;
             this.LbxCadastrados.Location = new System.Drawing.Point(300, 39);
             this.LbxCadastrados.Name = "LbxCadastrados";
-            this.LbxCadastrados.Size = new System.Drawing.Size(309, 154);
-            this.LbxCadastrados.TabIndex = 9;
+            this.LbxCadastrados.Size = new System.Drawing.Size(309, 169);
+            this.LbxCadastrados.TabIndex = 7;
             this.LbxCadastrados.SelectedIndexChanged += new System.EventHandler(this.LbxCadastrados_SelectedIndexChanged);
             // 
             // BtnCadastrarAluno
@@ -134,7 +134,7 @@ namespace AcademiaGinastica
             this.BtnCadastrarAluno.Location = new System.Drawing.Point(24, 278);
             this.BtnCadastrarAluno.Name = "BtnCadastrarAluno";
             this.BtnCadastrarAluno.Size = new System.Drawing.Size(105, 23);
-            this.BtnCadastrarAluno.TabIndex = 7;
+            this.BtnCadastrarAluno.TabIndex = 5;
             this.BtnCadastrarAluno.Text = "Cadastrar Aluno";
             this.BtnCadastrarAluno.UseVisualStyleBackColor = true;
             this.BtnCadastrarAluno.Click += new System.EventHandler(this.BtnIncerir_Click);
@@ -144,37 +144,37 @@ namespace AcademiaGinastica
             this.BtnNovo.Location = new System.Drawing.Point(156, 278);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(105, 23);
-            this.BtnNovo.TabIndex = 8;
+            this.BtnNovo.TabIndex = 6;
             this.BtnNovo.Text = "Novo Aluno";
             this.BtnNovo.UseVisualStyleBackColor = true;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // BtnDeletar
             // 
-            this.BtnDeletar.Location = new System.Drawing.Point(405, 209);
+            this.BtnDeletar.Location = new System.Drawing.Point(405, 225);
             this.BtnDeletar.Name = "BtnDeletar";
             this.BtnDeletar.Size = new System.Drawing.Size(99, 23);
-            this.BtnDeletar.TabIndex = 11;
+            this.BtnDeletar.TabIndex = 9;
             this.BtnDeletar.Text = "Deletar";
             this.BtnDeletar.UseVisualStyleBackColor = true;
             this.BtnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
             // 
             // BtnConfirmarPagamentos
             // 
-            this.BtnConfirmarPagamentos.Location = new System.Drawing.Point(300, 244);
+            this.BtnConfirmarPagamentos.Location = new System.Drawing.Point(300, 278);
             this.BtnConfirmarPagamentos.Name = "BtnConfirmarPagamentos";
             this.BtnConfirmarPagamentos.Size = new System.Drawing.Size(204, 23);
-            this.BtnConfirmarPagamentos.TabIndex = 12;
+            this.BtnConfirmarPagamentos.TabIndex = 10;
             this.BtnConfirmarPagamentos.Text = "Confirmar Pagamentos";
             this.BtnConfirmarPagamentos.UseVisualStyleBackColor = true;
             this.BtnConfirmarPagamentos.Click += new System.EventHandler(this.BtnConfirmarPagamentos_Click);
             // 
             // BtnNovoAluno
             // 
-            this.BtnNovoAluno.Location = new System.Drawing.Point(300, 209);
+            this.BtnNovoAluno.Location = new System.Drawing.Point(300, 227);
             this.BtnNovoAluno.Name = "BtnNovoAluno";
             this.BtnNovoAluno.Size = new System.Drawing.Size(99, 23);
-            this.BtnNovoAluno.TabIndex = 13;
+            this.BtnNovoAluno.TabIndex = 8;
             this.BtnNovoAluno.Text = "Novo Aluno";
             this.BtnNovoAluno.UseVisualStyleBackColor = true;
             this.BtnNovoAluno.Click += new System.EventHandler(this.BtnNovoAluno_Click);
@@ -203,7 +203,7 @@ namespace AcademiaGinastica
             this.CmbModalidade.Location = new System.Drawing.Point(24, 163);
             this.CmbModalidade.Name = "CmbModalidade";
             this.CmbModalidade.Size = new System.Drawing.Size(105, 23);
-            this.CmbModalidade.TabIndex = 16;
+            this.CmbModalidade.TabIndex = 4;
             this.CmbModalidade.SelectedIndexChanged += new System.EventHandler(this.CmbModalidade_SelectedIndexChanged);
             // 
             // label1
@@ -248,15 +248,17 @@ namespace AcademiaGinastica
             this.Controls.Add(this.BtnNovo);
             this.Controls.Add(this.BtnCadastrarAluno);
             this.Controls.Add(this.LbxCadastrados);
-            this.Controls.Add(this.MtbTelefone);
-            this.Controls.Add(this.MtbCPF);
+            this.Controls.Add(this.MskTelefone);
+            this.Controls.Add(this.MskCPF);
             this.Controls.Add(this.TxtNome);
             this.Controls.Add(this.LblMensalidade);
             this.Controls.Add(this.LblTurma);
             this.Controls.Add(this.LblTelefone);
             this.Controls.Add(this.LblCPF);
             this.Controls.Add(this.LblNome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Academia Ginastica";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -271,8 +273,8 @@ namespace AcademiaGinastica
         private System.Windows.Forms.Label LblMensalidade;
         private System.Windows.Forms.Label LblTurma;
         private System.Windows.Forms.TextBox TxtNome;
-        private System.Windows.Forms.MaskedTextBox MtbCPF;
-        private System.Windows.Forms.MaskedTextBox MtbTelefone;
+        private System.Windows.Forms.MaskedTextBox MskCPF;
+        private System.Windows.Forms.MaskedTextBox MskTelefone;
         private System.Windows.Forms.ListBox LbxCadastrados;
         private System.Windows.Forms.Button BtnCadastrarAluno;
         private System.Windows.Forms.Button BtnNovo;
