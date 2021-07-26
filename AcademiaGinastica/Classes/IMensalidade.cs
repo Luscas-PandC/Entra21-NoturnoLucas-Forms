@@ -6,6 +6,6 @@ namespace AcademiaGinastica.Classes
 {
     interface IMensalidade
     {
-        public double CalculaValor();
+        public double CalculaValor(int diasSemanas);
     }
 }

@@ -26,33 +26,18 @@ namespace AcademiaGinastica
             InitializeComponent();
             EsconderMenu2();
             atualizaListBox();
-            foreach (var item in _academia.ListaModalidades)
-            {
-                CmbModalidade.Items.Add(item);
-            }
         }
 
         private void BtnIncerir_Click(object sender, EventArgs e)
         {
             if(indice >= 0 && VerificandoCadastro())
             {
-                _academia.AtualizarAluno(
-                indice,
-                TxtNome.Text,
-                MskCPF.Text,
-                MskTelefone.Text,
-                (Modalidade)CmbModalidade.SelectedItem
-                );
+                _academia.AtualizarAluno(indice, TxtNome.Text, MskCPF.Text, MskTelefone.Text, (Modalidade)CmbModalidade.SelectedItem, CmbTurno.Text, int.Parse(CmbDiasSemanas.Text), double.Parse(TxtMensalidade.Text));
                 nome = TxtNome.Text;
             }
             else if (indice < 0 && VerificandoCadastro())
             {
-                _academia.AddAluno(
-                TxtNome.Text,
-                MskCPF.Text,
-                MskTelefone.Text,
-                (Modalidade)CmbModalidade.SelectedItem
-                );
+                _academia.AddAluno(TxtNome.Text, MskCPF.Text, MskTelefone.Text, (Modalidade)CmbModalidade.SelectedItem, CmbTurno.Text, int.Parse(CmbDiasSemanas.Text), double.Parse(TxtMensalidade.Text));
                 BtnNovo_Click(sender, e);
             }
             atualizaListBox();
@@ -79,14 +64,7 @@ namespace AcademiaGinastica
         private void BtnNovo_Click(object sender, EventArgs e)
         {
             TxtNome.Focus();
-            BtnCadastrarAluno.Text = "Cadastrar Aluno";
-            TxtNome.Text = "";
-            MskCPF.Text = "";
-            MskTelefone.Text = "";
-            CmbModalidade.SelectedIndex = -1;
-            TxtProfessor.Text = "";
-            TxtTurno.Text = "";
-            TxtMensalidade.Text = "";
+            limpar();
         }
 
         private void BtnNovoAluno_Click(object sender, EventArgs e)
@@ -94,7 +72,9 @@ namespace AcademiaGinastica
             EsconderMenu2();
             BtnCadastrarAluno.Show();
             BtnNovo.Show();
-            BtnNovo_Click(sender, e);
+            BtnCadastrarAluno.Text = "Cadastrar Aluno";
+            limpar();
+            TxtNome.Focus();
             LbxCadastrados.SelectedIndex = -1;
             indice = -1;
         }
@@ -113,8 +93,10 @@ namespace AcademiaGinastica
             if (CmbModalidade.SelectedItem != null)
             {
                 TxtProfessor.Text = _academia.ListaModalidades[CmbModalidade.SelectedIndex].Professor.Nome;
-                TxtTurno.Text = _academia.ListaModalidades[CmbModalidade.SelectedIndex].Professor.Turno;
-                TxtMensalidade.Text = _academia.ListaModalidades[CmbModalidade.SelectedIndex].CalculaValor().ToString();
+            }
+            if (CmbDiasSemanas.SelectedIndex >= 0 && CmbModalidade.SelectedIndex >= 0)
+            {
+                TxtMensalidade.Text = _academia.ListaModalidades[CmbModalidade.SelectedIndex].CalculaValor(int.Parse(CmbDiasSemanas.Text)).ToString(); 
             }
         }
 
@@ -129,10 +111,14 @@ namespace AcademiaGinastica
                 BtnConfirmarPagamentos.Show();
                 BtnNovo.Hide();
                 BtnCadastrarAluno.Text = "Atualizar";
+
                 TxtNome.Text = _academia.ListaAlunos[indice].Nome;
                 MskCPF.Text = _academia.ListaAlunos[indice].CPF;
                 MskTelefone.Text = _academia.ListaAlunos[indice].Telefone;
                 CmbModalidade.SelectedItem = _academia.ListaAlunos[indice].Modalidade;
+                CmbTurno.SelectedItem = _academia.ListaAlunos[indice].Turno;
+                CmbDiasSemanas.SelectedItem = _academia.ListaAlunos[indice].DiasSemana.ToString();
+                TxtMensalidade.Text = _academia.ListaAlunos[indice].Mensalidade.ToString();
             }
         }
 
@@ -143,6 +129,18 @@ namespace AcademiaGinastica
             {
                 LbxCadastrados.Items.Add(aluno.ToString());
             }
+        }
+
+        public void limpar()
+        {
+            TxtNome.Clear();
+            MskCPF.Clear();
+            MskTelefone.Clear();
+            CmbModalidade.SelectedIndex = -1;
+            TxtProfessor.Clear();
+            CmbTurno.SelectedIndex = -1;
+            CmbDiasSemanas.SelectedIndex = -1;
+            TxtMensalidade.Clear();
         }
 
         private void EsconderMenu2()
@@ -157,17 +155,17 @@ namespace AcademiaGinastica
             bool preenchido = true;
             string mensagem = "Por favor informe os seguintes itens:\n";
 
-            if (TxtNome.Text.Length == 0)
+            if (String.IsNullOrEmpty(TxtNome.Text))
             {
                 mensagem += "- Nome.\n";
                 preenchido = false;
             }
-            if (MskCPF.Text.Length < 14)
+            if (!MskCPF.MaskCompleted)
             {
                 mensagem += "- CPF.\n";
                 preenchido = false;
             }
-            if (MskTelefone.Text.Length < 15)
+            if (!MskTelefone.MaskCompleted)
             {
                 mensagem += "- Telefone.\n";
                 preenchido = false;
@@ -177,6 +175,17 @@ namespace AcademiaGinastica
                 mensagem += "- Modalidade.\n";
                 preenchido = false;
             }
+            if (CmbTurno.SelectedIndex < 0)
+            {
+                mensagem += "- Turno.\n";
+                preenchido = false;
+            }
+            if (CmbDiasSemanas.SelectedIndex < 0)
+            {
+                mensagem += "- Dias da Semana.\n";
+                preenchido = false;
+            }
+
             foreach (var item in _academia.ListaAlunos)
             {
                 if (item.Nome == TxtNome.Text && indice < 0)
@@ -200,6 +209,22 @@ namespace AcademiaGinastica
                 MessageBox.Show(mensagem);
             }
             return preenchido;
+        }
+
+        private void FrmAluno_Load(object sender, EventArgs e)
+        {
+            foreach (var item in _academia.ListaModalidades)
+            {
+                CmbModalidade.Items.Add(item);
+            }
+        }
+
+        private void CmbDiasSemanas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CmbModalidade.SelectedIndex >= 0)
+            {
+                TxtMensalidade.Text = _academia.ListaModalidades[CmbModalidade.SelectedIndex].CalculaValor(int.Parse(CmbDiasSemanas.Text)).ToString();
+            }
         }
     }
 }

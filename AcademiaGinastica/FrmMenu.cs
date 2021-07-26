@@ -13,6 +13,11 @@ namespace AcademiaGinastica
     public partial class FrmMenu : Form
     {
         Academia academia;
+
+        FrmProfessor frmProfessor;
+        FrmModalidade frmModalidade;
+        FrmAluno frmAluno;
+
         public FrmMenu()
         {
             academia = new Academia();
@@ -23,13 +28,23 @@ namespace AcademiaGinastica
 
         private void btnProfessores_Click(object sender, EventArgs e)
         {
-            FrmProfessor frmProfessor = new FrmProfessor(academia, this);
+            PnlPrincipal.Show();
+            frmProfessor.TopLevel = false;
+            PnlPrincipal.Controls.Clear();
+            PnlPrincipal.Controls.Add(frmProfessor);
             frmProfessor.Show();
         }
 
         private void BtnModalidade_Click(object sender, EventArgs e)
         {
-            FrmModalidade frmModalidade = new FrmModalidade(academia,this);
+            btnProfessores.Hide();
+            BtnModalidade.Hide();
+            BtnAlunos.Hide();
+            frmModalidade.TopLevel = false;
+            frmModalidade.MdiParent = this;
+            int sizeW = frmModalidade.Size.Width;
+            int sizeH = frmModalidade.Size.Height;
+            Size = new Size(533, 235);
             frmModalidade.Show();
         }
 
@@ -58,6 +73,20 @@ namespace AcademiaGinastica
             {
                 BtnAlunos.Enabled = false;
             }
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            frmProfessor = new FrmProfessor(academia, this);
+            frmModalidade = new FrmModalidade(academia, this);
+            frmAluno = new FrmAluno(academia);
+            PnlPrincipal.Hide();
+        }
+        public void HabilitarBtns()
+        {
+            btnProfessores.Show();
+            BtnModalidade.Show();
+            BtnAlunos.Show();
         }
     }
 }

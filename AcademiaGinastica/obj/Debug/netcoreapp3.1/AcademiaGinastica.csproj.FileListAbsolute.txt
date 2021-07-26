@@ -16,3 +16,4 @@ C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGin
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.FrmModalidade.resources
 C:\Users\Luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.FrmProfessor.resources
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.FrmAluno.resources
+C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaGinastica\obj\Debug\netcoreapp3.1\AcademiaGinastica.Properties.Resources.resources

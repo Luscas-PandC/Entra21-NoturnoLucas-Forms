@@ -23,7 +23,7 @@ namespace AcademiaGinastica
         public FrmProfessor(Academia academia, FrmMenu frmMenu)
         {
             InitializeComponent();
-            _academia = academia;
+            _academia =academia;
             _frmMenu = frmMenu;
 
             BtnNovoProfessor.Hide();
@@ -36,12 +36,12 @@ namespace AcademiaGinastica
        
             if(indice <0 && VerificandoCadastro())
             {
-                _academia.AddProfessor(TxtNome.Text, MskTelefone.Text, MskCPF.Text, CmbTurno.Text);
+                _academia.AddProfessor(TxtNome.Text, MskCPF.Text, MskTelefone.Text, double.Parse(MskPrecoHora.Text));
                 Limpar();
             }
             else if (indice >= 0 && VerificandoCadastro())
             {
-                _academia.AtualizarProfessor(indice, TxtNome.Text, MskTelefone.Text, MskCPF.Text, CmbTurno.Text);
+                _academia.AtualizarProfessor(indice, TxtNome.Text, MskCPF.Text, MskTelefone.Text, double.Parse(MskPrecoHora.Text));
                 nome = TxtNome.Text;
             }
             AtualizarLista();
@@ -53,6 +53,7 @@ namespace AcademiaGinastica
             if (LbxCadastrados.SelectedIndex >= 0)
             {
                 bool cadastrado = false;
+
                 foreach (var item in _academia.ListaModalidades)
                 {
                     if (item.Professor.Nome == TxtNome.Text)
@@ -60,14 +61,16 @@ namespace AcademiaGinastica
                         cadastrado = true;
                     }
                 }
+
                 if (cadastrado)
                 {
-                    MessageBox.Show("Professor não pode ser deletado pois à modalidade cadastrada nele!\nExclua a modalidade primeiro.");
+                    MessageBox.Show("Professor não pode ser deletado pois está cadastrado em uma(s) modalidade(s)!\nPor favor exclua a modalidade primeiro.");
                 }
                 else
                 {
                     _academia.DeletarProfessor(LbxCadastrados.SelectedIndex);
                     AtualizarLista();
+
                     if (LbxCadastrados.Items.Count == 0)
                     {
                         BtnNovoProfessor_Click(sender, e);
@@ -110,10 +113,11 @@ namespace AcademiaGinastica
                 BtnNovo.Hide();
                 BtnNovoProfessor.Show();
                 BtnDeletar.Show();
+
                 TxtNome.Text = _academia.ListaProfessores[indice].Nome;
                 MskCPF.Text = _academia.ListaProfessores[indice].CPF;
                 MskTelefone.Text = _academia.ListaProfessores[indice].Telefone;
-                CmbTurno.SelectedItem = _academia.ListaProfessores[indice].Turno;
+                MskPrecoHora.Text = _academia.ListaProfessores[indice].SalarioHora.ToString(); 
             }
         }
 
@@ -131,12 +135,7 @@ namespace AcademiaGinastica
             TxtNome.Clear();
             MskCPF.Clear();
             MskTelefone.Clear();
-            CmbTurno.SelectedItem = null;
-        }
-
-        private void FrmProfessor_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            _frmMenu.VerificandoListas();
+            MskPrecoHora.Clear();
         }
 
         public bool VerificandoCadastro()
@@ -144,27 +143,27 @@ namespace AcademiaGinastica
             bool preenchido = true;
             string mensagem = "Por favor informe os seguintes itens:\n";
 
-            if (TxtNome.Text.Length == 0)
+            if (String.IsNullOrEmpty(TxtNome.Text))
             {
                 mensagem += "- Nome.\n";
                 preenchido = false;
             }
 
-            if (MskTelefone.Text.Length < 15)
-            {
-                mensagem += "- Telefone.\n";
-                preenchido = false;
-            }
-
-            if(MskCPF.Text.Length < 14)
+            if(!MskCPF.MaskCompleted)
             {
                 mensagem += "- CPF.\n";
                 preenchido = false;
             }
 
-            if(CmbTurno.SelectedIndex < 0)
+            if (!MskTelefone.MaskCompleted)
             {
-                mensagem += "- Turno.\n";
+                mensagem += "- Telefone.\n";
+                preenchido = false;
+            }
+
+            if(String.IsNullOrEmpty(MskPrecoHora.Text))
+            {
+                mensagem += "- Preço por Hora.\n";
                 preenchido = false;
             }
 
@@ -172,7 +171,7 @@ namespace AcademiaGinastica
             {
                 if (item.Nome == TxtNome.Text && indice <0)
                 {
-                    MessageBox.Show("USUÁRIO JÁ CADASTRADO!!!");
+                    MessageBox.Show("PROFESSOR JÁ CADASTRADO!!!");
                     preenchido = false;
                     return preenchido;
                 }
@@ -181,7 +180,7 @@ namespace AcademiaGinastica
                 {
                     if (item.Nome == TxtNome.Text)
                     {
-                        MessageBox.Show("USUÁRIO JÁ CADASTRADO!!!");
+                        MessageBox.Show("PROFESSOR JÁ CADASTRADO!!!");
                         preenchido = false;
                         return preenchido;
                     }
@@ -193,6 +192,25 @@ namespace AcademiaGinastica
                 MessageBox.Show(mensagem);
             }
             return preenchido;
+        }
+
+        private void MskPrecoHora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Se a tecla digitada não for número e nem backspace
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08)
+            {
+                //Atribui True no Handled para cancelar o evento
+                e.Handled = true;
+            }
+        }
+
+        private void BtnVoltar_Click(object sender, EventArgs e)
+        {
+            _frmMenu.HabilitarBtns();
+            _frmMenu.VerificandoListas();
+            _frmMenu.WindowState = FormWindowState.Normal;
+            this.Hide();
+
         }
     }
 }

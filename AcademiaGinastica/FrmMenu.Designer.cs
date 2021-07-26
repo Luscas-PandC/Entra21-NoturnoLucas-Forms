@@ -32,6 +32,7 @@ namespace AcademiaGinastica
             this.btnProfessores = new System.Windows.Forms.Button();
             this.BtnModalidade = new System.Windows.Forms.Button();
             this.BtnAlunos = new System.Windows.Forms.Button();
+            this.PnlPrincipal = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnProfessores
@@ -64,18 +65,29 @@ namespace AcademiaGinastica
             this.BtnAlunos.UseVisualStyleBackColor = true;
             this.BtnAlunos.Click += new System.EventHandler(this.BtnAlunos_Click);
             // 
+            // PnlPrincipal
+            // 
+            this.PnlPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.PnlPrincipal.Location = new System.Drawing.Point(-1, -2);
+            this.PnlPrincipal.Name = "PnlPrincipal";
+            this.PnlPrincipal.Size = new System.Drawing.Size(539, 235);
+            this.PnlPrincipal.TabIndex = 4;
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 249);
+            this.ClientSize = new System.Drawing.Size(539, 234);
+            this.Controls.Add(this.PnlPrincipal);
             this.Controls.Add(this.BtnAlunos);
             this.Controls.Add(this.BtnModalidade);
             this.Controls.Add(this.btnProfessores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.IsMdiContainer = true;
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenu";
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.ResumeLayout(false);
 
         }
@@ -85,5 +97,6 @@ namespace AcademiaGinastica
         private System.Windows.Forms.Button btnProfessores;
         private System.Windows.Forms.Button BtnModalidade;
         private System.Windows.Forms.Button BtnAlunos;
+        private System.Windows.Forms.Panel PnlPrincipal;
     }
 }

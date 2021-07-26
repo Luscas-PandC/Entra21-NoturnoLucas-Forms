@@ -12,7 +12,7 @@ namespace AcademiaGinastica.ClassPessoa
         public List<Professor> ListaProfessores { get; set; }
 
         public List<Modalidade> ListaModalidades { get; set; }
-
+        
         public Academia()
         {
             ListaAlunos = new List<Aluno>();
@@ -20,72 +20,47 @@ namespace AcademiaGinastica.ClassPessoa
             ListaModalidades = new List<Modalidade>();
         }
 
-        public void AddAluno(string nome, string cpf, string telefone, Modalidade modalidade)
+        public void AddAluno(string nome, string cpf, string telefone, Modalidade modalidade, string turno, int diasSemana, double mensalidade)
         {
-            ListaAlunos.Add(new Aluno(nome, cpf, telefone, modalidade));
+            ListaAlunos.Add(new Aluno(nome, cpf, telefone, modalidade, turno, diasSemana, mensalidade));
         }
 
-        public void AddProfessor(string nome, string telefone, string cpf, string turno)
+        public void AddProfessor(string nome, string telefone, string cpf, double precoHora)
         {
-            ListaProfessores.Add(new Professor()
-            {
-                Nome = nome,
-                Telefone = telefone,
-                CPF = cpf,
-                Turno = turno
-            });
+            ListaProfessores.Add(new Professor(nome, telefone, cpf, precoHora));
         }
 
-        public void AddModalidade(Professor professor, int vezesSemana, double precoHora, string nome)
+        public void AddModalidade(string nome, Professor professor)
         {
-            ListaModalidades.Add(new Modalidade()
-            {
-                Professor = professor,
-                VezesSemana = vezesSemana,
-                PrecoHora = precoHora,
-                Nome = nome
-            });
+            ListaModalidades.Add(new Modalidade(nome, professor));
         }
 
-        public void AtualizarAluno(
-            int indice,
-            string nome,
-            string telefone,
-            string cpf,
-            Modalidade modalidade
-            )
+
+        public void AtualizarAluno(int indice, string nome, string cpf, string telefone, Modalidade modalidade, string turno, int diasSemana, double mensalidade)
         {
             ListaAlunos[indice].Nome = nome;
-            ListaAlunos[indice].Telefone = telefone;
             ListaAlunos[indice].CPF = cpf;
+            ListaAlunos[indice].Telefone = telefone;
             ListaAlunos[indice].Modalidade = modalidade;
+            ListaAlunos[indice].Turno = turno;
+            ListaAlunos[indice].DiasSemana = diasSemana;
+            ListaAlunos[indice].Mensalidade = mensalidade;
         }
 
-        public void AtualizarProfessor(
-            int indice,
-            string nome,
-            string telefone,
-            string cpf,
-            string turno)
+        public void AtualizarProfessor(int indice, string nome, string cpf, string telefone, double salarioHora)
         {
             ListaProfessores[indice].Nome = nome;
-            ListaProfessores[indice].Telefone = telefone;
             ListaProfessores[indice].CPF = cpf;
-            ListaProfessores[indice].Turno = turno;
+            ListaProfessores[indice].Telefone = telefone;
+            ListaProfessores[indice].SalarioHora = salarioHora;
         }
 
-        public void AtualizarModalidade(
-            int indice,
-            string nome,
-            double precoHora,
-            Professor professor,
-            int vezesSemana)
+        public void AtualizarModalidade(int indice, string nome, Professor professor)
         {
             ListaModalidades[indice].Nome = nome;
-            ListaModalidades[indice].PrecoHora = precoHora;
             ListaModalidades[indice].Professor = professor;
-            ListaModalidades[indice].VezesSemana = vezesSemana;
         }
+
 
         public void DeletarAluno(int indice)
         {

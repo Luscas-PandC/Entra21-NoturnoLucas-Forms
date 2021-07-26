@@ -9,20 +9,29 @@ namespace AcademiaGinastica.ClassPessoa
     {
         public Modalidade Modalidade { get; set; }
 
-        public string Pagou { get; set; }  
+        public string Turno { get; set; }
 
-        public Aluno(string nome, string cpf, string telefone, Modalidade modalidade)
+        public int DiasSemana { get; set; }
+
+        public double Mensalidade { get; set; }
+
+        public string Pagou { get; set; }
+
+        public Aluno(string nome, string cpf, string telefone, Modalidade modalidade, string turno, int diasSemana, double mensalidade)
         {
             Nome = nome;
             CPF = cpf;
             Telefone = telefone;
-            Pagou = "Não.";
             Modalidade = modalidade;
+            Turno = turno;
+            DiasSemana = diasSemana;
+            Mensalidade = mensalidade;
+            Pagou = "Não";
         }
 
         public override string ToString()
         {
-            return $"{Nome} - {Modalidade.Nome}- {Modalidade.Professor.Turno} - Pagou: {Pagou}";
+            return $"{Nome} - {Modalidade.Nome} - {Turno} - Pagou: {Pagou}";
         }
     }
 }

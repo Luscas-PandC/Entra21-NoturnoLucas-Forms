@@ -44,11 +44,13 @@ namespace AcademiaGinastica
             this.BtnConfirmarPagamentos = new System.Windows.Forms.Button();
             this.BtnNovoAluno = new System.Windows.Forms.Button();
             this.LblModalidade = new System.Windows.Forms.Label();
-            this.TxtMensalidade = new System.Windows.Forms.TextBox();
             this.CmbModalidade = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtProfessor = new System.Windows.Forms.TextBox();
-            this.TxtTurno = new System.Windows.Forms.TextBox();
+            this.TxtMensalidade = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CmbDiasSemanas = new System.Windows.Forms.ComboBox();
+            this.CmbTurno = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // LblNome
@@ -81,7 +83,7 @@ namespace AcademiaGinastica
             // LblMensalidade
             // 
             this.LblMensalidade.AutoSize = true;
-            this.LblMensalidade.Location = new System.Drawing.Point(156, 208);
+            this.LblMensalidade.Location = new System.Drawing.Point(24, 270);
             this.LblMensalidade.Name = "LblMensalidade";
             this.LblMensalidade.Size = new System.Drawing.Size(74, 15);
             this.LblMensalidade.TabIndex = 5;
@@ -123,58 +125,58 @@ namespace AcademiaGinastica
             // 
             this.LbxCadastrados.FormattingEnabled = true;
             this.LbxCadastrados.ItemHeight = 15;
-            this.LbxCadastrados.Location = new System.Drawing.Point(300, 39);
+            this.LbxCadastrados.Location = new System.Drawing.Point(296, 39);
             this.LbxCadastrados.Name = "LbxCadastrados";
-            this.LbxCadastrados.Size = new System.Drawing.Size(309, 169);
-            this.LbxCadastrados.TabIndex = 7;
+            this.LbxCadastrados.Size = new System.Drawing.Size(314, 229);
+            this.LbxCadastrados.TabIndex = 11;
             this.LbxCadastrados.SelectedIndexChanged += new System.EventHandler(this.LbxCadastrados_SelectedIndexChanged);
             // 
             // BtnCadastrarAluno
             // 
-            this.BtnCadastrarAluno.Location = new System.Drawing.Point(24, 278);
+            this.BtnCadastrarAluno.Location = new System.Drawing.Point(24, 335);
             this.BtnCadastrarAluno.Name = "BtnCadastrarAluno";
             this.BtnCadastrarAluno.Size = new System.Drawing.Size(105, 23);
-            this.BtnCadastrarAluno.TabIndex = 5;
+            this.BtnCadastrarAluno.TabIndex = 9;
             this.BtnCadastrarAluno.Text = "Cadastrar Aluno";
             this.BtnCadastrarAluno.UseVisualStyleBackColor = true;
             this.BtnCadastrarAluno.Click += new System.EventHandler(this.BtnIncerir_Click);
             // 
             // BtnNovo
             // 
-            this.BtnNovo.Location = new System.Drawing.Point(156, 278);
+            this.BtnNovo.Location = new System.Drawing.Point(156, 335);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(105, 23);
-            this.BtnNovo.TabIndex = 6;
+            this.BtnNovo.TabIndex = 10;
             this.BtnNovo.Text = "Novo Aluno";
             this.BtnNovo.UseVisualStyleBackColor = true;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // BtnDeletar
             // 
-            this.BtnDeletar.Location = new System.Drawing.Point(405, 225);
+            this.BtnDeletar.Location = new System.Drawing.Point(425, 287);
             this.BtnDeletar.Name = "BtnDeletar";
             this.BtnDeletar.Size = new System.Drawing.Size(99, 23);
-            this.BtnDeletar.TabIndex = 9;
+            this.BtnDeletar.TabIndex = 13;
             this.BtnDeletar.Text = "Deletar";
             this.BtnDeletar.UseVisualStyleBackColor = true;
             this.BtnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
             // 
             // BtnConfirmarPagamentos
             // 
-            this.BtnConfirmarPagamentos.Location = new System.Drawing.Point(300, 278);
+            this.BtnConfirmarPagamentos.Location = new System.Drawing.Point(293, 335);
             this.BtnConfirmarPagamentos.Name = "BtnConfirmarPagamentos";
-            this.BtnConfirmarPagamentos.Size = new System.Drawing.Size(204, 23);
-            this.BtnConfirmarPagamentos.TabIndex = 10;
+            this.BtnConfirmarPagamentos.Size = new System.Drawing.Size(231, 23);
+            this.BtnConfirmarPagamentos.TabIndex = 14;
             this.BtnConfirmarPagamentos.Text = "Confirmar Pagamentos";
             this.BtnConfirmarPagamentos.UseVisualStyleBackColor = true;
             this.BtnConfirmarPagamentos.Click += new System.EventHandler(this.BtnConfirmarPagamentos_Click);
             // 
             // BtnNovoAluno
             // 
-            this.BtnNovoAluno.Location = new System.Drawing.Point(300, 227);
+            this.BtnNovoAluno.Location = new System.Drawing.Point(293, 287);
             this.BtnNovoAluno.Name = "BtnNovoAluno";
             this.BtnNovoAluno.Size = new System.Drawing.Size(99, 23);
-            this.BtnNovoAluno.TabIndex = 8;
+            this.BtnNovoAluno.TabIndex = 12;
             this.BtnNovoAluno.Text = "Novo Aluno";
             this.BtnNovoAluno.UseVisualStyleBackColor = true;
             this.BtnNovoAluno.Click += new System.EventHandler(this.BtnNovoAluno_Click);
@@ -187,14 +189,6 @@ namespace AcademiaGinastica
             this.LblModalidade.Size = new System.Drawing.Size(70, 15);
             this.LblModalidade.TabIndex = 14;
             this.LblModalidade.Text = "Modalidade";
-            // 
-            // TxtMensalidade
-            // 
-            this.TxtMensalidade.Location = new System.Drawing.Point(155, 226);
-            this.TxtMensalidade.Name = "TxtMensalidade";
-            this.TxtMensalidade.ReadOnly = true;
-            this.TxtMensalidade.Size = new System.Drawing.Size(106, 23);
-            this.TxtMensalidade.TabIndex = 15;
             // 
             // CmbModalidade
             // 
@@ -221,26 +215,69 @@ namespace AcademiaGinastica
             this.TxtProfessor.Name = "TxtProfessor";
             this.TxtProfessor.ReadOnly = true;
             this.TxtProfessor.Size = new System.Drawing.Size(105, 23);
-            this.TxtProfessor.TabIndex = 18;
+            this.TxtProfessor.TabIndex = 5;
             // 
-            // TxtTurno
+            // TxtMensalidade
             // 
-            this.TxtTurno.Location = new System.Drawing.Point(24, 227);
-            this.TxtTurno.Name = "TxtTurno";
-            this.TxtTurno.ReadOnly = true;
-            this.TxtTurno.Size = new System.Drawing.Size(105, 23);
-            this.TxtTurno.TabIndex = 19;
+            this.TxtMensalidade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.TxtMensalidade.Location = new System.Drawing.Point(24, 288);
+            this.TxtMensalidade.Name = "TxtMensalidade";
+            this.TxtMensalidade.ReadOnly = true;
+            this.TxtMensalidade.Size = new System.Drawing.Size(237, 23);
+            this.TxtMensalidade.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(155, 210);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 15);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Dias da semana";
+            // 
+            // CmbDiasSemanas
+            // 
+            this.CmbDiasSemanas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbDiasSemanas.FormattingEnabled = true;
+            this.CmbDiasSemanas.ItemHeight = 15;
+            this.CmbDiasSemanas.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.CmbDiasSemanas.Location = new System.Drawing.Point(156, 228);
+            this.CmbDiasSemanas.Name = "CmbDiasSemanas";
+            this.CmbDiasSemanas.Size = new System.Drawing.Size(105, 23);
+            this.CmbDiasSemanas.TabIndex = 7;
+            this.CmbDiasSemanas.SelectedIndexChanged += new System.EventHandler(this.CmbDiasSemanas_SelectedIndexChanged);
+            // 
+            // CmbTurno
+            // 
+            this.CmbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbTurno.FormattingEnabled = true;
+            this.CmbTurno.Items.AddRange(new object[] {
+            "Matutino",
+            "Vespertino",
+            "Noturno"});
+            this.CmbTurno.Location = new System.Drawing.Point(24, 227);
+            this.CmbTurno.Name = "CmbTurno";
+            this.CmbTurno.Size = new System.Drawing.Size(121, 23);
+            this.CmbTurno.TabIndex = 6;
             // 
             // FrmAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 325);
-            this.Controls.Add(this.TxtTurno);
+            this.ClientSize = new System.Drawing.Size(628, 394);
+            this.Controls.Add(this.CmbTurno);
+            this.Controls.Add(this.CmbDiasSemanas);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.TxtMensalidade);
             this.Controls.Add(this.TxtProfessor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CmbModalidade);
-            this.Controls.Add(this.TxtMensalidade);
             this.Controls.Add(this.LblModalidade);
             this.Controls.Add(this.BtnNovoAluno);
             this.Controls.Add(this.BtnConfirmarPagamentos);
@@ -260,6 +297,7 @@ namespace AcademiaGinastica
             this.Name = "FrmAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Academia Ginastica";
+            this.Load += new System.EventHandler(this.FrmAluno_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,11 +320,13 @@ namespace AcademiaGinastica
         private System.Windows.Forms.Button BtnConfirmarPagamentos;
         private System.Windows.Forms.Button BtnNovoAluno;
         private System.Windows.Forms.Label LblModalidade;
-        private System.Windows.Forms.TextBox TxtMensalidade;
         private System.Windows.Forms.ComboBox CmbModalidade;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtProfessor;
-        private System.Windows.Forms.TextBox TxtTurno;
+        private System.Windows.Forms.TextBox TxtMensalidade;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox CmbDiasSemanas;
+        private System.Windows.Forms.ComboBox CmbTurno;
     }
 }
 
