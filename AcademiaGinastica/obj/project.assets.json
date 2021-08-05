@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\AcademiaGinastica\\AcademiaGinastica.csproj",
+      "projectUniqueName": "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\AcademiaGinastica\\AcademiaGinastica.csproj",
       "projectName": "AcademiaGinastica",
-      "projectPath": "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\AcademiaGinastica\\AcademiaGinastica.csproj",
+      "projectPath": "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\AcademiaGinastica\\AcademiaGinastica.csproj",
       "packagesPath": "C:\\Users\\luscas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\AcademiaGinastica\\obj\\",
+      "outputPath": "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\AcademiaGinastica\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\luscas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

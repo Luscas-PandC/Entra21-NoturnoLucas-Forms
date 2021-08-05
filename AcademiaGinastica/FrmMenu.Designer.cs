@@ -68,9 +68,9 @@ namespace AcademiaGinastica
             // PnlPrincipal
             // 
             this.PnlPrincipal.BackColor = System.Drawing.Color.Transparent;
-            this.PnlPrincipal.Location = new System.Drawing.Point(-1, -2);
+            this.PnlPrincipal.Location = new System.Drawing.Point(-1, 1);
             this.PnlPrincipal.Name = "PnlPrincipal";
-            this.PnlPrincipal.Size = new System.Drawing.Size(539, 235);
+            this.PnlPrincipal.Size = new System.Drawing.Size(539, 232);
             this.PnlPrincipal.TabIndex = 4;
             // 
             // FrmMenu

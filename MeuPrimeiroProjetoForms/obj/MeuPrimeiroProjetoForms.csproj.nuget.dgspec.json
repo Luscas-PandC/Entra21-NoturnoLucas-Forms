@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\MeuPrimeiroProjetoForms\\MeuPrimeiroProjetoForms.csproj": {}
+    "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\MeuPrimeiroProjetoForms\\MeuPrimeiroProjetoForms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\MeuPrimeiroProjetoForms\\MeuPrimeiroProjetoForms.csproj": {
+    "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\MeuPrimeiroProjetoForms\\MeuPrimeiroProjetoForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\MeuPrimeiroProjetoForms\\MeuPrimeiroProjetoForms.csproj",
+        "projectUniqueName": "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\MeuPrimeiroProjetoForms\\MeuPrimeiroProjetoForms.csproj",
         "projectName": "MeuPrimeiroProjetoForms",
-        "projectPath": "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\MeuPrimeiroProjetoForms\\MeuPrimeiroProjetoForms.csproj",
+        "projectPath": "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\MeuPrimeiroProjetoForms\\MeuPrimeiroProjetoForms.csproj",
         "packagesPath": "C:\\Users\\luscas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\MeuPrimeiroProjetoForms\\obj\\",
+        "outputPath": "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\MeuPrimeiroProjetoForms\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luscas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
