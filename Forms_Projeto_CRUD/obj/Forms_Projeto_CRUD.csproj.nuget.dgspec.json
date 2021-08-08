@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj": {}
+    "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj": {
+    "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj",
+        "projectUniqueName": "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj",
         "projectName": "Forms_Projeto_CRUD",
-        "projectPath": "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj",
+        "projectPath": "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\Forms_Projeto_CRUD.csproj",
         "packagesPath": "C:\\Users\\luscas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luscas\\source\\repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\obj\\",
+        "outputPath": "C:\\Users\\luscas\\Source\\Repos\\Luscas-PandC\\Entra21-NoturnoLucas-Forms\\Forms_Projeto_CRUD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luscas\\AppData\\Roaming\\NuGet\\NuGet.Config",

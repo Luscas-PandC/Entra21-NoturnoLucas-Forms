@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuPrimeiroProjetoForms", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forms_Projeto_CRUD", "Forms_Projeto_CRUD\Forms_Projeto_CRUD.csproj", "{B1458EE8-E4A7-4213-A8A6-7F9E3DCDC570}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcademiaGinastica", "AcademiaGinastica\AcademiaGinastica.csproj", "{9AEDE9DA-DED1-4B1C-AA85-7558E4D7B889}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcademiaGinastica", "AcademiaGinastica\AcademiaGinastica.csproj", "{9AEDE9DA-DED1-4B1C-AA85-7558E4D7B889}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleEstoqueComEF6", "ControleEstoqueComEF6\ControleEstoqueComEF6.csproj", "{EBE17BCE-BB80-47F6-BDFE-DE890CC675BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{9AEDE9DA-DED1-4B1C-AA85-7558E4D7B889}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AEDE9DA-DED1-4B1C-AA85-7558E4D7B889}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AEDE9DA-DED1-4B1C-AA85-7558E4D7B889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBE17BCE-BB80-47F6-BDFE-DE890CC675BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE17BCE-BB80-47F6-BDFE-DE890CC675BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE17BCE-BB80-47F6-BDFE-DE890CC675BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE17BCE-BB80-47F6-BDFE-DE890CC675BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
