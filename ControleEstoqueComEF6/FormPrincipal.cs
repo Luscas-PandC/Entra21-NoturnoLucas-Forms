@@ -30,7 +30,7 @@ namespace ControleEstoqueComEF6
 
             using (var form = new FormCategoria(categoriaBindingSource.Current as Categoria))
             {
-                if(form.ShowDialog() == DialogResult.OK)
+                if (form.ShowDialog() == DialogResult.OK)
                 {
                     var categoria = categoriaBindingSource.Current as Categoria;
 
@@ -46,24 +46,33 @@ namespace ControleEstoqueComEF6
                         else
                             db.Entry<Categoria>(categoria).State = EntityState.Modified;
 
-                        if(db.SaveChanges() > 0)
+                        if (db.SaveChanges() > 0)
                         {
                             dgvCategorias.Refresh();
                             MessageBox.Show($"Categoria \"{categoria.Nome}\" salva com sucesso.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        else
+                        else 
                         {
                             MessageBox.Show($"Categoria \"{categoria.Nome}\" não pôde ser salva.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
-
+                }
+                else if(sender == btnNovaCategoria)
+                {
+                    categoriaBindingSource.Remove(categoriaBindingSource.Current);
+                }
             }
+            CarregandoCategoria();
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             dgvCategorias.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            CarregandoCategoria();
+        }
 
+        public void CarregandoCategoria()
+        {
             using (var db = new ApplicationDbContext())
             {
                 categoriaBindingSource.DataSource = db.Categorias.ToList();
