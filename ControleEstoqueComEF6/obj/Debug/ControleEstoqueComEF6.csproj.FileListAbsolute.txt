@@ -40,3 +40,5 @@ C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\ControleEst
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\ControleEstoqueComEF6\obj\Debug\ControleEstoqueComEF6.Migrations.versao01.resources
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\ControleEstoqueComEF6\obj\Debug\ControleEstoqueComEF6.FormCategoria.resources
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\ControleEstoqueComEF6\obj\Debug\ControleEstoqueComEF6.Migrations.versao02.resources
+C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\ControleEstoqueComEF6\obj\Debug\ControleEstoqueComEF6.FormProduto.resources
+C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\ControleEstoqueComEF6\obj\Debug\ControleEstoqueComEF6.Migrations.versao03.resources

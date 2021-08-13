@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ControleEstoqueComEF6.Dominios
 {
-    class Produto
+    public class Produto
     {
         [Key]
         public int IdProduto { get; set; }

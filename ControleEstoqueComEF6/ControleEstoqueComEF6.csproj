@@ -110,6 +110,12 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProduto.Designer.cs">
+      <DependentUpon>FormProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202108081458479_versao01.cs" />
     <Compile Include="Migrations\202108081458479_versao01.designer.cs">
       <DependentUpon>202108081458479_versao01.cs</DependentUpon>
@@ -117,6 +123,10 @@
     <Compile Include="Migrations\202108082110003_versao02.cs" />
     <Compile Include="Migrations\202108082110003_versao02.designer.cs">
       <DependentUpon>202108082110003_versao02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108101424447_versao03.cs" />
+    <Compile Include="Migrations\202108101424447_versao03.designer.cs">
+      <DependentUpon>202108101424447_versao03.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -127,11 +137,17 @@
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormProduto.resx">
+      <DependentUpon>FormProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108081458479_versao01.resx">
       <DependentUpon>202108081458479_versao01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108082110003_versao02.resx">
       <DependentUpon>202108082110003_versao02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108101424447_versao03.resx">
+      <DependentUpon>202108101424447_versao03.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
