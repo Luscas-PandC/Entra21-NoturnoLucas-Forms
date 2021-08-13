@@ -30,10 +30,13 @@ C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\bin\Debug\System.ValueTuple.xml
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\obj\Debug\AcademiaEF6.csproj.AssemblyReference.cache
-C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\obj\Debug\AcademiaEF6.Form1.resources
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\obj\Debug\AcademiaEF6.Properties.Resources.resources
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\obj\Debug\AcademiaEF6.csproj.GenerateResource.cache
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\obj\Debug\AcademiaEF6.csproj.CoreCompileInputs.cache
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\obj\Debug\AcademiaEF6.csproj.CopyComplete
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\obj\Debug\AcademiaEF6.exe
 C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\obj\Debug\AcademiaEF6.pdb
+C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\obj\Debug\AcademiaEF6.Migrations.versao01.resources
+C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\obj\Debug\AcademiaEF6.FormPrincipal.resources
+C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\obj\Debug\AcademiaEF6.FormProfessor.resources
+C:\Users\luscas\Source\Repos\Luscas-PandC\Entra21-NoturnoLucas-Forms\AcademiaEF6\obj\Debug\AcademiaEF6.FormModalidade.resources

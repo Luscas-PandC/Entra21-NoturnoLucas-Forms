@@ -2,7 +2,7 @@
 
 namespace AcademiaEF6.Dominio
 {
-    class Pessoa
+    public class Pessoa
     {
         [Key, MaxLength(14)]
         public string CPF { get; set; }

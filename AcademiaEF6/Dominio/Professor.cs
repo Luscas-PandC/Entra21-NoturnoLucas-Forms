@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AcademiaEF6.Dominio
 {
-    class Professor: Pessoa
+    public class Professor: Pessoa
     {
         [MaxLength(20)]
         public string Turno { get; set; }

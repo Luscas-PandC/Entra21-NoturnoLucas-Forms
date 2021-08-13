@@ -100,16 +100,50 @@
     <Compile Include="Dominio\Modalidade.cs" />
     <Compile Include="Dominio\Pessoa.cs" />
     <Compile Include="Dominio\Professor.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FormAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormAluno.Designer.cs">
+      <DependentUpon>FormAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModalidade.Designer.cs">
+      <DependentUpon>FormModalidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfessor.Designer.cs">
+      <DependentUpon>FormProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108131146159_versao01.cs" />
+    <Compile Include="Migrations\202108131146159_versao01.designer.cs">
+      <DependentUpon>202108131146159_versao01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Repository\RepositorioModalidade.cs" />
+    <Compile Include="Repository\RepositorioProfessor.cs" />
+    <EmbeddedResource Include="FormModalidade.resx">
+      <DependentUpon>FormModalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfessor.resx">
+      <DependentUpon>FormProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108131146159_versao01.resx">
+      <DependentUpon>202108131146159_versao01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,6 +155,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\AcademiaEF6.Dominio.Aluno.datasource" />
+    <None Include="Properties\DataSources\AcademiaEF6.Dominio.Modalidade.datasource" />
+    <None Include="Properties\DataSources\AcademiaEF6.Dominio.Professor.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

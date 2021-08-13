@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AcademiaEF6.Dominio
 {
-    class Aluno: Pessoa
+    public class Aluno: Pessoa
     {
         public virtual Modalidade Modalidade { get; set; }
     }

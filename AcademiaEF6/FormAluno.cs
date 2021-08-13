@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AcademiaEF6
 {
-    public partial class Form1 : Form
+    public partial class FormAluno : Form
     {
-        public Form1()
+        public FormAluno()
         {
             InitializeComponent();
         }

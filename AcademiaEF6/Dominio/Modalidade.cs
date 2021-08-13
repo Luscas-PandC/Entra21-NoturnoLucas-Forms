@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace AcademiaEF6.Dominio
 {
-    class Modalidade
+    public class Modalidade
     {
-        [Key, MaxLength(100)]
+        [Key]
         public int IdModalidade { get; set; }
         [MaxLength(100)]
         public string Nome { get; set; }
